@@ -7,3 +7,4 @@ mongoose.connect('mongodb://localhost/overwatch-api').then(function(){
     console.log(err)
 });
 
+exports.User = require('./User');
