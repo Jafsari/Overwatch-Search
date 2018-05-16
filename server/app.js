@@ -2,6 +2,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const express = require('express');
 const morgan = require('morgan');
+const authRoutes = require('./routes/auth');
 const app = express();
 
 app.use(morgan("tiny"));
@@ -16,6 +17,12 @@ app.use((req,res,next) => {
     return next(err);
 })
 
+app.use((err,req,res,next) => {
+    return res.status(err.status || 500).json({
+        message: err.message,
+        error: app.get("env") === "development" ? err : {}
+    });
+});
 
 const PORT = process.env.PORT || 3000;
 
