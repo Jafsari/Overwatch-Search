@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const morgan = require('morgan');
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
+const auth = require('./middleware/auth');
 const app = express();
 
 app.use(morgan("tiny"));
@@ -10,6 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+
+app.use("/api/auth",authRoutes);
+app.use("/api/users",auth.loginRequired,userRoutes)
 
 app.use((req,res,next) => {
     const err = new Error("Not Found");

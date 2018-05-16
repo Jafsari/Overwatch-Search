@@ -6,6 +6,7 @@ exports.loginRequired =function(req,res,next){
         var token = req.headers.authorization.split(" ")[1]
         jwt.verify(token,SECRET,function(err,decoded){
             if (decoded){
+                console.log('Good Job you made it through')
                 next();
             } else {
                 res.status(401).send('Please log in first')
