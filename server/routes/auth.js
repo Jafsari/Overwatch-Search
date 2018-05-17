@@ -14,7 +14,7 @@ router.post('/signup', function(req,res){
 });
 
 router.post('/login', function(req,res){
-    return User.findOne({name: req.body.name}).then(function(user){
+    return User.findOne({username:req.body.username}).then(function(user){
         user.comparePassword(req.body.password, function(err, isMatch){
             if(isMatch){
                 var token = jwt.sign({ user_id: user.id}, SECRET);

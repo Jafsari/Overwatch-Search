@@ -1,3 +1,5 @@
+import { connect } from 'react-redux';
+import * as actions from '../actions'
 import React, { Component } from 'react';
 
 
@@ -16,7 +18,10 @@ handleChange = (e) => {
 }
 handleSubmit = (e) => {
     e.preventDefault()
+   this.props.login(this.state);
+   console.log(this.state)
 }
+
 
 render(){
         return (
@@ -27,21 +32,26 @@ render(){
           onChange={this.handleChange}
           placeholder="What's your username?"
           name="username"
+          type="text"
+          id="username"
           value={this.state.username}
         />
         <input
           onChange={this.handleChange}
           placeholder="What's your password?"
           name="password"
+          id="password"
+          type="password"
           value={this.state.password}
         />
       </div>
       <div>
-          <button> Sign in </button>
+          <button>Sign in</button>
      </div>
       </form>
         )
     }
 }
 
-export default Landing;
+  
+  export default connect(null,actions)(Landing);
