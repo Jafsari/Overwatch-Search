@@ -1,13 +1,19 @@
-import { LOG_IN, SIGN_UP } from '../actions/types'
+import { SET_CURRENT_USER } from '../actions/types';
 
+const DEFAULT_STATE = {
+  isAuthenticated: false,
+  user: {}
+};
 
-export default (state = null, action) => {
-  switch(action.type){
-    case LOG_IN:
-    return action.payload || false
-    case SIGN_UP:
-    return action.paylad || false
-		default:
-		return state;
-	}
+export default (state = DEFAULT_STATE, action) => {
+  switch(action.type) {
+    case SET_CURRENT_USER:
+      return {
+        // turn an empty object into false or an object with keys to be true
+        isAuthenticated: !!(Object.keys(action.user).length),
+        user: action.user
+      };
+    default:
+      return state;
+  }
 }

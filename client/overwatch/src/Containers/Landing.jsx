@@ -11,21 +11,41 @@ class Landing extends Component {
             password:""
         }
     }
+clear = () => {
+    this.setState({
+        username:"",
+        password:""
+    });
+}
 handleChange = (e) => {
     this.setState({
         [e.target.name]: e.target.value
       });
 }
-handleSubmit = (e) => {
+handleLogin = (e) => {
     e.preventDefault()
    this.props.login(this.state);
-   console.log(this.state)
+   this.clear();
 }
+
+handleSignup =(e) => {
+    e.preventDefault();
+   this.props.signup(this.state);
+   this.clear();
+}
+
+handleLogout = (e) => {
+    e.preventDefault();
+    this.props.logout()
+    this.clear();
+}
+
+
 
 
 render(){
         return (
-            <form onSubmit ={this.handleSubmit}>
+         <form>
          <div>
         <h1>Please Sign in</h1>
         <input
@@ -46,8 +66,9 @@ render(){
         />
       </div>
       <div>
-      <Button color="primary">Signup</Button>
-      <Button color="danger"> Login </Button>
+      <Button onClick ={this.handleSignup} color="primary">Signup</Button>
+      <Button onClick ={this.handleLogin} color="danger"> Login </Button>
+      <Button onClick ={this.handleLogout} color="success"> Logout </Button>
      </div>
       </form>
     
