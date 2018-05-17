@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Landing.css';
+
 
 class Landing extends Component {
     constructor(props){
@@ -14,9 +14,13 @@ handleChange = (e) => {
         [e.target.name]: e.target.value
       });
 }
+handleSubmit = (e) => {
+    e.preventDefault()
+}
 
 render(){
         return (
+            <form onSubmit ={this.handleSubmit}>
          <div>
         <h1>Please Sign in</h1>
         <input
@@ -32,6 +36,12 @@ render(){
           value={this.state.password}
         />
       </div>
+      <div>
+          <button> Sign in </button>
+     </div>
+      </form>
         )
     }
 }
+
+export default Landing;
