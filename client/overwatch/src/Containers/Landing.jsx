@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import React, { Component } from 'react';
-
+import { Button, FormFeedback, FormGroup, FormText, Label, Input, Jumbotron } from 'reactstrap';
 
 class Landing extends Component {
     constructor(props){
@@ -46,9 +46,11 @@ render(){
         />
       </div>
       <div>
-          <button>Sign in</button>
+      <Button color="primary">Signup</Button>
+      <Button color="danger"> Login </Button>
      </div>
       </form>
+    
         )
     }
 }
