@@ -7,6 +7,32 @@
   background-attachment: fixed;
 }
 
+.Dash{
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/winstonEarth.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.signup{
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatchTeam.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.login{
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatch-serious.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -40,6 +66,15 @@
   left:535px;
   top:250px;
   color: white;
+}
+
+.inline{
+  position:absolute;
+  left: 75px;
+}
+.second{
+  position:absolute;
+  right:73px;
 }
 
 @keyframes App-logo-spin {

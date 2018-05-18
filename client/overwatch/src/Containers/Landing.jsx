@@ -27,23 +27,13 @@ handleChange = (e) => {
 }
 handleLogin = (e) => {
     e.preventDefault()
-    this.props.login(this.state).then(
-        () => {
-            this.props.history.push('dashboard')
-        },
-        err => {
-            debugger
-        }
-    );
-        this.clear();
-
+    this.props.history.push('login')
+}
+handleSignup = (e) => {
+    e.preventDefault()
+    this.props.history.push('signup')
 }
 
-handleSignup =(e) => {
-    e.preventDefault();
-   this.props.signup(this.state);
-   this.clear();
-}
 
 handleLogout = (e) => {
     e.preventDefault();
@@ -60,24 +50,9 @@ render(){
         <header>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <h1 className="App-title">Welcome to Overwatch Finder</h1>
+        <h1 className="App-title">Welcome to ToxicWatch</h1>
          <div>
-        <input
-          onChange={this.handleChange}
-          placeholder="What's your username?"
-          name="username"
-          type="text"
-          id="username"
-          value={this.state.username}
-        />
-        <input
-          onChange={this.handleChange}
-          placeholder="What's your password?"
-          name="password"
-          id="password"
-          type="password"
-          value={this.state.password}
-        />
+
       </div>
       <div>
       <Button onClick ={this.handleSignup} color="primary">Signup</Button>
