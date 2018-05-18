@@ -11,19 +11,11 @@ class App extends Component {
     return (
       <BrowserRouter>
       <div className="App">
-      <div className="format">
-        <header>
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Overwatch Finder</h1>
-        </header>
         <Switch>
-        <Route path='/' component={Landing} />
-        <Route path="/dashboard" component={requireAuth(Dashboard)} />
+        <Route exact path='/welcome' component={Landing} />
+        <Route exact path="/dashboard" component={Dashboard} />
         </Switch>
-        <p className="App-intro">
-          Sign in to join the Competitive Overwatch Premier Community!
-        </p>
-        </div>
+     
       </div>
       </BrowserRouter>
     );
