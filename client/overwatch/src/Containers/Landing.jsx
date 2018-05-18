@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import React, { Component } from 'react';
-import { Button, FormFeedback, FormGroup, FormText, Label, Input, Jumbotron } from 'reactstrap';
+import { Button } from 'reactstrap';
 
 class Landing extends Component {
     constructor(props){
