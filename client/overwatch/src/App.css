@@ -35,6 +35,13 @@
   color: white;
 }
 
+.dashboard{
+  position: absolute;
+  left:535px;
+  top:250px;
+  color: white;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

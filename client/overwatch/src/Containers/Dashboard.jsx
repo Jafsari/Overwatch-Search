@@ -7,7 +7,7 @@ const Dashboard = (props) => {
 
     let cool = console.log('woo')
         return(
-            <div className="format">
+            <div className="dashboard">
                 <Navigation />
                 <Modal />
                 {cool}
