@@ -47,7 +47,6 @@ render(){
         return (
          <form>
          <div>
-        <h1>Please Sign in</h1>
         <input
           onChange={this.handleChange}
           placeholder="What's your username?"

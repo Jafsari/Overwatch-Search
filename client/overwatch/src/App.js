@@ -7,7 +7,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+      <div className="format">
+        <header>
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Overwatch Finder</h1>
         </header>
@@ -15,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           Sign in to join the Competitive Overwatch Premier Community!
         </p>
+        </div>
       </div>
     );
   }
