@@ -14,6 +14,11 @@ class Landing extends Component {
             password:""
         }
     }
+    componentWillMount(){
+        if (localStorage.jwtToken !== undefined) {
+           this.props.history.push('dashboard')
+        }
+    }
 clear = () => {
     this.setState({
         username:"",
@@ -67,6 +72,7 @@ render(){
         )
     }
 }
+
 
   
   export default connect(null,actions)(Landing);

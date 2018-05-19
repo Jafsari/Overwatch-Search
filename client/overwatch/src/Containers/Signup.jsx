@@ -12,6 +12,11 @@ class Signup extends Component{
             password:""
         }
     }
+    componentWillMount(){
+        if (localStorage.jwtToken !== undefined) {
+           this.props.history.push('dashboard')
+        }
+    }
     clear = () => {
         this.setState({
             username:"",
