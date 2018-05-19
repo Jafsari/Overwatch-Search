@@ -11,7 +11,11 @@ class Dashboard extends Component {
     constructor(props){
         super(props)
     }
-
+    componentWillMount(){
+        if (!localStorage.jwtToken) {
+           this.props.history.push('welcome')
+        }
+    }
     handleLogout = (e) => {
         e.preventDefault();
         this.props.logout()
