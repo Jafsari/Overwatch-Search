@@ -35,10 +35,10 @@ export default class Navigation extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/LiveChat/">Live Chat</NavLink>
+                <NavLink href="/LiveChat/">General Chat</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">LFG</NavLink>
+                <NavLink href="https://github.com/reactstrap/reactstrap">Competitive Chat</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -46,14 +46,14 @@ export default class Navigation extends Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    GrandMasters
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Masters
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    Diamond
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
