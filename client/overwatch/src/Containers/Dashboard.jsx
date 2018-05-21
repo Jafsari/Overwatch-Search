@@ -33,7 +33,7 @@ class Dashboard extends Component {
                 <Modal />
                 </div>
                 <div className="second">
-                <Button onClick ={this.handleLogout} color="success">Logout</Button>
+                <Button onClick ={this.handleLogout} color="warning">Logout</Button>
                 </div>
                 </div>
             </div>
