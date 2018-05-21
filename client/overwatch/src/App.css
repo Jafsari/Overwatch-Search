@@ -6,6 +6,14 @@
   background-position:center;
   background-attachment: fixed;
 }
+.Dashboard2{
+  text-align: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatch-league.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
 
 .Dash{
   text-align: center;
@@ -64,7 +72,7 @@
 .dashboard{
   position: absolute;
   left:535px;
-  top:250px;
+  top:50px;
   color: white;
 }
 .login2{

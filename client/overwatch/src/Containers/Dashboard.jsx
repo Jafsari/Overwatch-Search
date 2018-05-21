@@ -26,7 +26,7 @@ class Dashboard extends Component {
     render(){
     let cool = console.log('woo')
         return(
-            <div className="Dash">
+            <div className="Dashboard2">
             <div className="dashboard">
                 <Navigation />
                 <div className="inline">
