@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import { Button, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css';
 
 class Signup extends Component{
@@ -47,24 +47,28 @@ class Signup extends Component{
     render(){
         return (
             <div className="login">
-            <form className="dashboard">
+            <form className="login2">
               <div>
-        <input
+        <FormGroup>
+          <Label for="exampleEmail">Username</Label>
+          <Input     
           onChange={this.handleChange}
           placeholder="Enter username"
           name="username"
           type="text"
           id="username"
-          value={this.state.username}
-        />
-        <input
-          onChange={this.handleChange}
-          placeholder="Enter password"
-          name="password"
-          id="password"
-          type="password"
-          value={this.state.password}
-        />
+          value={this.state.username} />
+        </FormGroup>
+        <FormGroup>
+          <Label for="examplePassword">Password</Label>
+          <Input 
+                    onChange={this.handleChange}
+                    placeholder="Enter password"
+                    name="password"
+                    id="password"
+                    type="password"
+                    value={this.state.password}/>
+        </FormGroup>
       </div>
             <div>
             <Button onClick ={this.handleLogin} color="danger">Login</Button>
