@@ -20,13 +20,13 @@ export function login(data) {
         localStorage.setItem('jwtToken', token);
         setAuthorizationToken(token);
         // dispatch(setCurrentUser(jwtDecode(token)));
-        try{
-        dispatch(setCurrentUser(jwtDecode(token)))
-        }
-        catch(e) {
-          dispatch(setCurrentUser(token))
-          console.log(e.message)
-        }
+        // try{
+        // dispatch(setCurrentUser(jwtDecode(token)))
+        // }
+        // catch(e) {
+        //   dispatch(setCurrentUser(token))
+        //   console.log(e.message)
+        // }
       });
     }
   }
@@ -47,7 +47,7 @@ export function login(data) {
         console.log(token);
         localStorage.setItem('jwtToken', token);
         setAuthorizationToken(token);
-        dispatch(setCurrentUser(jwtDecode(token)));
+        // dispatch(setCurrentUser(jwtDecode(token)));
       });
     }
   }

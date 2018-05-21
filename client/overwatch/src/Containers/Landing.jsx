@@ -60,9 +60,8 @@ render(){
 
       </div>
       <div>
-      <Button onClick ={this.handleSignup} color="primary">Signup</Button>
-      <Button onClick ={this.handleLogin} color="danger"> Login </Button>
-      <Button onClick ={this.handleLogout} color="success"> Logout </Button>
+      <Button onClick ={this.handleSignup} color="info">Signup</Button>
+      <Button onClick ={this.handleLogin} color="warning"> Login </Button>
      </div>
      <p className="App-intro">
           Sign in to join the Competitive Overwatch Premier Community!

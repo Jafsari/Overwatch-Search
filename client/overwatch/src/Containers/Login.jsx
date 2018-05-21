@@ -31,12 +31,13 @@ class Signup extends Component{
     }
     handleLogin = (e) => {
         e.preventDefault()
+        console.log(this.state)
         this.props.login(this.state).then(
             () => {
                 this.props.history.push('dashboard')
             },
             err => {
-                debugger
+                console.log(err.message)
             }
         );
             this.clear();

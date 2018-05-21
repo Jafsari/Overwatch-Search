@@ -30,15 +30,17 @@ class Signup extends Component{
     }
     handleSignup = (e) => {
         e.preventDefault()
+        console.log(this.state)
         this.props.signup(this.state).then(
             () => {
-                this.props.history.push('login')
+                this.props.history.push('dashboard')
             },
             err => {
+                console.log(err.message)
             }
         );
-        alert('Thanks for signing up')
             this.clear();
+            console.log(`You're in!`)
     }
 
     render(){
@@ -74,9 +76,3 @@ class Signup extends Component{
 
 export default connect(null,actions)(Signup);
 
-
-/*handleSignup = (e) => {
-    e.preventDefault();
-   this.props.signup(this.state);
-   this.clear();
-}*/
