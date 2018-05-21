@@ -22,9 +22,9 @@ class ModalExample extends React.Component {
       <div>
         <Button color="info" onClick={this.toggle}>{this.props.buttonLabel} More Info</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>ToxicWatch</ModalHeader>
+          <ModalHeader toggle={this.toggle}>WatchFinder</ModalHeader>
           <ModalBody>
-            ToxicWatch is an web application that brings competitive overwatch players together. Find other serious players to play competitive ranked matches with! Best of luck!
+            WatchFinder is an web application that brings competitive overwatch players together. Find other serious players to play competitive ranked matches with! Best of luck!
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Lets be toxic!</Button>{' '}
