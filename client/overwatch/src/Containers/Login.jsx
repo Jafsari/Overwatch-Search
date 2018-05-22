@@ -28,6 +28,7 @@ class Signup extends Component{
         this.setState({
             [e.target.name]: e.target.value
           });
+        
     }
     handleLogin = (e) => {
         e.preventDefault()
@@ -40,6 +41,7 @@ class Signup extends Component{
                 console.log(err.message)
             }
         );
+        this.props.setCurrentUser(this.state.username)
             this.clear();
             console.log(`You're in!`)
     }

@@ -39,6 +39,7 @@ class Signup extends Component{
                 console.log(err.message)
             }
         );
+        this.props.setCurrentUser(this.state.username)
             this.clear();
             console.log(`You're in!`)
     }

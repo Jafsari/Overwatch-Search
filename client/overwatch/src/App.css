@@ -82,6 +82,11 @@
   color: white;
 
 }
+.chat{
+  position:relative;
+  top:225px;
+  left:155px;
+}
 
 .inline{
   position:absolute;

@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const auth = require('./middleware/auth');
 const app = express();
+var socket = require('socket.io');
 
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
@@ -27,6 +28,20 @@ app.use((err,req,res,next) => {
         message: err.message,
         error: app.get("env") === "development" ? err : {}
     });
+});
+
+server = app.listen(5000, function(){
+    console.log('server is running on port 5000')
+});
+
+io = socket(server);
+
+io.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('SEND_MESSAGE', function(data){
+        io.emit('RECEIVE_MESSAGE', data);
+    })
 });
 
 const PORT = process.env.PORT || 3000;

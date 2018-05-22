@@ -11,6 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
+import { Route, Link } from "react-router-dom";
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -26,6 +27,10 @@ export default class Navigation extends Component {
       isOpen: !this.state.isOpen
     });
   }
+  handleCompetitiveChat = (e) => {
+    e.preventDefault();
+    this.props.history.push('/competitive')
+  }
   render() {
     return (
       <div>
@@ -38,7 +43,7 @@ export default class Navigation extends Component {
                 <NavLink href="/LiveChat/">General Chat</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Competitive Chat</NavLink>
+                <Link to="/competitive"> Competitive </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

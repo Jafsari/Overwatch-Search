@@ -12,24 +12,24 @@ export function setAuthorizationToken(token) {
 
 
 export function login(data) {
-    let BASE_URL = 'http://localhost:3000'
-    return dispatch => {
-      return axios.post(`${BASE_URL}/api/auth/login`, data).then(res => {
-        const token = res.data;
-        console.log(token);
-        localStorage.setItem('jwtToken', token);
-        setAuthorizationToken(token);
-        // dispatch(setCurrentUser(jwtDecode(token)));
-        // try{
-        // dispatch(setCurrentUser(jwtDecode(token)))
-        // }
-        // catch(e) {
-        //   dispatch(setCurrentUser(token))
-        //   console.log(e.message)
-        // }
-      });
-    }
+  let BASE_URL = 'http://localhost:3000'
+  return dispatch => {
+    return axios.post(`${BASE_URL}/api/auth/login`, data).then(res => {
+      const token = res.data;
+      console.log(token);
+      localStorage.setItem('jwtToken', token);
+      setAuthorizationToken(token);
+      // dispatch(setCurrentUser(jwtDecode(token)));
+      // try{
+      // dispatch(setCurrentUser(jwtDecode(token)))
+      // }
+      // catch(e) {
+      //   dispatch(setCurrentUser(token))
+      //   console.log(e.message)
+      // }
+    });
   }
+}
 
   export function logout() {
     return dispatch => {
@@ -38,6 +38,8 @@ export function login(data) {
       dispatch(setCurrentUser({}));
     }
   }
+
+
 
   export function signup(data) {
     let BASE_URL = 'http://localhost:3000'
@@ -58,3 +60,5 @@ export function login(data) {
       user
     };
   }
+
+
