@@ -40,10 +40,12 @@ export default class Navigation extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/LiveChat/">General Chat</NavLink>
+                <NavLink tag={Link}
+                to="/general">General Chat</NavLink>
               </NavItem>
               <NavItem>
-                <Link to="/competitive"> Competitive </Link>
+              <NavLink tag={Link}
+                to="/competitive">Competitive</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
