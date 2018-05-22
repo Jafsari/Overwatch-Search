@@ -34,7 +34,12 @@ server = app.listen(5000, function(){
     console.log('server is running on port 5000')
 });
 
+// second = app.listen(6000, function(){
+//     console.log('server is running on port 6000')
+// });
+
 io = socket(server);
+// io2 = socket(second);
 
 io.on('connection', (socket) => {
     console.log(socket.id);
@@ -43,6 +48,14 @@ io.on('connection', (socket) => {
         io.emit('RECEIVE_MESSAGE', data);
     })
 });
+
+// io2.on('connection', (socket) => {
+//     console.log(socket.id);
+
+//     socket.on('SEND_MESSAGE', function(data){
+//         io.emit('RECEIVE_MESSAGE', data);
+//     })
+// });
 
 const PORT = process.env.PORT || 3000;
 

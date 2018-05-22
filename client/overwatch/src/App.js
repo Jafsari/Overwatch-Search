@@ -6,6 +6,7 @@ import requireAuth from './Containers/Auth.jsx'
 import Signup from './Containers/Signup.jsx'
 import Chat from './Containers/chatroom.jsx'
 import Login from './Containers/Login.jsx'
+import General from './Containers/GeneralChat.jsx'
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,7 +16,7 @@ class App extends Component {
       <BrowserRouter>
       <div className="Dash">
         <Switch>
-        <Route exact path='/welcome' component={Landing} />
+        <Route exact path='/' component={Landing} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/signup" component = {Signup} />
         <Route exact path="/login" component ={Login} />
