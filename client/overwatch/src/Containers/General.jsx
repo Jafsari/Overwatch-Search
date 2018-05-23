@@ -4,6 +4,7 @@ import '../App.css'
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
+import Rein from '../Reinhardt_cute.png'
 
 class ChatGeneral extends React.Component{
     constructor(props){
@@ -39,7 +40,9 @@ class ChatGeneral extends React.Component{
     }
     render(){
         return (
+            <div>
           <div className="chat">
+          <img src={Rein} className="Reinhardt"alt="logo" />
             <div className="container">
                 <div className="row">
                     <div className="col-8">
@@ -65,6 +68,7 @@ class ChatGeneral extends React.Component{
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             </div>
         );

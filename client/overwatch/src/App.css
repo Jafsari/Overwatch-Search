@@ -142,3 +142,20 @@ transform:scale(0.7);
   transform:scale(0.7);
   }
 
+  .competitiveLogo{
+    position:absolute;
+    top:-230px;
+    right:800px;
+    -moz-transform:scale(0.7);
+    -webkit-transform:scale(0.7);
+    transform:scale(0.7);
+    }
+
+    .Reinhardt{
+      position:absolute;
+      top:-650px;
+      right:375px;
+      -moz-transform:scale(0.2);
+      -webkit-transform:scale(0.2);
+      transform:scale(0.2);
+      }
