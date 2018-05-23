@@ -5,6 +5,7 @@ import '../App.css';
 import logo from '../logo.svg';
 import { Button } from 'reactstrap';
 import Modal from '../Components/Modal.jsx'
+import Grand from '../grandmaster.svg'
 
 class Landing extends Component {
     constructor(props){
@@ -55,7 +56,7 @@ render(){
         <header>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <h1 className="App-title">Welcome to CompWatch</h1>
+        <h1 className="App-title">Welcome to OverChat</h1>
          <div>
 
       </div>

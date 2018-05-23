@@ -4,6 +4,8 @@ import '../App.css'
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
+import grand from '../grand.png'
+
 
 class ChatGrand extends React.Component{
     constructor(props){
@@ -39,7 +41,9 @@ class ChatGrand extends React.Component{
     }
     render(){
         return (
+            
           <div className="chat">
+          <img src={grand} className="grandmaster" alt="logo" />
             <div className="container">
                 <div className="row">
                     <div className="col-8">

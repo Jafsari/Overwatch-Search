@@ -4,6 +4,7 @@ import '../App.css'
 import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
+import diamond from '../diamond.png'
 
 class ChatDiamond extends React.Component{
     constructor(props){
@@ -40,6 +41,7 @@ class ChatDiamond extends React.Component{
     render(){
         return (
           <div className="chat">
+          <img src={diamond} className="diamond" alt="logo" />
             <div className="container">
                 <div className="row">
                     <div className="col-8">
