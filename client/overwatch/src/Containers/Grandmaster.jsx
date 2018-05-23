@@ -45,7 +45,7 @@ class ChatGrand extends React.Component{
                     <div className="col-8">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">Grandmaster Chat</div>
+                                <div className="card-title"><strong>Grandmaster Chat</strong></div>
                                 <hr/>
                                 <div className="messages">
                                     {this.state.messages.map(message => {

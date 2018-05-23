@@ -55,7 +55,7 @@ render(){
         <header>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-        <h1 className="App-title">Welcome to WatchFinder</h1>
+        <h1 className="App-title">Welcome to CompWatch</h1>
          <div>
 
       </div>
