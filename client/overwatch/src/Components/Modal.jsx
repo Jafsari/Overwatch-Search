@@ -24,11 +24,11 @@ class ModalExample extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>WatchFinder</ModalHeader>
           <ModalBody>
-            WatchFinder is an web application that brings competitive overwatch players together. Find other serious players to play competitive ranked matches with! Best of luck!
+            WatchFinder is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches with! Best of luck!
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Lets be toxic!</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>I'm a filthy casual</Button>
+            <Button color="primary" onClick={this.toggle}>Thanks!</Button>{' '}
+            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
       </div>
