@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
 import diamond from '../diamond.png'
+import Navigation from './Navigation.jsx'
 
 class ChatDiamond extends React.Component{
     constructor(props){
@@ -67,6 +68,9 @@ class ChatDiamond extends React.Component{
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="diamondNavigation">
+            <Navigation />
             </div>
             </div>
         );

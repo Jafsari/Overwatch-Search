@@ -94,7 +94,7 @@
 }
 .second{
   position:absolute;
-  right:132px;
+  right:133px;
 }
 
 @keyframes App-logo-spin {
@@ -158,4 +158,40 @@ transform:scale(0.7);
       -moz-transform:scale(0.2);
       -webkit-transform:scale(0.2);
       transform:scale(0.2);
+      }
+
+      .chatNavigation{
+        position: absolute;
+        left:320px;
+        bottom:175px;
+        color: black;
+        width:50.7%
+      }
+      .compNavigation{
+        position: absolute;
+        left:165px;
+        bottom:1px;
+        color: black;
+        width:50.7%
+      }
+      .masterNavigation{
+        position: absolute;
+        left:165px;
+        bottom:1px;
+        color: black;
+        width:50.7%
+      }
+      .GMNavigation{
+        position: absolute;
+        left:165px;
+        bottom:1px;
+        color: black;
+        width:50.7%
+      }
+      .diamondNavigation{
+        position: absolute;
+        left:165px;
+        bottom:1px;
+        color: black;
+        width:50.7%
       }

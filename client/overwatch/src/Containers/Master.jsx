@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
 import master from '../master.png'
+import Navigation from './Navigation.jsx'
 
 class ChatMaster extends React.Component{
     constructor(props){
@@ -67,6 +68,9 @@ class ChatMaster extends React.Component{
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="masterNavigation">
+            <Navigation />
             </div>
             </div>
         );

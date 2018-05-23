@@ -61,11 +61,17 @@ export default class Navigation extends Component {
                   to="/master">
                     Masters
                   </DropdownItem>
-                  <DropdownItem divider />
+                  <DropdownItem/>
                   <DropdownItem
                   tag={Link}
                   to="/diamond">
                     Diamond
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem
+                  tag={Link}
+                  to="/dashboard">
+                    Home
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
