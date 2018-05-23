@@ -27,9 +27,9 @@ export default class Navigation extends Component {
       isOpen: !this.state.isOpen
     });
   }
-  handleCompetitiveChat = (e) => {
+  handleGrandMasters = (e) => {
     e.preventDefault();
-    this.props.history.push('/competitive')
+    this.props.history.push('/grandmasters')
   }
   render() {
     return (
@@ -51,15 +51,20 @@ export default class Navigation extends Component {
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
+                <DropdownMenu>
+                  <DropdownItem  tag={Link}
+                to="/grandmaster">
                     GrandMasters
                   </DropdownItem>
-                  <DropdownItem>
+                  <DropdownItem
+                  tag={Link}
+                  to="/master">
                     Masters
                   </DropdownItem>
                   <DropdownItem divider />
-                  <DropdownItem>
+                  <DropdownItem
+                  tag={Link}
+                  to="/diamond">
                     Diamond
                   </DropdownItem>
                 </DropdownMenu>

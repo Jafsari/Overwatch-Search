@@ -7,6 +7,7 @@ const userRoutes = require('./routes/users');
 const auth = require('./middleware/auth');
 const app = express();
 var socket = require('socket.io');
+const Chatkit = require('pusher-chatkit-server')
 
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
@@ -30,32 +31,107 @@ app.use((err,req,res,next) => {
     });
 });
 
+const chatkit = new Chatkit.default({
+    instanceLocator: 'v1:us1:aa51485c-a0ad-47c4-9ffa-c31f5b4b0672',
+    key: 'e664f49b-d96c-40fa-8084-46dc9423d0ff:lDg2FCJs6f0Y1cWNl9i8FjxgiDEEuOqzpoGl002E0Qg=',
+     })
+
+    app.post('/users', (req, res) => {
+      const { username } = req.body
+      chatkit
+        .createUser({ 
+    	id: username, 
+    	name: username 
+         })
+        .then(() => res.sendStatus(201))
+        .catch(error => {
+          if (error.error_type === 'services/chatkit/user_already_exists') {
+            res.sendStatus(200)
+          } else {
+            res.status(error.status).json(error)
+          }
+        })
+    })
+
+    app.post('/authenticate', (req, res) => {
+          const authData = chatkit.authenticate({ userId: req.query.user_id })
+          res.status(authData.status).send(authData.body)
+        })
+    
+
 server = app.listen(5000, function(){
     console.log('server is running on port 5000')
 });
 
-// second = app.listen(6000, function(){
-//     console.log('server is running on port 6000')
-// });
 
-io = socket(server);
-// io2 = socket(second);
 
-io.on('connection', (socket) => {
+let io = socket(server);
+
+var competitive = io.of('/competitive');
+var general = io.of('/general');
+var grandmaster = io.of('/grandmaster');
+var master = io.of('/master');
+var diamond = io.of('/diamond');
+
+competitive.on('connection', (socket) => {
     console.log(socket.id);
 
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+      });
+
     socket.on('SEND_MESSAGE', function(data){
-        io.emit('RECEIVE_MESSAGE', data);
+        competitive.emit('RECEIVE_MESSAGE', data);
     })
 });
 
-// io2.on('connection', (socket) => {
-//     console.log(socket.id);
+general.on('connection', (socket) => {
+    console.log(socket.id);
 
-//     socket.on('SEND_MESSAGE', function(data){
-//         io.emit('RECEIVE_MESSAGE', data);
-//     })
-// });
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+      });
+
+    socket.on('SEND_MESSAGE', function(data){
+        general.emit('RECEIVE_MESSAGE', data);
+    })
+});
+
+grandmaster.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+      });
+
+    socket.on('SEND_MESSAGE', function(data){
+        grandmaster.emit('RECEIVE_MESSAGE', data);
+    })
+});
+
+master.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+      });
+
+    socket.on('SEND_MESSAGE', function(data){
+        master.emit('RECEIVE_MESSAGE', data);
+    })
+});
+
+diamond.on('connection', (socket) => {
+    console.log(socket.id);
+
+    socket.on('disconnect', function(){
+        console.log('user disconnected');
+      });
+
+    socket.on('SEND_MESSAGE', function(data){
+        diamond.emit('RECEIVE_MESSAGE', data);
+    })
+});
 
 const PORT = process.env.PORT || 3000;
 

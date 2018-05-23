@@ -101,3 +101,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.card-body{
+  height:300px;
+}
+
+.col-8{
+  position:relative;
+  top:-55px;
+}
+
+.message{
+  display:flex;
+}

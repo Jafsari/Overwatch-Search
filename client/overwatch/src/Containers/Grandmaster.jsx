@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
 
-class Chat extends React.Component{
+class ChatGrand extends React.Component{
     constructor(props){
         super(props);
 
@@ -15,7 +15,7 @@ class Chat extends React.Component{
             messages: []
         };
 
-          this.socket = io('localhost:5000/competitive');
+          this.socket = io('localhost:5000/grandmaster');
           console.log(this.state.messages)
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);
@@ -45,7 +45,7 @@ class Chat extends React.Component{
                     <div className="col-8">
                         <div className="card">
                             <div className="card-body">
-                                <div className="card-title">Competitive Chat</div>
+                                <div className="card-title">Grandmaster Chat</div>
                                 <hr/>
                                 <div className="messages">
                                     {this.state.messages.map(message => {
@@ -77,4 +77,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default connect(mapStateToProps,null)(Chat);
+export default connect(mapStateToProps,null)(ChatGrand);
