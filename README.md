@@ -10,9 +10,10 @@ Redux
 Node.JS
 Express
 Socket.IO
+Overwatch API: https://github.com/alfg/overwatch-api/blob/master/api/README.md
 
 
-Authors
+Author
 Justin Afsari
 
 
@@ -28,6 +29,9 @@ Login:
 Dashboard:
 ![screen shot 2018-05-23 at 1 57 42 pm](https://user-images.githubusercontent.com/28635782/40461703-7ea149d2-5ec1-11e8-9527-69959c1c3bfa.png)
 
+Search API:
+![screen shot 2018-05-23 at 11 42 47 pm](https://user-images.githubusercontent.com/28635782/40468918-b63d3906-5ee3-11e8-9fe6-443830fb08c9.png)
+
 General Chat:
 ![screen shot 2018-05-23 at 4 02 22 pm](https://user-images.githubusercontent.com/28635782/40461807-f195c67a-5ec1-11e8-808d-bebcebcae6e1.png)
 
@@ -42,6 +46,7 @@ Master Chat:
 
 Diamond Chat:
 ![screen shot 2018-05-23 at 5 29 08 pm](https://user-images.githubusercontent.com/28635782/40461746-ad268394-5ec1-11e8-93a9-98514c385a07.png)
+
 
 
 License

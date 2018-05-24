@@ -90,11 +90,11 @@
 
 .inline{
   position:absolute;
-  left: 100px;
+  left: 110px;
 }
 .second{
   position:absolute;
-  right:133px;
+  right:128px;
 }
 
 @keyframes App-logo-spin {
