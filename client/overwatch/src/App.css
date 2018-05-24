@@ -77,7 +77,15 @@
 }
 .login2{
   position: absolute;
-  left:625px;
+  left:610px;
+  top:200px;
+  color: white;
+
+}
+
+.Searchlayout{
+  position: absolute;
+  left:575px;
   top:200px;
   color: white;
 
@@ -122,6 +130,23 @@ right:700px;
 -moz-transform:scale(0.5);
 -webkit-transform:scale(0.5);
 transform:scale(0.5);
+}
+
+.SearchSpace{
+display:block;
+margin-bottom:20px;
+}
+
+.SearchButton{
+position:relative;
+right:10px;
+bottom:10px;
+}
+
+.formLay{
+position:relative;
+right:10px;
+bottom:10px;
 }
 
 .master{

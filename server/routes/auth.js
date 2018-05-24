@@ -29,10 +29,10 @@ router.post('/login', function(req,res){
     })
 });
 
-router.get('/search',(req,res,next) =>{
-    const platform = 'pc';
-    const region = 'us';
-    const tag = 'Calvin-1337';
+router.post('/search',(req,res,next) =>{
+    const platform = req.body.platform;
+    const region = req.body.region;
+    const tag = req.body.tag;
     
     overwatch.getProfile(platform, region, tag, (json) => {
      return res.status(200).json(json)

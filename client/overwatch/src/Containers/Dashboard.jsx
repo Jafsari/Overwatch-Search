@@ -16,13 +16,7 @@ class Dashboard extends Component {
         if (!localStorage.jwtToken) {
            this.props.history.push('welcome')
         }
-        axios.get('http://localhost:3000/api/auth/woo')
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+
     }
     handleLogout = (e) => {
         e.preventDefault();
