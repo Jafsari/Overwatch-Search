@@ -10,7 +10,9 @@ Redux
 Node.JS
 Express
 Socket.IO
-Overwatch API: https://github.com/alfg/overwatch-api/blob/master/api/README.md
+Overwatch API:
+
+ https://github.com/alfg/overwatch-api/blob/master/api/README.md
 
 
 Author
@@ -30,7 +32,7 @@ Dashboard:
 ![screen shot 2018-05-23 at 1 57 42 pm](https://user-images.githubusercontent.com/28635782/40461703-7ea149d2-5ec1-11e8-9527-69959c1c3bfa.png)
 
 Search API:
-![screen shot 2018-05-23 at 11 42 47 pm](https://user-images.githubusercontent.com/28635782/40468918-b63d3906-5ee3-11e8-9fe6-443830fb08c9.png)
+![screen shot 2018-05-24 at 1 44 29 am](https://user-images.githubusercontent.com/28635782/40474583-480c69d2-5ef4-11e8-9244-fe1559c55105.png)
 
 General Chat:
 ![screen shot 2018-05-23 at 4 02 22 pm](https://user-images.githubusercontent.com/28635782/40461807-f195c67a-5ec1-11e8-808d-bebcebcae6e1.png)
