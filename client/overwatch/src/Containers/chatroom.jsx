@@ -6,6 +6,9 @@ import * as actions from '../actions'
 import InfiniteScroll from 'react-infinite-scroller';
 import comp from '../grandmaster.png'
 import Navigation from './Navigation.jsx'
+import diamond from '../diamond.png'
+import Rein from '../Reinhardt_cute.png'
+import grand from '../grandmaster.png'
 
 class Chat extends React.Component{
     constructor(props){
@@ -54,7 +57,7 @@ class Chat extends React.Component{
                                     {this.state.messages.map(message => {
                                         return (
                                     
-                                            <div className="message"><strong>{message.author}</strong>: {message.message}</div>
+                                            <div className="message"> <div><img src={grand} className="complogo"/></div> <strong>{message.author}</strong>: {message.message}</div>
                                         )
                                     })}
                                 </div>
