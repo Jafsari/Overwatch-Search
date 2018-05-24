@@ -35,7 +35,8 @@ export default class Navigation extends Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="https://us.battle.net/forums/en/overwatch">Forum</NavbarBrand>
+          <NavbarBrand  tag={Link}
+                to="/search">Search</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

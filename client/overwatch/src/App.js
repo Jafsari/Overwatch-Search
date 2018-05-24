@@ -10,6 +10,7 @@ import Diamond from './Containers/Diamond.jsx'
 import Master from './Containers/Master.jsx'
 import Grandmaster from './Containers/Grandmaster.jsx'
 import General from './Containers/General.jsx'
+import Search from './Containers/Search.jsx'
 import logo from './logo.svg';
 import './App.css';
 
@@ -28,6 +29,7 @@ class App extends Component {
         <Route exact path="/grandmaster" component={Grandmaster} />
         <Route exact path="/master" component={Master} />
         <Route exact path="/diamond" component={Diamond} />
+        <Route exact path="/search" component={Search} />
         </Switch>
      
       </div>

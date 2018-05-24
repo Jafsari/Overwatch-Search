@@ -8,6 +8,7 @@ const auth = require('./middleware/auth');
 const app = express();
 var socket = require('socket.io');
 const Chatkit = require('pusher-chatkit-server')
+const overwatch = require('overwatch-api');
 
 app.use(morgan("tiny"));
 app.use(bodyParser.json());
@@ -31,39 +32,9 @@ app.use((err,req,res,next) => {
     });
 });
 
-const chatkit = new Chatkit.default({
-    instanceLocator: 'v1:us1:aa51485c-a0ad-47c4-9ffa-c31f5b4b0672',
-    key: 'e664f49b-d96c-40fa-8084-46dc9423d0ff:lDg2FCJs6f0Y1cWNl9i8FjxgiDEEuOqzpoGl002E0Qg=',
-     })
-
-    app.post('/users', (req, res) => {
-      const { username } = req.body
-      chatkit
-        .createUser({ 
-    	id: username, 
-    	name: username 
-         })
-        .then(() => res.sendStatus(201))
-        .catch(error => {
-          if (error.error_type === 'services/chatkit/user_already_exists') {
-            res.sendStatus(200)
-          } else {
-            res.status(error.status).json(error)
-          }
-        })
-    })
-
-    app.post('/authenticate', (req, res) => {
-          const authData = chatkit.authenticate({ userId: req.query.user_id })
-          res.status(authData.status).send(authData.body)
-        })
-    
-
-server = app.listen(5000, function(){
+    server = app.listen(5000, function(){
     console.log('server is running on port 5000')
 });
-
-
 
 let io = socket(server);
 

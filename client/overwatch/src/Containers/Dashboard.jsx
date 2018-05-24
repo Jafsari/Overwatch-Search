@@ -6,6 +6,7 @@ import Chatroom from './chatroom.jsx'
 import '../App.css';
 import { Button } from 'reactstrap';
 import Modal from '../Components/Modal.jsx'
+import axios from 'axios'
 
 class Dashboard extends Component {
     constructor(props){
@@ -15,6 +16,13 @@ class Dashboard extends Component {
         if (!localStorage.jwtToken) {
            this.props.history.push('welcome')
         }
+        axios.get('http://localhost:3000/api/auth/woo')
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
     }
     handleLogout = (e) => {
         e.preventDefault();

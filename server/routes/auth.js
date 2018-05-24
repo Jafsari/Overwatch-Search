@@ -3,6 +3,7 @@ const router = express.Router();
 const { User } = require("../models/")
 const jwt = require("jsonwebtoken")
 const SECRET = "woo"
+const overwatch = require('overwatch-api');
 
 router.post('/signup', function(req,res){
     return User.create(req.body).then(function(response){
@@ -27,5 +28,15 @@ router.post('/login', function(req,res){
         res.status(400).send('Invalid Credentials')
     })
 });
+
+router.get('/search',(req,res,next) =>{
+    const platform = 'pc';
+    const region = 'us';
+    const tag = 'Calvin-1337';
+    
+    overwatch.getProfile(platform, region, tag, (json) => {
+     return res.status(200).json(json)
+    });
+})
 
 module.exports = router;
