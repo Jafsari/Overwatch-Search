@@ -54,7 +54,7 @@ class ChatDiamond extends React.Component{
                                     {this.state.messages.map(message => {
                                         return (
                                     
-                                            <div className="message"><strong>{message.author}</strong>: {message.message}</div>
+                                            <div className="message"> <div><img src={diamond} className="diamondlogo"/></div><strong>{message.author}</strong>: {message.message}</div>
                                         )
                                     })}
                                 </div>

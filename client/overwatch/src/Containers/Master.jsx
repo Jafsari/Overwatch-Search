@@ -54,7 +54,7 @@ class ChatMaster extends React.Component{
                                     {this.state.messages.map(message => {
                                         return (
                                     
-                                            <div className="message"><strong>{message.author}</strong>: {message.message}</div>
+                                            <div className="message">  <div><img src={master} className="masterlogo"/></div> <strong>{message.author}</strong>: {message.message}</div>
                                         )
                                     })}
                                 </div>

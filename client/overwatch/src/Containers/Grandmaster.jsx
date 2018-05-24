@@ -41,7 +41,6 @@ class ChatGrand extends React.Component{
     }
     render(){
         return (
-            
           <div className="chat">
           <img src={grand} className="grandmaster" alt="logo" />
             <div className="container">
@@ -55,7 +54,7 @@ class ChatGrand extends React.Component{
                                     {this.state.messages.map(message => {
                                         return (
                                     
-                                            <div className="message"><strong>{message.author}</strong>: {message.message}</div>
+                                            <div className="message">  <div><img src={grand} className="grandlogo"/></div> <strong>{message.author}</strong>: {message.message}</div>
                                         )
                                     })}
                                 </div>

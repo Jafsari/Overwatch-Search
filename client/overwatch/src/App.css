@@ -118,7 +118,7 @@
 .grandmaster{
 position:absolute;
 top:-340px;
-right:690px;
+right:700px;
 -moz-transform:scale(0.5);
 -webkit-transform:scale(0.5);
 transform:scale(0.5);
@@ -127,7 +127,7 @@ transform:scale(0.5);
 .master{
 position:absolute;
 top:-275px;
-right:765px;
+right:780px;
 -moz-transform:scale(0.7);
 -webkit-transform:scale(0.7);
 transform:scale(0.7);
@@ -136,10 +136,38 @@ transform:scale(0.7);
 .diamond{
   position:absolute;
   top:-275px;
-  right:775px;
+  right:780px;
   -moz-transform:scale(0.7);
   -webkit-transform:scale(0.7);
   transform:scale(0.7);
+  }
+
+  .diamondlogo{
+    padding:-105px;
+    margin:-118px;
+    -moz-transform:scale(0.1);
+    -webkit-transform:scale(0.1);
+    transform:scale(0.1);
+  }
+
+  .grandlogo{
+    position:relative;
+    bottom:4px;
+    padding:-105px;
+    margin:-185px;
+    -moz-transform:scale(0.1);
+    -webkit-transform:scale(0.1);
+    transform:scale(0.1);
+  }
+
+  .masterlogo{
+    position:relative;
+    bottom:2px;
+    padding:-105px;
+    margin:-115px;
+    -moz-transform:scale(0.1);
+    -webkit-transform:scale(0.1);
+    transform:scale(0.1);
   }
 
   .competitiveLogo{
