@@ -31,6 +31,10 @@ handleChange = (e) => {
       });
     
 }
+route = () => {
+    this.props.history.push('player')
+}
+
 information = (cb) => {
     this.props.search(this.state).then(res => {
         let info = res.data
@@ -42,12 +46,13 @@ information = (cb) => {
     cb
 }
 
+
     /* const platform = 'pc';
     const region = 'us';
     const tag = 'Calvin-1337';*/
 handleSearch =(e) => {
 e.preventDefault();
-this.information(setTimeout(this.props.history.push('player'),3000))
+this.information(setTimeout(this.route,0))
 
 }
 
