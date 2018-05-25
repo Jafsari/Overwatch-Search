@@ -23,10 +23,15 @@ class Playerinfo extends Component{
 
     render(){
         console.log(this.state)
-        const comp = (this.state.data ? (
-            <div>{this.props.information.competitive.rank}</div> 
+        const information = (this.state.data ? (
+            <div>
+            <div><strong>Username:</strong>{this.props.information.username}</div>
+            <div><strong>Level:</strong>{this.props.information.level}</div>
+            <img src={this.props.information.portrait} />
+            <div><strong>Competitive Rank:</strong>{this.props.information.competitive.rank}</div>
+            </div>
           ) : (
-            <div>hi</div> 
+            <div></div> 
           ));
         return(
         <div className="chat">
@@ -36,10 +41,7 @@ class Playerinfo extends Component{
                    <div className="card">
                        <div className="card-body">
                            <div className="card-title"><strong>Player Information</strong></div>
-                           <div>{this.props.information.username}</div>
-                           <div>{this.props.information.level}</div>
-                           <img src={this.props.information.portrait} />
-                           <div>{comp}</div>
+                                <div> {information} </div>
                            </div>
                            </div>
                            </div>

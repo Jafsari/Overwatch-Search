@@ -32,7 +32,11 @@ Dashboard:
 ![screen shot 2018-05-23 at 1 57 42 pm](https://user-images.githubusercontent.com/28635782/40461703-7ea149d2-5ec1-11e8-9527-69959c1c3bfa.png)
 
 Search API:
-![screen shot 2018-05-24 at 1 44 29 am](https://user-images.githubusercontent.com/28635782/40474583-480c69d2-5ef4-11e8-9244-fe1559c55105.png)
+![screen shot 2018-05-25 at 3 22 59 pm](https://user-images.githubusercontent.com/28635782/40568513-d8a04b9e-602f-11e8-8460-5c9d481643bf.png)
+
+PlayerInfo:
+![screen shot 2018-05-25 at 3 23 26 pm](https://user-images.githubusercontent.com/28635782/40568514-da52bf6c-602f-11e8-81de-fc50bbbe8764.png)
+
 
 General Chat:
 ![screen shot 2018-05-23 at 4 02 22 pm](https://user-images.githubusercontent.com/28635782/40461807-f195c67a-5ec1-11e8-808d-bebcebcae6e1.png)
