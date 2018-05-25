@@ -85,7 +85,7 @@
 
 .Searchlayout{
   position: absolute;
-  left:575px;
+  left:475px;
   top:200px;
   color: white;
 
@@ -137,7 +137,7 @@ display:block;
 margin-bottom:20px;
 }
 
-.SearchButton{
+.SearchMutton{
 position:relative;
 right:10px;
 bottom:10px;

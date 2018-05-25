@@ -1,7 +1,11 @@
 import React, {Component} from 'react';
-import { Form, FormGroup, Label, Input, FormFeedback, FormText, Button } from 'reactstrap';
+import { connect } from 'react-redux';
+import * as actions from '../actions'
+import { Form, FormGroup, Label, Input, FormFeedback, FormText, Button, ModalBody, Modal, ModalHeader } from 'reactstrap';
 import '../App.css'
 import axios from 'axios'
+import Mutton from '../Components/Modal.jsx'
+import Navigation from './Navigation.jsx'
 
 class Search extends Component{
 constructor(props){
@@ -9,8 +13,16 @@ constructor(props){
     this.state = {
         platform:'',
         region:'',
-        tag:''
+        tag:'',
     }
+
+}
+clear = () => {
+    this.setState({
+        platform:"",
+        region:"",
+        tag:""
+    });
 }
 
 handleChange = (e) => {
@@ -19,24 +31,24 @@ handleChange = (e) => {
       });
     
 }
+information = (cb) => {
+    this.props.search(this.state).then(res => {
+        let info = res.data
+        this.props.setSearchUser(info.username)
+    })
+    .catch(err => {
+        console.log(err.message)
+    })
+    cb
+}
 
-handleSearch =(e) => {
     /* const platform = 'pc';
     const region = 'us';
     const tag = 'Calvin-1337';*/
-    let obj ={
-        platform:this.state.platform,
-        region:this.state.region,
-        tag:this.state.tag
-    }
-    axios.post('http://localhost:3000/api/auth/search',obj)
-    .then(function (response) {
-      console.log(response.data);
-      alert(response.data.username)
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+handleSearch =(e) => {
+e.preventDefault();
+this.information(setTimeout(this.props.history.push('player'),3000))
+
 }
 
 render(){
@@ -71,13 +83,16 @@ return(
           value={this.state.Search} 
  valid />
 
- <Button className="SearchButton"  onClick ={this.handleSearch} color="danger">Login</Button>
+ <Button className="SearchMutton" onClick ={this.handleSearch} color="info">Search</Button>
 <FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
 <FormText className="formLay"> Remember to keep stalking at a minimum :)</FormText>
+<div >
+            <Navigation />
+            </div>
 </FormGroup>
         )
     }
 
 }
 
-export default Search;
+export default connect(null,actions)(Search);

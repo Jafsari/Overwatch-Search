@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER } from './types'
 import * as jwtDecode from 'jwt-decode';
 
 export function setAuthorizationToken(token) {
@@ -54,11 +54,29 @@ export function login(data) {
     }
   }
 
+  export function search(data){
+    let BASE_URL = 'http://localhost:3000/api/auth/search'
+    return dispatch => {
+    return axios.post(BASE_URL,data).then(res => {
+      const information = res.data;
+      console.log(information);
+      return dispatch(setSearchUser(information))
+    })
+    }
+  }
+
   export function setCurrentUser(user) {
     return {
       type: SET_CURRENT_USER,
       user
     };
+  }
+
+  export function setSearchUser(information){
+    return{
+      type:SET_SEARCH_USER,
+      information
+    }
   }
 
 
