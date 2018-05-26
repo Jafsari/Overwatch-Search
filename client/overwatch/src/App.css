@@ -266,3 +266,13 @@ transform:scale(0.7);
         color: black;
         width:50.7%
       }
+
+      .player{
+        position:relative;
+        left:30px;
+        float:left;
+      }
+      .player-card{
+        position:relative;
+        right:50px;
+      }

@@ -34,8 +34,7 @@ Dashboard:
 Search API:
 ![screen shot 2018-05-25 at 3 22 59 pm](https://user-images.githubusercontent.com/28635782/40568513-d8a04b9e-602f-11e8-8460-5c9d481643bf.png)
 
-PlayerInfo:
-![screen shot 2018-05-25 at 3 23 26 pm](https://user-images.githubusercontent.com/28635782/40568514-da52bf6c-602f-11e8-81de-fc50bbbe8764.png)
+![screen shot 2018-05-25 at 5 38 43 pm](https://user-images.githubusercontent.com/28635782/40570746-c9add224-6042-11e8-9ced-cd323bca6e56.png)
 
 
 General Chat:
