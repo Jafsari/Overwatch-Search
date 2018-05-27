@@ -5,10 +5,10 @@ import { withRouter } from 'react-router-dom';
 export default function(ComponentToBeRendered) {
 
   class Authenticate extends Component {
-    componentWillMount() {
-      if (!this.props.isAuthenticated) {
-        this.props.history.push('/');
-      } 
+    componentDidMount(){
+      if (!this.props.isAuthenticated){
+        this.props.history.push('/')
+      }
     }
 
     componentWillUpdate(nextProps) {
@@ -26,7 +26,7 @@ export default function(ComponentToBeRendered) {
 
   function mapStateToProps(state) {
     return {
-      isAuthenticated: state.isAuthenticated
+      isAuthenticated: state.auth.isAuthenticated
     };
   }
 

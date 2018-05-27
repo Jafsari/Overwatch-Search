@@ -25,11 +25,11 @@ const store = createStore(
   )
 );
 
-store.subscribe(() => {
+store.subscribe(throttle(() => {
   saveState({
     auth: store.getState().auth
   });
-});
+}),1000);
 
 if (localStorage.jwtToken) {
   setAuthorizationToken(localStorage.jwtToken);

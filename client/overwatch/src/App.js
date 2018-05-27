@@ -11,6 +11,7 @@ import Grandmaster from './components/Grandmaster.jsx'
 import General from './components/General.jsx'
 import Search from './containers/Search.jsx'
 import Playerinfo from'./containers/PlayerInfo.jsx'
+import requireAuth from './containers/Auth.jsx'
 import './App.css';
 
 class App extends Component {
@@ -20,16 +21,16 @@ class App extends Component {
       <div className="Dash">
         <Switch>
         <Route exact path='/' component={Landing} />
-        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/dashboard" component={requireAuth(Dashboard)} />
         <Route exact path="/signup" component = {Signup} />
         <Route exact path="/login" component ={Login} />
-        <Route exact path="/competitive" component={Competitive} />
-        <Route exact path="/general" component={General} />
-        <Route exact path="/grandmaster" component={Grandmaster} />
-        <Route exact path="/master" component={Master} />
-        <Route exact path="/diamond" component={Diamond} />
-        <Route exact path="/search" component={Search} />
-        <Route exact path="/player" component={Playerinfo} />
+        <Route exact path="/competitive" component={requireAuth(Competitive)} />
+        <Route exact path="/general" component={requireAuth(General)} />
+        <Route exact path="/grandmaster" component={requireAuth(Grandmaster)} />
+        <Route exact path="/master" component={requireAuth(Master)} />
+        <Route exact path="/diamond" component={requireAuth(Diamond)} />
+        <Route exact path="/search" component={requireAuth(Search)} />
+        <Route exact path="/player" component={requireAuth(Playerinfo)} />
         </Switch>
      
       </div>

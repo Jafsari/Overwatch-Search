@@ -11,13 +11,10 @@ class Dashboard extends Component {
     constructor(props){
         super(props)
     }
-    // componentDidMount(){
-    //     if (!localStorage.jwtToken) {
-    //        this.props.history.push('welcome')
-    //     }
-
-    // }
-    handleLogout = (e) => {
+    componentDidMount(){
+        console.log('charmander')
+    }
+        handleLogout = (e) => {
         e.preventDefault();
         this.props.logout()
         this.props.history.push('')
@@ -39,7 +36,7 @@ class Dashboard extends Component {
             </div>
         )
     }
-    
 }
+
 
 export default connect(null,actions)(Dashboard);
