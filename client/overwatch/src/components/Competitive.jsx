@@ -4,9 +4,7 @@ import comp from '../logos/grandmaster.png'
 import grand from '../logos/grandmaster.png'
 import Chat from '../containers/Chat.jsx'
 
-class CompetitiveChat extends React.Component{
-
-  render(){
+const CompetitiveChat = () => {
       return<div>
           <Chat 
           name='Competitive Chat' 
@@ -17,6 +15,5 @@ class CompetitiveChat extends React.Component{
           server='localhost:5000/competitive'
           />
           </div>
-  }
 }
 export default CompetitiveChat

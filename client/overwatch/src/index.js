@@ -9,16 +9,27 @@ import jwtDecode from 'jwt-decode';
 import rootReducer from './reducers';
 import { setCurrentUser,setAuthorizationToken } from './actions';
 import App from './App';
+import { loadState, saveState } from './localStorage.js';
+import throttle from 'lodash/throttle';
+import logger from 'redux-logger'
 
 
+const persistedState = loadState();
+console.log(persistedState)
 const store = createStore(
   rootReducer,
+  persistedState,
   compose(
-    applyMiddleware(reduxThunk),
+    applyMiddleware(reduxThunk,logger),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
 
+store.subscribe(() => {
+  saveState({
+    auth: store.getState().auth
+  });
+});
 
 if (localStorage.jwtToken) {
   setAuthorizationToken(localStorage.jwtToken);
@@ -26,7 +37,7 @@ if (localStorage.jwtToken) {
   try {
     store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
   } catch(e) {
-    store.dispatch(setCurrentUser({}))
+    console.log(e)
   }
 }
 

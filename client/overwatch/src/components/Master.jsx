@@ -3,9 +3,7 @@ import '../App.css'
 import master from '../logos/master.png'
 import Chat from '../containers/Chat.jsx'
 
-class ChatMaster extends React.Component{
-
-    render(){
+const ChatMaster = () => {
         return<div>
             <Chat 
             name='Master Chat'
@@ -16,6 +14,5 @@ class ChatMaster extends React.Component{
             server='localhost:5000/master'
             />
             </div>
-    }
 }
 export default ChatMaster;

@@ -3,9 +3,7 @@ import '../App.css'
 import diamond from '../logos/diamond.png'
 import Chat from '../containers/Chat.jsx'
 
-class ChatDiamond extends React.Component{
-
-    render(){
+const ChatDiamond = () => {
         return<div>
             <Chat 
             name='Diamond' 
@@ -16,6 +14,6 @@ class ChatDiamond extends React.Component{
             server='localhost:5000/diamond'
             />
             </div>
-    }
+    
 }
 export default ChatDiamond;

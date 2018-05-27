@@ -34,6 +34,7 @@ export function login(data) {
   export function logout() {
     return dispatch => {
       localStorage.removeItem('jwtToken');
+      localStorage.removeItem('state');
       setAuthorizationToken(false);
       dispatch(setCurrentUser({}));
     }

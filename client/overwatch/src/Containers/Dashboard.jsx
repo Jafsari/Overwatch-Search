@@ -5,18 +5,18 @@ import * as actions from '../actions'
 import '../App.css';
 import { Button } from 'reactstrap';
 import Modal from '../components/Modal.jsx'
-import axios from 'axios'
+
 
 class Dashboard extends Component {
     constructor(props){
         super(props)
     }
-    componentWillMount(){
-        if (!localStorage.jwtToken) {
-           this.props.history.push('welcome')
-        }
+    // componentDidMount(){
+    //     if (!localStorage.jwtToken) {
+    //        this.props.history.push('welcome')
+    //     }
 
-    }
+    // }
     handleLogout = (e) => {
         e.preventDefault();
         this.props.logout()

@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import '../App.css'
 import { connect } from 'react-redux';
 import Navigation from '../components/Navigation.jsx'
+import Infinite from 'react-infinite'
 
 
 class Chat extends React.Component{
@@ -36,10 +37,14 @@ class Chat extends React.Component{
             this.setState({message: ''});
 
         }
+
     }
+    
     render(){
+ 
         return (
           <div className="chat">
+          <form onSubmit={this.sendMessage} >
              <img src={this.props.image} className={this.props.imageStyle} alt="logo" />
             <div className="container">
                 <div className="row">
@@ -49,7 +54,7 @@ class Chat extends React.Component{
                                 <div className="card-title"><strong>{this.props.name}</strong></div>
                                 <hr/>
                                 <div className="messages">
-                                    {this.state.messages.map(message => {
+                                {this.state.messages.map(message => {
                                         return (
                                     
                                             <div className="message"> <div><img src={this.props.logo} className={this.props.logoStyle}/></div> <strong>{message.author}</strong>: {message.message}</div>
@@ -67,6 +72,7 @@ class Chat extends React.Component{
                     </div>
                 </div>
             </div>
+            </form>
             <div className="compNavigation">
             <Navigation />
             </div>

@@ -30,7 +30,7 @@ class Signup extends Component{
           });
         
     }
-    handleLogin = (e) => {
+    handleSubmit = (e) => {
         e.preventDefault()
         console.log(this.state)
         this.props.login(this.state).then(
@@ -51,7 +51,7 @@ class Signup extends Component{
             <div className="login">
             <form className="login2">
               <div>
-        <FormGroup>
+        <FormGroup onSubmit={this.handleSubmit}>
           <Label for="exampleEmail">Username</Label>
           <Input     
           onChange={this.handleChange}
@@ -73,7 +73,7 @@ class Signup extends Component{
         </FormGroup>
       </div>
             <div>
-            <Button onClick ={this.handleLogin} color="danger">Login</Button>
+            <Button onClick ={this.handleSubmit} color="danger">Login</Button>
             </div>
             </form>
             </div>

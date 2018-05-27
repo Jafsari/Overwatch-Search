@@ -4,9 +4,7 @@ import Rein from '../logos/Reinhardt_cute.png'
 import grand from '../logos/grandmaster.png'
 import Chat from '../containers/Chat.jsx'
 
-class ChatGeneral extends React.Component{
-
-    render(){
+const ChatGeneral = () => {
         return<div>
             <Chat 
             name='General Chat' 
@@ -17,6 +15,5 @@ class ChatGeneral extends React.Component{
             server= 'localhost:5000/general'
             />
             </div>
-    }
 }
 export default ChatGeneral;
