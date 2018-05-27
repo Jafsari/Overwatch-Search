@@ -1,15 +1,8 @@
 import React from "react";
-import io from "socket.io-client";
 import '../App.css'
-import { connect } from 'react-redux';
-import * as actions from '../actions'
-import InfiniteScroll from 'react-infinite-scroller';
-import Rein from '../Reinhardt_cute.png'
-import comp from '../grandmaster.png'
-import Navigation from './Navigation.jsx'
-import reaper from '../reaper.png'
-import grand from '../grandmaster.png'
-import Chat from '../Components/Chat.jsx'
+import Rein from '../logos/Reinhardt_cute.png'
+import grand from '../logos/grandmaster.png'
+import Chat from '../containers/Chat.jsx'
 
 class ChatGeneral extends React.Component{
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import'./player.css'
-import Navigation from './Navigation.jsx'
+import'../player.css'
+import Navigation from '../components/Navigation.jsx'
 
 class Playerinfo extends Component{
     constructor(props){

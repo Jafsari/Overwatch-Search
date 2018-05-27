@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import logo from '../logo.svg';
 import { Button } from 'reactstrap';
-import Modal from '../Components/Modal.jsx'
+import Modal from '../components/Modal.jsx'
 import Grand from '../grandmaster.svg'
 
 class Landing extends Component {
@@ -17,8 +17,8 @@ class Landing extends Component {
     }
     componentWillMount(){
         if (localStorage.jwtToken !== undefined) {
-           this.props.history.push('dashboard')
-        }
+            this.props.history.push('dashboard')
+         }
     }
 clear = () => {
     this.setState({

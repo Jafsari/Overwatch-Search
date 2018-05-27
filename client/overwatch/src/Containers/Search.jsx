@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
-import { Form, FormGroup, Label, Input, FormFeedback, FormText, Button, ModalBody, Modal, ModalHeader } from 'reactstrap';
+import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reactstrap';
 import '../App.css'
-import axios from 'axios'
-import Mutton from '../Components/Modal.jsx'
-import Navigation from './Navigation.jsx'
+import Navigation from '../components/Navigation.jsx'
 
 class Search extends Component{
 constructor(props){

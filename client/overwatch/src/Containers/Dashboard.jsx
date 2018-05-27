@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navigation from './Navigation.jsx'
+import Navigation from '../components/Navigation.jsx'
 import * as actions from '../actions'
-import Chatroom from './chatroom.jsx'
 import '../App.css';
 import { Button } from 'reactstrap';
-import Modal from '../Components/Modal.jsx'
+import Modal from '../components/Modal.jsx'
 import axios from 'axios'
 
 class Dashboard extends Component {

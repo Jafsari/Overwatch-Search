@@ -2,13 +2,7 @@ import React from "react";
 import io from "socket.io-client";
 import '../App.css'
 import { connect } from 'react-redux';
-import * as actions from '../actions'
-import InfiniteScroll from 'react-infinite-scroller';
-import comp from '../grandmaster.png'
-import Navigation from '../Containers/Navigation.jsx'
-import master from '../master.png'
-import diamond from '../diamond.png'
-import grand from '../grandmaster.png'
+import Navigation from '../components/Navigation.jsx'
 
 
 class Chat extends React.Component{
@@ -21,7 +15,7 @@ class Chat extends React.Component{
             messages: []
         };
 
-          this.socket = io('localhost:5000/competitive');
+          this.socket = io(this.props.server);
           console.log(this.state.messages)
         this.socket.on('RECEIVE_MESSAGE', function(data){
             addMessage(data);

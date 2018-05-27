@@ -1,12 +1,7 @@
 import React from "react";
-import io from "socket.io-client";
 import '../App.css'
-import { connect } from 'react-redux';
-import * as actions from '../actions'
-import InfiniteScroll from 'react-infinite-scroller';
-import grand from '../grand.png'
-import Navigation from './Navigation.jsx'
-import Chat from '../Components/Chat.jsx'
+import grand from '../logos/grand.png'
+import Chat from '../containers/Chat.jsx'
 
 class ChatGrand extends React.Component{
 

@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import Landing from './Containers/Landing.jsx'
+import Landing from './containers/Landing.jsx'
 import { Route, BrowserRouter, Switch} from 'react-router-dom'
-import Dashboard from './Containers/Dashboard.jsx'
-import requireAuth from './Containers/Auth.jsx'
-import Signup from './Containers/Signup.jsx'
-import Chat from './Containers/chatroom.jsx'
-import Login from './Containers/Login.jsx'
-import Diamond from './Containers/Diamond.jsx'
-import Master from './Containers/Master.jsx'
-import Grandmaster from './Containers/Grandmaster.jsx'
-import General from './Containers/General.jsx'
-import Search from './Containers/Search.jsx'
-import Playerinfo from'./Containers/PlayerInfo.jsx'
-import logo from './logo.svg';
+import Dashboard from './containers/Dashboard.jsx'
+import Signup from './containers/Signup.jsx'
+import Login from './containers/Login.jsx'
+import Competitive from './components/Competitive.jsx'
+import Diamond from './components/Diamond.jsx'
+import Master from './components/Master.jsx'
+import Grandmaster from './components/Grandmaster.jsx'
+import General from './components/General.jsx'
+import Search from './containers/Search.jsx'
+import Playerinfo from'./containers/PlayerInfo.jsx'
 import './App.css';
 
 class App extends Component {
@@ -25,7 +23,7 @@ class App extends Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/signup" component = {Signup} />
         <Route exact path="/login" component ={Login} />
-        <Route exact path="/competitive" component={Chat} />
+        <Route exact path="/competitive" component={Competitive} />
         <Route exact path="/general" component={General} />
         <Route exact path="/grandmaster" component={Grandmaster} />
         <Route exact path="/master" component={Master} />

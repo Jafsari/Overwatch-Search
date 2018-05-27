@@ -1,14 +1,8 @@
 import React from "react";
-import io from "socket.io-client";
 import '../App.css'
-import { connect } from 'react-redux';
-import * as actions from '../actions'
-import InfiniteScroll from 'react-infinite-scroller';
-import comp from '../grandmaster.png'
-import Navigation from './Navigation.jsx'
-import Rein from '../Reinhardt_cute.png'
-import grand from '../grandmaster.png'
-import Chat from '../Components/Chat.jsx'
+import comp from '../logos/grandmaster.png'
+import grand from '../logos/grandmaster.png'
+import Chat from '../containers/Chat.jsx'
 
 class CompetitiveChat extends React.Component{
 
