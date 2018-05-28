@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Button, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css';
 
-class Signup extends Component{
+class Login extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -12,12 +12,12 @@ class Signup extends Component{
             password:""
         }
     }
+    componentDidMount(){
+    if (this.props.isAuthenticated){
+        this.props.history.push('dashboard')
+    }
+}
 
-    // componentWillMount(){
-    //     if (localStorage.jwtToken !== undefined) {
-    //        this.props.history.push('dashboard')
-    //     }
-    // }
     clear = () => {
         this.setState({
             username:"",
@@ -85,4 +85,11 @@ class Signup extends Component{
     }
 }
 
-export default connect(null,actions)(Signup);
+const mapStateToProps = (state) => { 
+    return { 
+      user: state.auth.user ,
+      isAuthenticated: state.auth.isAuthenticated
+      };
+  };
+  
+  export default connect(mapStateToProps,actions)(Login);

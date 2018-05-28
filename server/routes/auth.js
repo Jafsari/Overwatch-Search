@@ -31,15 +31,4 @@ router.post('/login', function(req,res){
     })
 });
 
-
-router.post('/search',(req,res,next) =>{
-    console.log(req.body)
-    const platform = req.body.platform;
-    const region = req.body.region;
-    const tag = req.body.tag;
-    
-    overwatch.getProfile(platform, region, tag, (json) => {
-     return res.status(200).json(json)
-    });
-})
 module.exports = router;

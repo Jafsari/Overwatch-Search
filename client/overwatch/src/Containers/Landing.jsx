@@ -19,6 +19,10 @@ handleSignup = (e) => {
     e.preventDefault()
     this.props.history.push('signup')
 }
+handleFB = (e) => {
+    e.preventDefault()
+    this.props.history.push('dashboard')
+}
 
 
 render(){

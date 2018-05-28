@@ -64,11 +64,14 @@
 
 .format {
   position: absolute;
-  left:475px;
+  left:425px;
   top:175px;
   color: white;
 }
 
+.card-body{
+  overflow:scroll;
+}
 .dashboard{
   position: absolute;
   left:500px;
