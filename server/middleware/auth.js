@@ -25,10 +25,10 @@ exports.ensureCorrectUser = function(req,res,next){
             if (decoded.user_id === req.params.id){
                 next();
             }  else {
-                res.status(401).send('Unauthorized');
+                res.status(401).send('Woopsie, looks like you didnt make it');
             }
         })
     } catch(ex){
-        res.status(401).send('Unauthorized');
+        res.status(401).send(ex.message);
     }
 }

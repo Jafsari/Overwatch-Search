@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
 import logo from '../logo.svg';
 import { Button } from 'reactstrap';
 
 
 class Landing extends Component {
-    componentWillMount(){
-        if (localStorage.jwtToken !== undefined) {
-            this.props.history.push('dashboard')
-         }
+componentDidMount(){
+    if (this.props.isAuthenticated){
+        this.props.history.push('dashboard')
     }
+}
 handleLogin = (e) => {
     e.preventDefault()
     this.props.history.push('login')
@@ -44,5 +45,11 @@ render(){
 }
 
 
+const mapStateToProps = (state) => { 
+    return { 
+      user: state.auth.user ,
+      isAuthenticated: state.auth.isAuthenticated
+      };
+  };
   
-  export default Landing
+  export default connect(mapStateToProps,null)(Landing);

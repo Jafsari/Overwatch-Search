@@ -4,6 +4,7 @@ import * as actions from '../actions'
 import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reactstrap';
 import '../App.css'
 import Navigation from '../components/Navigation.jsx'
+import jwtDecode from 'jwt-decode';
 
 class Search extends Component{
 constructor(props){
@@ -15,6 +16,7 @@ constructor(props){
     }
 
 }
+
 clear = () => {
     this.setState({
         platform:"",

@@ -13,11 +13,11 @@ class Signup extends Component{
         }
     }
 
-    componentWillMount(){
-        if (localStorage.jwtToken !== undefined) {
-           this.props.history.push('dashboard')
-        }
-    }
+    // componentWillMount(){
+    //     if (localStorage.jwtToken !== undefined) {
+    //        this.props.history.push('dashboard')
+    //     }
+    // }
     clear = () => {
         this.setState({
             username:"",
@@ -41,9 +41,12 @@ class Signup extends Component{
                 console.log(err.message)
             }
         );
+
         this.props.setCurrentUser(this.state.username)
             this.clear();
             console.log(`You're in!`)
+        
+        
     }
 
     render(){

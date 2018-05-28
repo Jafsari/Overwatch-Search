@@ -31,15 +31,15 @@ store.subscribe(throttle(() => {
   });
 }),1000);
 
-if (localStorage.jwtToken) {
-  setAuthorizationToken(localStorage.jwtToken);
-  // prevent someone from manually setting a key of 'jwtToken' in localStorage
-  try {
-    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
-  } catch(e) {
-    console.log(e)
-  }
-}
+// if (localStorage.jwtToken) {
+//   setAuthorizationToken(localStorage.jwtToken);
+//   // prevent someone from manually setting a key of 'jwtToken' in localStorage
+//   try {
+//     store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)));
+//   } catch(e) {
+//     console.log(e)
+//   }
+// }
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>,

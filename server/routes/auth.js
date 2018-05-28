@@ -14,6 +14,8 @@ router.post('/signup', function(req,res){
     })
 });
 
+
+
 router.post('/login', function(req,res){
     return User.findOne({username:req.body.username}).then(function(user){
         user.comparePassword(req.body.password, function(err, isMatch){
@@ -29,6 +31,7 @@ router.post('/login', function(req,res){
     })
 });
 
+
 router.post('/search',(req,res,next) =>{
     console.log(req.body)
     const platform = req.body.platform;
@@ -39,5 +42,4 @@ router.post('/search',(req,res,next) =>{
      return res.status(200).json(json)
     });
 })
-
 module.exports = router;

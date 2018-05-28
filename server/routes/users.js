@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { User } = require("../models");
 var auth = require('../middleware/auth')
+const overwatch = require('overwatch-api');
 
 router.get("/", (req,res,next) => {
     return User.find().then(users => {
@@ -18,6 +19,7 @@ router.get('/:id', (req,res,next) => {
         res.status(400).send(response.message);
     })
 })
+
 
 router.post('/',(req,res,next) => {
     return User.create(req.body).then(function(response){
@@ -42,6 +44,17 @@ router.delete('/:id',(req,res,next) => {
             title:"Success",
             message:"Successfully Deleted!"
         });
+    });
+})
+
+router.post('/search',(req,res,next) =>{
+    console.log(req.body)
+    const platform = req.body.platform;
+    const region = req.body.region;
+    const tag = req.body.tag;
+    
+    overwatch.getProfile(platform, region, tag, (json) => {
+     return res.status(200).json(json)
     });
 })
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER } from './types'
-import * as jwtDecode from 'jwt-decode';
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN } from './types'
+import jwtDecode from 'jwt-decode';
 
 export function setAuthorizationToken(token) {
   if (token) {
@@ -15,8 +15,9 @@ export function login(data) {
   let BASE_URL = 'http://localhost:3000'
   return dispatch => {
     return axios.post(`${BASE_URL}/api/auth/login`, data).then(res => {
-      const token = res.data;
-      console.log(token);
+      const token = JSON.stringify(res.data.token);
+      const decode = jwtDecode(token)
+      console.log(decode)
       localStorage.setItem('jwtToken', token);
       setAuthorizationToken(token);
       // dispatch(setCurrentUser(jwtDecode(token)));
@@ -49,16 +50,18 @@ export function login(data) {
         const token = res.data;
         console.log(token);
         localStorage.setItem('jwtToken', token);
-        setAuthorizationToken(token);
         // dispatch(setCurrentUser(jwtDecode(token)));
       });
     }
   }
 
   export function search(data){
-    let BASE_URL = 'http://localhost:3000/api/auth/search'
+    var answer = localStorage.getItem('jwtToken')
+    answer = JSON.parse(answer)
+    console.log(answer)
+    let BASE_URL = 'http://localhost:3000/api/users/search'
     return dispatch => {
-    return axios.post(BASE_URL,data).then(res => {
+    return axios.post(BASE_URL,data, { headers: {"Authorization" : `Bearer ${answer}`} }).then(res => {
       const information = res.data;
       console.log(information);
       return dispatch(setSearchUser(information))
@@ -66,9 +69,23 @@ export function login(data) {
     }
   }
 
+  export function setCurrentToken(token){
+    return{
+      type:SET_CURRENT_TOKEN,
+      token
+    };
+  }
+
   export function setCurrentUser(user) {
     return {
       type: SET_CURRENT_USER,
+      user
+    };
+  }
+  
+  export function setCurrentName(user) {
+    return {
+      type: SET_CURRENT_NAME,
       user
     };
   }
