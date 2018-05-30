@@ -19,10 +19,6 @@ handleSignup = (e) => {
     e.preventDefault()
     this.props.history.push('signup')
 }
-handleFB = (e) => {
-    e.preventDefault()
-    this.props.history.push('dashboard')
-}
 
 
 render(){
@@ -49,11 +45,6 @@ render(){
 }
 
 
-const mapStateToProps = (state) => { 
-    return { 
-      user: state.auth.user ,
-      isAuthenticated: state.auth.isAuthenticated
-      };
-  };
+
   
-  export default connect(mapStateToProps,null)(Landing);
+  export default Landing

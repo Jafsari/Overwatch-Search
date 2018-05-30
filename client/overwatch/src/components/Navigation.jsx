@@ -11,7 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import { Route, Link } from "react-router-dom";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -33,6 +33,7 @@ export default class Navigation extends Component {
   }
   render() {
     return (
+      <Router>
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand  tag={Link}
@@ -80,6 +81,7 @@ export default class Navigation extends Component {
           </Collapse>
         </Navbar>
       </div>
+      </Router>
     );
   }
 }

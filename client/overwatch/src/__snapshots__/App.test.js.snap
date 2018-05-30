@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="login"
+>
+  <form
+    className="login2"
+  >
+    <div>
+      <div
+        className="form-group"
+        onSubmit={[Function]}
+      >
+        <label
+          className=""
+          htmlFor="exampleEmail"
+        >
+          Username
+        </label>
+        <input
+          className="form-control"
+          id="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter username"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className=""
+          htmlFor="examplePassword"
+        >
+          Password
+        </label>
+        <input
+          className="form-control"
+          id="password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter password"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[` 2`] = `
+<div>
+  <button
+    className="btn btn-info"
+    onClick={[Function]}
+    type="button"
+  >
+     More Info
+  </button>
+</div>
+`;
+
+exports[` 3`] = `
+<div
+  className="chat"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <img
+      alt="logo"
+      className={undefined}
+      src={undefined}
+    />
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-8"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="card-body"
+            >
+              <div
+                className="card-title"
+              >
+                <strong />
+              </div>
+              <hr />
+              <div
+                className="messages"
+              />
+            </div>
+            <div
+              className="card-footer"
+            >
+              <input
+                className="form-control"
+                onChange={[Function]}
+                placeholder="Message"
+                type="text"
+                value=""
+              />
+              <br />
+              <button
+                className="btn btn-primary form-control"
+                onClick={[Function]}
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div
+    className="compNavigation"
+  >
+    <div>
+      <nav
+        className="navbar navbar-expand-md navbar-light bg-light"
+      >
+        <a
+          className="navbar-brand"
+          href="/search"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <button
+          className="navbar-toggler"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          style={Object {}}
+        >
+          <ul
+            className="ml-auto navbar-nav"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/general"
+                onClick={[Function]}
+              >
+                General Chat
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/competitive"
+                onClick={[Function]}
+              >
+                Competitive
+              </a>
+            </li>
+            <li
+              className="dropdown nav-item"
+              onKeyDown={[Function]}
+            >
+              <a
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle nav-link"
+                href="#"
+                onClick={[Function]}
+              >
+                Options
+              </a>
+              <div
+                aria-hidden={true}
+                className="dropdown-menu"
+                role="menu"
+                tabIndex="-1"
+                x-placement={undefined}
+              >
+                <a
+                  className="dropdown-item"
+                  href="/grandmaster"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  GrandMasters
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/master"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Masters
+                </a>
+                <button
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type="button"
+                />
+                <a
+                  className="dropdown-item"
+                  href="/diamond"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Diamond
+                </a>
+                <div
+                  className="dropdown-divider"
+                  onClick={[Function]}
+                  tabIndex="-1"
+                  type={undefined}
+                />
+                <a
+                  className="dropdown-item"
+                  href="/dashboard"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Home
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+`;

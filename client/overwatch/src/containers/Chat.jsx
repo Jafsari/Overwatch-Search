@@ -40,9 +40,8 @@ class Chat extends React.Component{
 
     }
 
-
-    
     render(){
+        
         return (
           <div className="chat">
           <form onSubmit={this.sendMessage} >
@@ -57,6 +56,7 @@ class Chat extends React.Component{
                                 <div className="messages">
                                 {this.state.messages.map(message => {
                                         return (
+                                            
                                             <div className="message"> <div><img src={this.props.logo} className={this.props.logoStyle}/></div> <strong>{message.author}</strong>: {message.message}</div>
                                      
                                         )

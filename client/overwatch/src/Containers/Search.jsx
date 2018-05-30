@@ -46,10 +46,6 @@ information = (cb) => {
     cb
 }
 
-
-    /* const platform = 'pc';
-    const region = 'us';
-    const tag = 'Calvin-1337';*/
 handleSearch =(e) => {
 e.preventDefault();
 this.information(setTimeout(this.route,0))
