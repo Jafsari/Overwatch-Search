@@ -47,7 +47,8 @@ export function login(data) {
     let BASE_URL = 'http://localhost:3000'
     return dispatch => {
       return axios.post(`${BASE_URL}/api/auth/signup`, data).then(res => {
-        const token = res.data;
+        const token = JSON.stringify(res.data.token);
+        const decode = jwtDecode(token)
         console.log(token);
         localStorage.setItem('jwtToken', token);
         // dispatch(setCurrentUser(jwtDecode(token)));

@@ -39,6 +39,7 @@ class Signup extends Component{
                 console.log(err.message)
             }
         );
+
         this.props.setCurrentUser(this.state.username)
             this.clear();
             console.log(`You're in!`)
@@ -85,5 +86,5 @@ const mapStateToProps = (state) => {
       };
   };
   
-  export default connect(mapStateToProps,null)(Signup);;
+  export default connect(mapStateToProps,actions)(Signup);;
 
