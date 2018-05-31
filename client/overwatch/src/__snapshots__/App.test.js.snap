@@ -262,3 +262,723 @@ exports[` 3`] = `
   </div>
 </div>
 `;
+
+exports[` 4`] = `
+<div
+  className="Searchlayout form-group"
+>
+  <label
+    className=""
+    htmlFor="exampleEmail"
+  >
+    Search for Player
+  </label>
+  <input
+    className="SearchSpace is-valid form-control"
+    id="platform"
+    name="platform"
+    onChange={[Function]}
+    placeholder="Enter platform"
+    type="text"
+    value={undefined}
+  />
+  <input
+    className="SearchSpace is-valid form-control"
+    id="region"
+    name="region"
+    onChange={[Function]}
+    placeholder="Enter region"
+    type="text"
+    value={undefined}
+  />
+  <input
+    className="SearchSpace is-valid form-control"
+    id="tag"
+    name="tag"
+    onChange={[Function]}
+    placeholder="Enter tag"
+    type="text"
+    value={undefined}
+  />
+  <button
+    className="SearchMutton btn btn-info"
+    onClick={[Function]}
+    type="button"
+  >
+    Search
+  </button>
+  <div
+    className="formLay valid-feedback"
+  >
+    Search Players for their Info!
+  </div>
+  <small
+    className="formLay form-text text-muted"
+  >
+     Remember to keep stalking at a minimum :)
+  </small>
+  <div>
+    <div>
+      <nav
+        className="navbar navbar-expand-md navbar-light bg-light"
+      >
+        <a
+          className="navbar-brand"
+          href="/search"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <button
+          className="navbar-toggler"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          style={Object {}}
+        >
+          <ul
+            className="ml-auto navbar-nav"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/general"
+                onClick={[Function]}
+              >
+                General Chat
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/competitive"
+                onClick={[Function]}
+              >
+                Competitive
+              </a>
+            </li>
+            <li
+              className="dropdown nav-item"
+              onKeyDown={[Function]}
+            >
+              <a
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle nav-link"
+                href="#"
+                onClick={[Function]}
+              >
+                Options
+              </a>
+              <div
+                aria-hidden={true}
+                className="dropdown-menu"
+                role="menu"
+                tabIndex="-1"
+                x-placement={undefined}
+              >
+                <a
+                  className="dropdown-item"
+                  href="/grandmaster"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  GrandMasters
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/master"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Masters
+                </a>
+                <button
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type="button"
+                />
+                <a
+                  className="dropdown-item"
+                  href="/diamond"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Diamond
+                </a>
+                <div
+                  className="dropdown-divider"
+                  onClick={[Function]}
+                  tabIndex="-1"
+                  type={undefined}
+                />
+                <a
+                  className="dropdown-item"
+                  href="/dashboard"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Home
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 5`] = `
+<div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-7"
+      >
+        <div
+          className="card-cool"
+        >
+          <div>
+             
+            <div />
+             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="playerLayout"
+  >
+    <div>
+      <nav
+        className="navbar navbar-expand-md navbar-light bg-light"
+      >
+        <a
+          className="navbar-brand"
+          href="/search"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <button
+          className="navbar-toggler"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          style={Object {}}
+        >
+          <ul
+            className="ml-auto navbar-nav"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/general"
+                onClick={[Function]}
+              >
+                General Chat
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/competitive"
+                onClick={[Function]}
+              >
+                Competitive
+              </a>
+            </li>
+            <li
+              className="dropdown nav-item"
+              onKeyDown={[Function]}
+            >
+              <a
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle nav-link"
+                href="#"
+                onClick={[Function]}
+              >
+                Options
+              </a>
+              <div
+                aria-hidden={true}
+                className="dropdown-menu"
+                role="menu"
+                tabIndex="-1"
+                x-placement={undefined}
+              >
+                <a
+                  className="dropdown-item"
+                  href="/grandmaster"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  GrandMasters
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/master"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Masters
+                </a>
+                <button
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type="button"
+                />
+                <a
+                  className="dropdown-item"
+                  href="/diamond"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Diamond
+                </a>
+                <div
+                  className="dropdown-divider"
+                  onClick={[Function]}
+                  tabIndex="-1"
+                  type={undefined}
+                />
+                <a
+                  className="dropdown-item"
+                  href="/dashboard"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Home
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 6`] = `
+<div
+  className="signup"
+>
+  <form
+    className="login2"
+  >
+    <div>
+      <div
+        className="form-group"
+      >
+        <label
+          className=""
+          htmlFor="exampleEmail"
+        >
+          Username
+        </label>
+        <input
+          className="form-control"
+          id="username"
+          name="username"
+          onChange={[Function]}
+          placeholder="Enter username"
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className=""
+          htmlFor="examplePassword"
+        >
+          Password
+        </label>
+        <input
+          className="form-control"
+          id="password"
+          name="password"
+          onChange={[Function]}
+          placeholder="Enter password"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <div>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Signup
+      </button>
+    </div>
+  </form>
+</div>
+`;
+
+exports[` 7`] = `
+<div
+  className="Dashboard2"
+>
+  <div
+    className="dashboard"
+  >
+    <div>
+      <nav
+        className="navbar navbar-expand-md navbar-light bg-light"
+      >
+        <a
+          className="navbar-brand"
+          href="/search"
+          onClick={[Function]}
+        >
+          Search
+        </a>
+        <button
+          className="navbar-toggler"
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="navbar-toggler-icon"
+          />
+        </button>
+        <div
+          className="collapse navbar-collapse"
+          style={Object {}}
+        >
+          <ul
+            className="ml-auto navbar-nav"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/general"
+                onClick={[Function]}
+              >
+                General Chat
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                href="/competitive"
+                onClick={[Function]}
+              >
+                Competitive
+              </a>
+            </li>
+            <li
+              className="dropdown nav-item"
+              onKeyDown={[Function]}
+            >
+              <a
+                aria-expanded={false}
+                aria-haspopup={true}
+                className="dropdown-toggle nav-link"
+                href="#"
+                onClick={[Function]}
+              >
+                Options
+              </a>
+              <div
+                aria-hidden={true}
+                className="dropdown-menu"
+                role="menu"
+                tabIndex="-1"
+                x-placement={undefined}
+              >
+                <a
+                  className="dropdown-item"
+                  href="/grandmaster"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  GrandMasters
+                </a>
+                <a
+                  className="dropdown-item"
+                  href="/master"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Masters
+                </a>
+                <button
+                  className="dropdown-item"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type="button"
+                />
+                <a
+                  className="dropdown-item"
+                  href="/diamond"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Diamond
+                </a>
+                <div
+                  className="dropdown-divider"
+                  onClick={[Function]}
+                  tabIndex="-1"
+                  type={undefined}
+                />
+                <a
+                  className="dropdown-item"
+                  href="/dashboard"
+                  onClick={[Function]}
+                  tabIndex="0"
+                  type={undefined}
+                >
+                  Home
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div
+      className="inline"
+    >
+      <div>
+        <button
+          className="btn btn-info"
+          onClick={[Function]}
+          type="button"
+        >
+           More Info
+        </button>
+      </div>
+    </div>
+    <div
+      className="second"
+    >
+      <button
+        className="btn btn-warning"
+        onClick={[Function]}
+        type="button"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[` 8`] = `
+<div
+  className="format"
+>
+  <header>
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg"
+    />
+  </header>
+  <h1
+    className="App-title"
+  >
+    Welcome to OverChat
+  </h1>
+  <div />
+  <div>
+    <button
+      className="btn btn-info"
+      onClick={[Function]}
+      type="button"
+    >
+      Signup
+    </button>
+    <button
+      className="btn btn-warning"
+      onClick={[Function]}
+      type="button"
+    >
+       Login 
+    </button>
+  </div>
+  <p
+    className="App-intro"
+  >
+    Sign in to join the Competitive Overwatch Premier Community!
+  </p>
+</div>
+`;
+
+exports[` 9`] = `
+<div>
+  <nav
+    className="navbar navbar-expand-md navbar-light bg-light"
+  >
+    <a
+      className="navbar-brand"
+      href="/search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+    <button
+      className="navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="collapse navbar-collapse"
+      style={Object {}}
+    >
+      <ul
+        className="ml-auto navbar-nav"
+      >
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/general"
+            onClick={[Function]}
+          >
+            General Chat
+          </a>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/competitive"
+            onClick={[Function]}
+          >
+            Competitive
+          </a>
+        </li>
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Options
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu"
+            role="menu"
+            tabIndex="-1"
+            x-placement={undefined}
+          >
+            <a
+              className="dropdown-item"
+              href="/grandmaster"
+              onClick={[Function]}
+              tabIndex="0"
+              type={undefined}
+            >
+              GrandMasters
+            </a>
+            <a
+              className="dropdown-item"
+              href="/master"
+              onClick={[Function]}
+              tabIndex="0"
+              type={undefined}
+            >
+              Masters
+            </a>
+            <button
+              className="dropdown-item"
+              onClick={[Function]}
+              tabIndex="0"
+              type="button"
+            />
+            <a
+              className="dropdown-item"
+              href="/diamond"
+              onClick={[Function]}
+              tabIndex="0"
+              type={undefined}
+            >
+              Diamond
+            </a>
+            <div
+              className="dropdown-divider"
+              onClick={[Function]}
+              tabIndex="-1"
+              type={undefined}
+            />
+            <a
+              className="dropdown-item"
+              href="/dashboard"
+              onClick={[Function]}
+              tabIndex="0"
+              type={undefined}
+            >
+              Home
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+`;

@@ -33,11 +33,11 @@ export default class Navigation extends Component {
   }
   render() {
     return (
-      <Router>
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand  tag={Link}
-                to="/search">Search</NavbarBrand>
+                to="/search">Search
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -81,7 +81,6 @@ export default class Navigation extends Component {
           </Collapse>
         </Navbar>
       </div>
-      </Router>
     );
   }
 }
