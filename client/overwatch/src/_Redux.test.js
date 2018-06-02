@@ -5,6 +5,9 @@ import fetchMock from 'fetch-mock';
 import configureMockStore from 'redux-mock-store';
 import moxios from 'moxios';
 import expect from 'expect';
+import reducer from './reducers/authReducer.js';
+import searchReducer from './reducers/searchReducer.js';
+import {playerinfo} from './helper/help.js';
 
 
 describe('setCurrentUser', () => {
@@ -42,37 +45,66 @@ describe('setCurrentToken', () => {
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
 
-var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWFmZjhkYTNlZTMyMjEyOGMzYzQ3OWVhIiwiaWF0IjoxNTI3ODk3MDU1fQ.j-NitJaffApswaka3Imct_YMp3wIBidAWBQleavGrHo"
+// var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWFmZjhkYTNlZTMyMjEyOGMzYzQ3OWVhIiwiaWF0IjoxNTI3ODk3MDU1fQ.j-NitJaffApswaka3Imct_YMp3wIBidAWBQleavGrHo"
 
-describe('login action', () => {
+// describe('login action', () => {
 
-    beforeEach(function () {
-      moxios.install();
-    });
+//     beforeEach(function () {
+//       moxios.install();
+//     });
   
-    afterEach(function () {
-      moxios.uninstall();
-    });
+//     afterEach(function () {
+//       moxios.uninstall();
+//     });
   
-    it('should dispatch SET_CURRENT_USER and receive token', () => {
-      moxios.wait(() => {
-        const request = moxios.requests.mostRecent();
-        request.respondWith({
-          status: 200,
-          response:token
-        });
+//     it('should dispatch SET_CURRENT_USER and receive token', () => {
+//       moxios.wait(() => {
+//         const request = moxios.requests.mostRecent();
+//         request.respondWith({
+//           status: 200,
+//           response:token
+//         });
+//       });
+  
+//       const expectedActions = [
+//         {type: actions.SET_CURRENT_USER, user:token}
+
+//       ];
+  
+//       const store = mockStore({ user: {} })
+  
+//       return store.dispatch(actions.login()).then(() => {
+//         // return of async actions
+//         expect(store.getActions()).toEqual(expectedActions);
+//       });
+//     });
+//   });
+
+describe('auth reducer', () => {
+    var user = 'justin'
+    it('should return the initial state', () => {
+      expect(reducer(undefined, {})).toEqual( {"isAuthenticated": false, "token": {}, "user": {}});
+    });
+
+    it('should handle SET_CURRENT_USER', () => {
+        const successAction = {
+          type: types.SET_CURRENT_USER,
+          user, // important to pass correct payload, that's what the tests are for ;)
+        };
+        expect(reducer({}, successAction)).toEqual( {"isAuthenticated": true, "user": "justin"});
       });
-  
-      const expectedActions = [
-        {type: actions.SET_CURRENT_USER, user:token}
+    })
 
-      ];
-  
-      const store = mockStore({ user: {} })
-  
-      return store.dispatch(actions.login()).then(() => {
-        // return of async actions
-        expect(store.getActions()).toEqual(expectedActions);
-      });
+describe('search reducer', () => {
+    it ('should return the initial state', () => {
+        expect(reducer(undefined,{})).toEqual({"isAuthenticated": false, "token": {}, "user": {}})
     });
-  });
+    it('should handle data received from Overwatch API', () => {
+        const successAction = {
+            type:types.SET_SEARCH_USER,
+            playerinfo,
+        };
+        expect(reducer({},successAction)).toEqual({playerinfo})
+    })
+})
+    

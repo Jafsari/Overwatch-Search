@@ -12,3 +12,5 @@ export const clear = () => {
         password:""
     });
 }
+
+ const playerinfo = {username: "Calvin", level: 902, portrait: "https://d1u1mce87gyfbn.cloudfront.net/game/unlocks/0x02500000000013FE.png",rank:4497,Title:'Grandmaster'}
