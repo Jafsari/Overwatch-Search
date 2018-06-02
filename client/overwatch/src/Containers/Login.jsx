@@ -33,7 +33,7 @@ class Login extends Component{
     handleSubmit = (e) => {
         e.preventDefault()
         console.log(this.state)
-        this.props.login(this.state).then(
+        this.props.login(this.state,this.state.username).then(
             () => {
                 this.props.history.push('dashboard')
             },
@@ -41,8 +41,6 @@ class Login extends Component{
                 console.log(err.message)
             }
         );
-
-        this.props.setCurrentUser(this.state.username)
             this.clear();
             console.log(`You're in!`)
         

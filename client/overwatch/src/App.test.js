@@ -166,7 +166,7 @@ describe('renders Landing component correctly', () => {
   )
 );
 const tree = renderer.create(
-  <Router>
+<Router>
 <Landing store={store} />
 </Router>
 ).toJSON();

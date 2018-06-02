@@ -1,31 +1,10 @@
 import * as actions from './actions';
 import * as types from './actions/types.js';
-
-// export function setCurrentUser(user) {
-//     return {
-//       type: SET_CURRENT_USER,
-//       user
-//     };
-//   }
-
-// export function setCurrentName(user) {
-//     return {
-//       type: SET_CURRENT_NAME,
-//       user
-//     };
-//   }
-
-//   export function setSearchUser(information){
-//     return{
-//       type:SET_SEARCH_USER,
-//       information
-//     }
-//   }
-
-// export const SET_CURRENT_USER = 'SET_CURRENT_USER';
-// export const SET_SEARCH_USER ='SET_SEARCH_USER';
-// export const SET_CURRENT_NAME = 'SET_CURRENT_NAME';
-// export const SET_CURRENT_TOKEN = 'SET_CURRENT_TOKEN';
+import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
+import configureMockStore from 'redux-mock-store';
+import moxios from 'moxios';
+import expect from 'expect';
 
 
 describe('setCurrentUser', () => {
@@ -60,3 +39,40 @@ describe('setCurrentToken', () => {
         expect(actions.setCurrentToken(token)).toEqual(expectedAction)
     })
 })
+const middlewares = [thunk]
+const mockStore = configureMockStore(middlewares)
+
+var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNWFmZjhkYTNlZTMyMjEyOGMzYzQ3OWVhIiwiaWF0IjoxNTI3ODk3MDU1fQ.j-NitJaffApswaka3Imct_YMp3wIBidAWBQleavGrHo"
+
+describe('login action', () => {
+
+    beforeEach(function () {
+      moxios.install();
+    });
+  
+    afterEach(function () {
+      moxios.uninstall();
+    });
+  
+    it('should dispatch SET_CURRENT_USER and receive token', () => {
+      moxios.wait(() => {
+        const request = moxios.requests.mostRecent();
+        request.respondWith({
+          status: 200,
+          response:token
+        });
+      });
+  
+      const expectedActions = [
+        {type: actions.SET_CURRENT_USER, user:token}
+
+      ];
+  
+      const store = mockStore({ user: {} })
+  
+      return store.dispatch(actions.login()).then(() => {
+        // return of async actions
+        expect(store.getActions()).toEqual(expectedActions);
+      });
+    });
+  });

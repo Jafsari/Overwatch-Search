@@ -11,7 +11,7 @@ export function setAuthorizationToken(token) {
 }
 
 
-export function login(data) {
+export function login(data,second) {
   let BASE_URL = 'http://localhost:3000'
   return dispatch => {
     return axios.post(`${BASE_URL}/api/auth/login`, data).then(res => {
@@ -20,6 +20,7 @@ export function login(data) {
       console.log(decode)
       localStorage.setItem('jwtToken', token);
       setAuthorizationToken(token);
+      dispatch(setCurrentUser(second))
       // dispatch(setCurrentUser(jwtDecode(token)));
       // try{
       // dispatch(setCurrentUser(jwtDecode(token)))

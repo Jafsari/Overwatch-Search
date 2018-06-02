@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
+import * as actions from '../actions';
 import logo from '../logo.svg';
 import { Button } from 'reactstrap';
 
 
 class Landing extends Component {
-componentDidMount(){
+
+    componentDidMount(){
     if (this.props.isAuthenticated){
+        console.log('hi')
         this.props.history.push('dashboard')
     }
 }
@@ -46,5 +49,11 @@ render(){
 
 
 
+const mapStateToProps = (state) => { 
+    return { 
+      user: state.auth.user ,
+      isAuthenticated: state.auth.isAuthenticated
+      };
+  };
   
-  export default Landing
+  export default connect(mapStateToProps,actions)(Landing);
