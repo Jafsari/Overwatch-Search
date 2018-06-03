@@ -15,9 +15,6 @@ componentDidMount(){
         this.props.history.push('dashboard')
     }
 }
-componentWillUnmount(){
-return <Progress/>
-}
 handleLogin = (e) => {
     e.preventDefault()
     this.props.history.push('login')

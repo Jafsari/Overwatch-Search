@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Landing from './containers/Landing.jsx'
 import { Route, BrowserRouter, Switch} from 'react-router-dom'
 import Dashboard from './containers/Dashboard.jsx'
-import Signup from './containers/Signup.jsx'
-import Login from './containers/Login.jsx'
+import Signup from './components/Signup.jsx'
+import Login from './components/Login.jsx'
 import Competitive from './components/Competitive.jsx'
 import Diamond from './components/Diamond.jsx'
 import Master from './components/Master.jsx'
@@ -23,7 +23,7 @@ class App extends Component {
         <Route exact path='/' component={Landing} />
         <Route exact path="/dashboard" component={requireAuth(Dashboard)} />
         <Route exact path="/signup" component = {Signup} />
-        <Route exact path="/login" component ={Login} />
+        <Route exact path="/login" component ={Login}   />
         <Route exact path="/competitive" component={requireAuth(Competitive)} />
         <Route exact path="/general" component={requireAuth(General)} />
         <Route exact path="/grandmaster" component={requireAuth(Grandmaster)} />

@@ -33,7 +33,7 @@ class Chat extends React.Component{
             ev.preventDefault();
             console.log(this.state.message.length)
             if (this.state.message.length === 0){
-                alert('Please write a message')
+                return;
             } else {
             this.socket.emit('SEND_MESSAGE', {
                 author: this.state.username,

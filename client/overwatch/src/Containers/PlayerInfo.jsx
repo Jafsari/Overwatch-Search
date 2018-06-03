@@ -11,8 +11,6 @@ class Playerinfo extends Component{
             data:false
         }
     }
-
-
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
         if(nextProps !== undefined) {  

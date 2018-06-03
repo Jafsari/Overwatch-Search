@@ -279,8 +279,10 @@ transform:scale(0.7);
         position:relative;
         right:50px;
       }
-
-      .Progress{
-        position:relative;
-        top:300px;
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
       }
+
+      

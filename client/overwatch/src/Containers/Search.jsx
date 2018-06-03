@@ -48,7 +48,11 @@ information = (cb) => {
 
 handleSearch =(e) => {
 e.preventDefault();
+if (this.state.platform.length === 0 || this.state.region.length === 0 || this.state.tag.length === 0){
+    alert('Please fill out the forms')
+} else {
 this.information(setTimeout(this.route,0))
+}
 
 }
 

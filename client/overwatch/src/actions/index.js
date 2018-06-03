@@ -21,14 +21,6 @@ export function login(data,second) {
       localStorage.setItem('jwtToken', token);
       setAuthorizationToken(token);
       dispatch(setCurrentUser(second))
-      // dispatch(setCurrentUser(jwtDecode(token)));
-      // try{
-      // dispatch(setCurrentUser(jwtDecode(token)))
-      // }
-      // catch(e) {
-      //   dispatch(setCurrentUser(token))
-      //   console.log(e.message)
-      // }
     });
   }
 }
@@ -67,6 +59,10 @@ export function login(data,second) {
       const information = res.data;
       console.log(information);
       return dispatch(setSearchUser(information))
+      return dispatch(this.props.history.push('playerinfo'))
+    }).catch(e => {
+      console.log(e)
+      return;
     })
     }
   }
