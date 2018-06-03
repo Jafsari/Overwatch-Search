@@ -62,7 +62,8 @@ export function login(data,second) {
       return dispatch(this.props.history.push('playerinfo'))
     }).catch(e => {
       console.log(e)
-      return;
+      alert('There was a problem with your request')
+      dispatch(this.props.history.push('search'))
     })
     }
   }

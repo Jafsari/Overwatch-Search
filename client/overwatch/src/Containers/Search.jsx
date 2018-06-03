@@ -35,15 +35,18 @@ route = () => {
     this.props.history.push('player')
 }
 
-information = (cb) => {
+information = () => {
+ var that = false
     this.props.search(this.state).then(res => {
         let info = res.data
         this.props.setSearchUser(info.username)
+        that = true;
     })
     .catch(err => {
         console.log(err.message)
     })
-    cb
+    console.log(that)
+    this.props.history.push('player')
 }
 
 handleSearch =(e) => {
@@ -51,7 +54,7 @@ e.preventDefault();
 if (this.state.platform.length === 0 || this.state.region.length === 0 || this.state.tag.length === 0){
     alert('Please fill out the forms')
 } else {
-this.information(setTimeout(this.route,0))
+this.information(setTimeout(0))
 }
 
 }

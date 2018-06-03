@@ -166,7 +166,7 @@ import { Button } from 'reactstrap';
               ref="password"
               value={ this.state.password } 
               onChange={ this.handleChange }
-              pattern=".{5,}"
+              pattern=".{1,}"
               placeholder='Enter password'
               required />
             <div className="error" id="passwordError" />

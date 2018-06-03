@@ -23,10 +23,10 @@ Landing:
 ![screen shot 2018-05-23 at 1 57 18 pm](https://user-images.githubusercontent.com/28635782/40461442-50978250-5ec0-11e8-999c-0b95f7b3f238.png)
 
 Sign Up:
-![screen shot 2018-05-23 at 1 57 24 pm](https://user-images.githubusercontent.com/28635782/40461673-5860d332-5ec1-11e8-9ffa-1c2302e11668.png)
+![screen shot 2018-06-03 at 2 13 31 am](https://user-images.githubusercontent.com/28635782/40885043-0e26b488-66d4-11e8-8dbe-2f334a5b86b7.png)
 
 Login:
-![screen shot 2018-05-23 at 3 40 21 pm](https://user-images.githubusercontent.com/28635782/40461645-2ef9e9fc-5ec1-11e8-9cf6-590b7b968e13.png)
+![screen shot 2018-06-03 at 2 13 19 am](https://user-images.githubusercontent.com/28635782/40885041-0bb3da00-66d4-11e8-84ec-b684c5e8d36a.png)
 
 Dashboard:
 ![screen shot 2018-05-23 at 1 57 42 pm](https://user-images.githubusercontent.com/28635782/40461703-7ea149d2-5ec1-11e8-9527-69959c1c3bfa.png)
@@ -54,5 +54,4 @@ Diamond Chat:
 
 
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This App is made a gift back to the amazing Overwatch Community! :)

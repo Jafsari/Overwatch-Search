@@ -3,6 +3,7 @@ import * as actions from '../actions'
 import React, { Component } from 'react';
 import { Button, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css';
+import 
 
 class SignPage extends Component{
     constructor(props){
@@ -32,7 +33,7 @@ class SignPage extends Component{
 
     handleLogin = (e) => {
         e.preventDefault()
-        console.log(this.state)
+        console.log(this.stateC)
         this.props.login(this.state).then(
             () => {
                 this.props.history.push('dashboard')
