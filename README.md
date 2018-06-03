@@ -54,6 +54,6 @@ Diamond Chat:
 
 
 
-This App is made a gift back to the amazing Overwatch Community! :)
+This App is a gift back to the amazing Overwatch Community! :)
 
 The fan-art is work of other artists, and I do not take any credit for the beatiful pieces. 
