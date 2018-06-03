@@ -25,3 +25,12 @@
   top:250px;
   right:30px;
 }
+
+.SearchBackground {
+  text-align: center;
+  background-image: url(pics/reinhardt-shield.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}

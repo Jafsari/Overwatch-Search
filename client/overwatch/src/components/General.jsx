@@ -5,7 +5,7 @@ import grand from '../logos/grandmaster.png'
 import Chat from '../containers/Chat.jsx'
 
 const ChatGeneral = () => {
-        return<div>
+        return<div className="GChat">
             <Chat 
             name='General Chat' 
             image={Rein} 

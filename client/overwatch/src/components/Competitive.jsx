@@ -5,7 +5,7 @@ import grand from '../logos/grandmaster.png'
 import Chat from '../containers/Chat.jsx'
 
 const CompetitiveChat = () => {
-      return<div>
+      return<div className="CChat">
           <Chat 
           name='Competitive Chat' 
           image={comp} 

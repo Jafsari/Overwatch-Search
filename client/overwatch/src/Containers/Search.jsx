@@ -61,6 +61,7 @@ this.information(setTimeout(0))
 
 render(){
 return(
+    <div className="SearchBackground">
     <FormGroup className="Searchlayout">
 <Label for="exampleEmail">Search for Player</Label>
 
@@ -98,6 +99,7 @@ return(
             <Navigation />
             </div>
 </FormGroup>
+</div>
         )
     }
 

@@ -4,9 +4,9 @@ import diamond from '../logos/diamond.png'
 import Chat from '../containers/Chat.jsx'
 
 const ChatDiamond = () => {
-        return<div>
+        return<div className="DiaChat">
             <Chat 
-            name='Diamond' 
+            name='Diamond Chat' 
             image={diamond} 
             logo={diamond} 
             imageStyle={'diamond'} 

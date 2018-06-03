@@ -6,9 +6,62 @@
   background-position:center;
   background-attachment: fixed;
 }
+
+.SearchBackground {
+  text-align: center;
+  background-image: url(pics/reinhardt-shield.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.GChat {
+  text-align: center;
+  background-image: url(pics/roadhog-junk.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+.CChat {
+  text-align: center;
+  background-image: url(pics/bridgette.jpeg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+.DiaChat {
+  text-align: center;
+  background-image:url(pics/anime-tracer.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+.MasChat {
+  text-align: center;
+  background-image: url(pics/junkrat.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+.GrandMasChat {
+  text-align: center;
+  background-image: url(pics/Dva.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
+
 .Dashboard2{
   text-align: center;
-  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatch-league.jpg);
+  background-image:url(pics/overwatch-league.jpg);
   height:100vh;
   background-size:cover;
   background-position:center;

@@ -25,7 +25,7 @@ class Playerinfo extends Component{
     render(){
         console.log(this.state)
         const information = (this.state.data ? (
-            <div >
+            <div  >
                        <div className="container">
            <div className="row">
                <div className="col-7">
@@ -55,7 +55,7 @@ class Playerinfo extends Component{
            </div>
           ));
         return(
-        <div >
+        <div className="SearchBackground">
         <div> {information} </div>
             </div>
                       
