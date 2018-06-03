@@ -50,7 +50,6 @@ import { Button } from 'reactstrap';
             console.log(`You're in!`)
     }
     handleSignup = (e) => {
-        e.preventDefault()
         console.log(this.state)
         this.props.signup(this.state).then(
             () => {
@@ -71,13 +70,14 @@ import { Button } from 'reactstrap';
       console.log('component state', JSON.stringify(this.state));
       if (!this.showFormErrors()) {
         console.log('form is invalid: do not submit');
-          if (this.props.current === 'Login')
-        this.handleSubmitLogin()
       }
+       else {
+        if (this.props.current === 'Login')
+        this.handleSubmitLogin()
+      
       if (this.props.current === 'Signup'){
           this.handleSignup()
       }
-       else {
         console.log('form is valid: submit');
       }
     }
@@ -88,10 +88,11 @@ import { Button } from 'reactstrap';
       
       inputs.forEach(input => {
         input.classList.add('active');
-        
+        console.log(inputs)
+        console.log(isInputValid)
         const isInputValid = this.showInputError(input.name);
         
-        if (!isInputValid) {
+        if (this.state.username.length < 1 || this.state.username.length > 12 || this.state.password.length < 1 || this.state.password.length > 12) {
           isFormValid = false;
         }
       });
@@ -136,7 +137,7 @@ import { Button } from 'reactstrap';
             return   <Button onClick ={this.handleSubmit} color="danger">Login</Button>
         } else {
             if (this.props.current === 'Signup'){
-                return       <Button onClick ={this.handleSubmit} color="primary">Signup</Button>
+            return   <Button onClick ={this.handleSubmit} color="primary">Signup</Button>
             }
         }
     }
@@ -144,7 +145,7 @@ import { Button } from 'reactstrap';
     render() {
 
       return (
-        <form novalidate>
+        <form noValidate>
           <div className="form-group">
             <label id="usernameLabel">Username</label>
             <input className="form-control"
