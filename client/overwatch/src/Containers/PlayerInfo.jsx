@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import'../player.css'
 import Navigation from '../components/Navigation.jsx'
+import Progress from '../components/Progress.jsx'
 
 class Playerinfo extends Component{
     constructor(props){
@@ -27,6 +28,10 @@ class Playerinfo extends Component{
         console.log(this.state)
         const information = (this.state.data ? (
             <div >
+                       <div className="container">
+           <div className="row">
+               <div className="col-7">
+               <div className="card-cool">
             <div className="player" >
             <div className="card-title"><strong>Player Information</strong></div>
             <div><strong>Username:</strong>{this.props.information.username}</div>
@@ -39,25 +44,23 @@ class Playerinfo extends Component{
             <img  src={this.props.information.competitive.rank_img} />
             </div>
             </div>
+            </div>
+            </div>
+            </div>
+            <div className="playerLayout">
+            <Navigation />
+            </div>
+            </div>
           ) : (
-            <div></div> 
+            <div className='Progress' >
+           <Progress/>
+           </div>
           ));
         return(
         <div >
-       <div className="container">
-           <div className="row">
-               <div className="col-7">
-                  
-                       <div className="card-cool">
-                                <div> {information} </div>
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-                           <div className="playerLayout">
-            <Navigation />
+        <div> {information} </div>
             </div>
-                           </div>
+                      
                         
         )
     }

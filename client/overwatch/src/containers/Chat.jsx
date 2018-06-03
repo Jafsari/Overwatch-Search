@@ -2,8 +2,9 @@ import React from "react";
 import io from "socket.io-client";
 import '../App.css'
 import { connect } from 'react-redux';
-import Navigation from '../components/Navigation.jsx'
-import Infinite from 'react-infinite'
+import Navigation from '../components/Navigation.jsx';
+import Infinite from 'react-infinite';
+import { Alert } from 'reactstrap';
 
 
 class Chat extends React.Component{
@@ -30,6 +31,10 @@ class Chat extends React.Component{
 
         this.sendMessage = ev => {
             ev.preventDefault();
+            console.log(this.state.message.length)
+            if (this.state.message.length === 0){
+                alert('Please write a message')
+            } else {
             this.socket.emit('SEND_MESSAGE', {
                 author: this.state.username,
                 message: this.state.message
@@ -37,6 +42,7 @@ class Chat extends React.Component{
             this.setState({message: ''});
 
         }
+    }
 
     }
 

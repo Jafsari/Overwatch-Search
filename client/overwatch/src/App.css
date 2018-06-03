@@ -279,3 +279,8 @@ transform:scale(0.7);
         position:relative;
         right:50px;
       }
+
+      .Progress{
+        position:relative;
+        top:300px;
+      }

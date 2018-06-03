@@ -19,3 +19,9 @@
   top:486.4px;
   color: white;
 }
+
+.Progress{
+  position:relative;
+  top:250px;
+  right:30px;
+}

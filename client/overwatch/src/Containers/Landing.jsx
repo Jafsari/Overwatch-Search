@@ -3,16 +3,20 @@ import { connect } from 'react-redux';
 import '../App.css';
 import * as actions from '../actions';
 import logo from '../logo.svg';
+import Progress from '../components/Progress.jsx';
 import { Button } from 'reactstrap';
 
 
 class Landing extends Component {
 
-    componentDidMount(){
+componentDidMount(){
     if (this.props.isAuthenticated){
         console.log('hi')
         this.props.history.push('dashboard')
     }
+}
+componentWillUnmount(){
+return <Progress/>
 }
 handleLogin = (e) => {
     e.preventDefault()
