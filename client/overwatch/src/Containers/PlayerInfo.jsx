@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import'../player.css'
 import Navigation from '../components/Navigation.jsx'
 import Progress from '../components/Progress.jsx'
+import {withRouter} from "react-router-dom";
+import { compose } from 'redux';
 
 class Playerinfo extends Component{
     constructor(props){
@@ -13,12 +15,16 @@ class Playerinfo extends Component{
     }
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
-        if(nextProps !== undefined) {  
+        if(nextProps !== undefined && nextProps.information.username) {  
             (this.setState({
                 data:true
             }));
-        } 
-      }
+        } else {
+            console.log('cool')
+            this.props.history.push('search')
+            alert('Bad Request')
+        }
+    }
       
 
 
@@ -71,4 +77,10 @@ const mapStateToProps = (state) => {
       };
   };
   
-  export default connect(mapStateToProps,null)(Playerinfo);
+
+  export default compose(
+  connect(mapStateToProps,null),
+  withRouter
+  )
+  (Playerinfo);
+

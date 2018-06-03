@@ -5,6 +5,8 @@ import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reacts
 import '../App.css'
 import Navigation from '../components/Navigation.jsx'
 import jwtDecode from 'jwt-decode';
+import {withRouter} from "react-router-dom";
+import { compose } from 'redux';
 
 class Search extends Component{
 constructor(props){
@@ -35,18 +37,26 @@ route = () => {
     this.props.history.push('player')
 }
 
+
 information = () => {
  var that = false
+ var self = this
+ var check = true
+ let success;
     this.props.search(this.state).then(res => {
         let info = res.data
         this.props.setSearchUser(info.username)
-        that = true;
-    })
+       })
     .catch(err => {
         console.log(err.message)
+        check = false
     })
-    console.log(that)
-    this.props.history.push('player')
+    if (check === undefined){
+        return;
+    } else {
+    self.props.history.push('player')
+    console.log(check)
+    }
 }
 
 handleSearch =(e) => {
@@ -94,7 +104,7 @@ return(
 
  <Button className="SearchMutton" onClick ={this.handleSearch} color="info">Search</Button>
 <FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
-<FormText className="formLay"> Remember to keep stalking at a minimum :)</FormText>
+<FormText className="formLay" > Remember to keep stalking at a minimum :)</FormText>
 <div >
             <Navigation />
             </div>
@@ -105,4 +115,10 @@ return(
 
 }
 
-export default connect(null,actions)(Search);
+export default compose(
+connect(null,actions),
+withRouter
+)
+(Search);
+
+

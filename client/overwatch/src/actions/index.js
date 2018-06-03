@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE } from './types'
 import jwtDecode from 'jwt-decode';
 
 export function setAuthorizationToken(token) {
@@ -62,8 +62,7 @@ export function login(data,second) {
       return dispatch(this.props.history.push('playerinfo'))
     }).catch(e => {
       console.log(e)
-      alert('There was a problem with your request')
-      dispatch(this.props.history.push('search'))
+      return dispatch(SET_SEARCH_FAILURE)
     })
     }
   }
@@ -75,10 +74,17 @@ export function login(data,second) {
     };
   }
 
-  export function setCurrentUser(user) {
+  export function SET_SEARCH_FALIURE(information){
+    return{
+      type:SET_SEARCH_FAILURE,
+      payload:'true'
+    }
+  }
+
+  export function setCurrentUser() {
     return {
       type: SET_CURRENT_USER,
-      user
+      payload:true
     };
   }
   

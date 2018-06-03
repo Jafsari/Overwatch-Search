@@ -31,4 +31,11 @@ render(){
         )
     }
 }
-export default Login;
+const mapStateToProps = (state) => { 
+    return { 
+      user: state.auth.user ,
+      isAuthenticated: state.auth.isAuthenticated
+      };
+  };
+  
+  export default connect(mapStateToProps,null)(Login);
