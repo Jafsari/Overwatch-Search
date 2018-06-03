@@ -10,10 +10,6 @@ export default (state = DEFAULT_STATE, action) => {
       return {
         playerinfo:action.information
       };
-    case SET_SEARCH_FAILURE:
-    return{
-        playerinfo: !!(Object.keys(action.payload).length)
-    };
     default:
       return state;
   }

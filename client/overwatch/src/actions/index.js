@@ -62,6 +62,7 @@ export function login(data,second) {
       return dispatch(this.props.history.push('playerinfo'))
     }).catch(e => {
       console.log(e)
+      alert('There was a problem with your request')
       return dispatch(SET_SEARCH_FAILURE)
     })
     }
@@ -77,14 +78,14 @@ export function login(data,second) {
   export function SET_SEARCH_FALIURE(information){
     return{
       type:SET_SEARCH_FAILURE,
-      payload:'true'
+      information
     }
   }
 
-  export function setCurrentUser() {
+  export function setCurrentUser(user) {
     return {
       type: SET_CURRENT_USER,
-      payload:true
+      user
     };
   }
   
