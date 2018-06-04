@@ -22,7 +22,6 @@ class Playerinfo extends Component{
         } else {
             console.log('cool')
             this.props.history.push('search')
-            alert('Bad Request')
         }
     }
       

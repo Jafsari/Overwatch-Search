@@ -20,7 +20,7 @@ Justin Afsari
 
 
 Landing:
-![screen shot 2018-05-23 at 1 57 18 pm](https://user-images.githubusercontent.com/28635782/40461442-50978250-5ec0-11e8-999c-0b95f7b3f238.png)
+![screen shot 2018-06-04 at 3 49 29 pm](https://user-images.githubusercontent.com/28635782/40945800-2c8ce1d6-680f-11e8-883e-b7cb29bd75c6.png)
 
 Sign Up:
 ![screen shot 2018-06-03 at 2 13 31 am](https://user-images.githubusercontent.com/28635782/40885043-0e26b488-66d4-11e8-8dbe-2f334a5b86b7.png)

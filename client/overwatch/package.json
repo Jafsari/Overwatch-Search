@@ -22,6 +22,7 @@
     "react-infinite-scroller": "^1.1.4",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
+    "react-s-alert": "^1.4.1",
     "react-scripts": "1.1.4",
     "react-test-renderer": "^16.4.0",
     "reactstrap": "^6.0.1",

@@ -61,7 +61,7 @@
 
 .Dashboard2{
   text-align: center;
-  background-image:url(pics/overwatch-league.jpg);
+  background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(pics/overwatch-league.jpg);
   height:100vh;
   background-size:cover;
   background-position:center;
