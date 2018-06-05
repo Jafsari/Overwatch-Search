@@ -160,10 +160,16 @@
 }
 
 .Searchlayout{
-  position: absolute;
+  display:flex;
+  flex-direction:column;
+  position:fixed;
+  top: 25%;
+  left: 32%;
+  color:white;
+  /* position: absolute;
   left:475px;
   top:200px;
-  color: white;
+  color: white; */
 
 }
 .chat{
@@ -216,16 +222,18 @@ margin-bottom:20px;
 }
 
 .SearchMutton{
-position:relative;
+/* position:relative;
 right:10px;
-bottom:10px;
+bottom:10px; */
 }
 
-.formLay{
-position:relative;
+.charmander{
+  color:red;
+/* position:relative;
 right:10px;
-bottom:10px;
+bottom:10px; */
 }
+
 
 .master{
 position:absolute;

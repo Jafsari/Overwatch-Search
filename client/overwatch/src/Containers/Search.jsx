@@ -104,7 +104,7 @@ return(
 
  <Button className="SearchMutton" onClick ={this.handleSearch} color="info">Search</Button>
 <FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
-<FormText className="formLay" > Remember to keep stalking at a minimum :)</FormText>
+<FormText className="charmander" > Remember to keep stalking at a minimum :)</FormText>
 <div >
             <Navigation />
             </div>
