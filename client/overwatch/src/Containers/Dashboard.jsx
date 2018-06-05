@@ -25,8 +25,6 @@ class Dashboard extends Component {
                 <Navigation />
                 <div className="inline">
                 <Modal />
-                </div>
-                <div className="second">
                 <Button onClick ={this.handleLogout} color="warning">Logout</Button>
                 </div>
                 </div>

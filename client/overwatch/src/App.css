@@ -116,26 +116,46 @@
 }
 
 .format {
-  position: absolute;
-  left:450px;
-  top:175px;
-  color: white;
+  color: white; 
+  display:flex;
+  flex-direction:column;
+  position: fixed;
+  top: 31%;
+  left: 37%;
+  margin-top: -50px;
+  margin-left: -100px;
 }
 
 .card-body{
   overflow:scroll;
 }
 .dashboard{
-  position: absolute;
+  display:flex;
+  flex-direction:column;
+  position: fixed;
+  top: 15%;
+  left: 40%;
+  margin-top: -50px;
+  margin-left: -100px;
+  color:white;
+  /* position: absolute;
   left:500px;
   top:50px;
-  color: white;
+  color: white; */
 }
 .login2{
-  position: absolute;
+  display:flex;
+  flex-direction:column;
+  position: fixed;
+  top: 31%;
+  left: 49%;
+  margin-top: -50px;
+  margin-left: -100px;
+  color:white;
+  /* position: absolute;
   left:610px;
   top:200px;
-  color: white;
+  color: white; */
 
 }
 
@@ -147,18 +167,20 @@
 
 }
 .chat{
+  /* display:flex;
+  flex-direction:column;
+  position:fixed;
+  top: 31%;
+  left: 49%; */
   position:relative;
   top:225px;
   left:155px;
 }
 
 .inline{
-  position:absolute;
-  left: 110px;
-}
-.second{
-  position:absolute;
-  right:128px;
+  display:flex;
+  justify-content:center;
+
 }
 
 @keyframes App-logo-spin {
@@ -295,6 +317,11 @@ transform:scale(0.7);
         width:50.7%
       }
       .compNavigation{
+        /* display:flex;
+        position:fixed;
+        bottom:22.5%;
+        right:39%; */
+        
         position: absolute;
         left:165px;
         bottom:1px;
