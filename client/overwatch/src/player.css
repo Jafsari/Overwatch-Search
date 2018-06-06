@@ -9,6 +9,10 @@
         background-color:white;
         
   }
+  .container{
+    display:flex;
+    flex-direction:column;
+  }
   .col7{
       background-color:white;
   }

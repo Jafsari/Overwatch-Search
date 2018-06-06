@@ -92,7 +92,7 @@ import { Button } from 'reactstrap';
         console.log(isInputValid)
         const isInputValid = this.showInputError(input.name);
         
-        if (this.state.username.length < 1 || this.state.username.length > 12 || this.state.password.length < 1 || this.state.password.length > 12) {
+        if (this.state.username.length < 4 || this.state.username.length > 12 || this.state.password.length < 4 || this.state.password.length > 12) {
           isFormValid = false;
         }
       });
@@ -166,7 +166,7 @@ import { Button } from 'reactstrap';
               ref="password"
               value={ this.state.password } 
               onChange={ this.handleChange }
-              pattern=".{1,}"
+              pattern=".{4,}"
               placeholder='Enter password'
               required />
             <div className="error" id="passwordError" />

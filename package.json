@@ -1,0 +1,23 @@
+{
+  "name": "overwatch-search",
+  "version": "1.0.0",
+  "description": "Description: OverChat is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches within specific ranks!",
+  "main": "index.js",
+  "dependencies": {
+    "enzyme": "^3.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jafsari/Overwatch-Search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jafsari/Overwatch-Search/issues"
+  },
+  "homepage": "https://github.com/Jafsari/Overwatch-Search#readme"
+}

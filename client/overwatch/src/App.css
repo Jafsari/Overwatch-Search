@@ -174,10 +174,7 @@
 }
 .chat{
   /* display:flex;
-  flex-direction:column;
-  position:fixed;
-  top: 31%;
-  left: 49%; */
+  flex-direction:column; */
   position:relative;
   top:225px;
   left:155px;
@@ -326,13 +323,13 @@ transform:scale(0.7);
       }
       .compNavigation{
         /* display:flex;
-        position:fixed;
+        position:relative;
         bottom:22.5%;
         right:39%; */
         
-        position: absolute;
+        position: relative;
         left:165px;
-        bottom:1px;
+        bottom:60px;
         color: black;
         width:50.7%
       }

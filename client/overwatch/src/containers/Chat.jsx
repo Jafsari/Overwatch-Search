@@ -80,10 +80,12 @@ class Chat extends React.Component{
                     </div>
                 </div>
             </div>
-            </form>
+          
             <div className="compNavigation">
             <Navigation />
+          
             </div>
+            </form>
             </div>
         );
     }
