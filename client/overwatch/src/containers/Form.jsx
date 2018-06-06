@@ -69,6 +69,7 @@ import { Button } from 'reactstrap';
       e.preventDefault();
       console.log('component state', JSON.stringify(this.state));
       if (!this.showFormErrors()) {
+        this.clear();
         console.log('form is invalid: do not submit');
       }
        else {
