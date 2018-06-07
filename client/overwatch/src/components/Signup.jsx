@@ -3,7 +3,7 @@ import * as actions from '../actions'
 import React, { Component } from 'react';
 import { Button, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css';
-import BasicForm from '../containers/Form.jsx';
+import BasicForm from '../Containers/Form.jsx';
 
 class Signup extends Component{
     constructor(props){

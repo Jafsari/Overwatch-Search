@@ -1,4 +1,4 @@
-.App {
+App {
   text-align: center;
   background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/bridgette.jpeg);
   height:100vh;
@@ -23,6 +23,13 @@
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.col-8{
+  position:absolute;
+  left:175px;
 }
 
 .CChat {
@@ -32,6 +39,9 @@
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
+
 }
 .DiaChat {
   text-align: center;
@@ -40,6 +50,8 @@
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
 }
 .MasChat {
   text-align: center;
@@ -48,6 +60,9 @@
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
+  display:flex;
+  flex-direction:column;
+
 }
 .GrandMasChat {
   text-align: center;
@@ -56,6 +71,9 @@
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
+    display:flex;
+  flex-direction:column;
+
 }
 
 
@@ -116,14 +134,15 @@
 }
 
 .format {
-  color: white; 
   display:flex;
   flex-direction:column;
   position: fixed;
   top: 31%;
-  left: 37%;
+  left: 39%;
   margin-top: -50px;
   margin-left: -100px;
+  color:white;
+  
 }
 
 .card-body{
@@ -164,7 +183,7 @@
   flex-direction:column;
   position:fixed;
   top: 25%;
-  left: 32%;
+  left: 36%;
   color:white;
   /* position: absolute;
   left:475px;
@@ -174,10 +193,11 @@
 }
 .chat{
   /* display:flex;
+  flex-direction:column;
+  justify-content:center; */
+  /* display:flex;
   flex-direction:column; */
-  position:relative;
-  top:225px;
-  left:155px;
+
 }
 
 .inline{
@@ -205,9 +225,13 @@
 }
 
 .grandmaster{
-position:absolute;
+/* position:absolute;
 top:-340px;
-right:700px;
+right:700px; */
+height:225px;
+width:225px;
+position:relative;
+left:-15px;
 -moz-transform:scale(0.5);
 -webkit-transform:scale(0.5);
 transform:scale(0.5);
@@ -232,19 +256,28 @@ bottom:10px; */
 }
 
 
+
 .master{
-position:absolute;
+/* position:absolute;
 top:-275px;
-right:780px;
+right:780px; */
+position:relative;
+height:225px;
+width:225px;
+left:-15px;
 -moz-transform:scale(0.7);
 -webkit-transform:scale(0.7);
 transform:scale(0.7);
 }
 
 .diamond{
-  position:absolute;
+  /* position:absolute;
   top:-275px;
-  right:780px;
+  right:780px; */
+height:225px;
+width:225px;
+position:relative;
+left:-15px;
   -moz-transform:scale(0.7);
   -webkit-transform:scale(0.7);
   transform:scale(0.7);
@@ -296,19 +329,24 @@ transform:scale(0.7);
     transform:scale(0.1);
   }
 
+
   .competitiveLogo{
-    position:absolute;
-    top:-230px;
-    right:800px;
-    -moz-transform:scale(0.7);
-    -webkit-transform:scale(0.7);
-    transform:scale(0.7);
+    /* position:absolute;
+    top:50px;
+    right:800px; */
+    position:relative;
+    bottom:30px;
+    height:225px;
+    left:-15px;
+    -moz-transform:scale(0.5);
+    -webkit-transform:scale(0.5);
+    transform:scale(0.5);
     }
 
     .Reinhardt{
-      position:absolute;
-      top:-650px;
-      right:375px;
+      position:fixed;
+      bottom:265px;
+      right:200px;
       -moz-transform:scale(0.2);
       -webkit-transform:scale(0.2);
       transform:scale(0.2);
@@ -369,5 +407,4 @@ transform:scale(0.7);
         font-size: 12px;
         margin-top: 5px;
       }
-
       

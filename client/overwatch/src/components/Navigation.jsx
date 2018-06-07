@@ -38,6 +38,9 @@ export default class Navigation extends Component {
           <NavbarBrand  tag={Link}
                 to="/search">Search
           </NavbarBrand>
+          <NavbarBrand  tag={Link}
+                to="/invite">Invite
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

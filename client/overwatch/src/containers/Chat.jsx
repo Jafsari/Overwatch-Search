@@ -2,7 +2,7 @@ import React from "react";
 import io from "socket.io-client";
 import '../App.css'
 import { connect } from 'react-redux';
-import Navigation from '../components/Navigation.jsx';
+import Navigation from '../Components/Navigation.jsx';
 import Infinite from 'react-infinite';
 import { Alert } from 'reactstrap';
 
@@ -77,13 +77,9 @@ class Chat extends React.Component{
                                 <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
                             </div>
                         </div>
+                        <Navigation />
                     </div>
-                </div>
-            </div>
-          
-            <div className="compNavigation">
-            <Navigation />
-          
+                   </div>
             </div>
             </form>
             </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Navigation from '../components/Navigation.jsx'
+import Navigation from '../Components/Navigation.jsx'
 import * as actions from '../actions'
 import '../App.css';
 import { Button } from 'reactstrap';
-import Modal from '../components/Modal.jsx'
+import Modal from '../Components/Modal.jsx'
 
 
 class Dashboard extends Component {

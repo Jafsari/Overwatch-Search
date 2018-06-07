@@ -1,7 +1,7 @@
 import React from "react";
 import '../App.css'
 import master from '../logos/master.png'
-import Chat from '../containers/Chat.jsx'
+import Chat from '../Containers/Chat.jsx'
 
 const ChatMaster = () => {
         return<div className="MasChat">

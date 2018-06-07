@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import '../App.css';
 import * as actions from '../actions';
 import logo from '../logo.svg';
-import Progress from '../components/Progress.jsx';
+import Progress from '../Components/Progress.jsx';
 import { Button } from 'reactstrap';
 
 

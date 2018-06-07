@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css'
 import comp from '../logos/grandmaster.png'
 import grand from '../logos/grandmaster.png'
-import Chat from '../containers/Chat.jsx'
+import Chat from '../Containers/Chat.jsx'
 
 const CompetitiveChat = () => {
       return<div className="CChat">

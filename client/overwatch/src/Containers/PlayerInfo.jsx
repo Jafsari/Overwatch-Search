@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import'../player.css'
-import Navigation from '../components/Navigation.jsx'
-import Progress from '../components/Progress.jsx'
+import Navigation from '../Components/Navigation.jsx'
+import Progress from '../Components/Progress.jsx'
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 
