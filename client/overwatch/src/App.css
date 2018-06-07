@@ -27,6 +27,15 @@ App {
   flex-direction:column;
   justify-content:center;
 }
+
+.inviteBackground{
+  text-align: center;
+  background-image: url(pics/bastion.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
 .col-8{
   position:absolute;
   left:175px;

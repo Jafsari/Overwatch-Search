@@ -12,6 +12,7 @@ import General from './Components/General.jsx'
 import Search from './Containers/Search.jsx'
 import Playerinfo from'./Containers/PlayerInfo.jsx'
 import requireAuth from './Containers/Auth.jsx'
+import Invite from './Containers/Invite.jsx'
 import './App.css';
 
 class App extends Component {
@@ -31,6 +32,7 @@ class App extends Component {
         <Route exact path="/diamond" component={requireAuth(Diamond)} />
         <Route exact path="/search" component={requireAuth(Search)} />
         <Route exact path="/player" component={requireAuth(Playerinfo)} />
+        <Route exact path="/invite" component={requireAuth(Invite)} />
         </Switch>
      
       </div>
