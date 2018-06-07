@@ -30,7 +30,7 @@ App {
 
 .inviteBackground{
   text-align: center;
-  background-image: url(pics/bastion.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(pics/bastion.jpg);
   height:100vh;
   background-size:cover;
   background-position:center;
@@ -249,6 +249,12 @@ transform:scale(0.5);
 .SearchSpace{
 display:block;
 margin-bottom:20px;
+}
+
+.EmailSpace{
+  display:block;
+  height:100px;
+  margin-bottom:20px;
 }
 
 .SearchMutton{

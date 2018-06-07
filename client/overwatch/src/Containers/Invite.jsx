@@ -12,18 +12,18 @@ class Search extends Component{
 constructor(props){
     super(props)
     this.state = {
-        platform:'',
-        region:'',
-        tag:'',
+        Who:'',
+        Subject:'',
+        message:'',
     }
 
 }
 
 clear = () => {
     this.setState({
-        platform:"",
-        region:"",
-        tag:""
+        Who:"",
+        Subject:"",
+        message:""
     });
 }
 
@@ -77,34 +77,39 @@ return(
 
 <Input className="SearchSpace"
           onChange={this.handleChange}
-          placeholder="Enter platform"
-          name="platform"
+          placeholder="Who do you want to invite?"
+          name="Who"
           type="text"
-          id="platform"
+          id="who"
           value={this.state.Search} 
  valid />
 
  <Input className="SearchSpace"
           onChange={this.handleChange}
-          placeholder="Enter region"
-          name="region"
+          placeholder="Subject"
+          name="Subject"
           type="text"
-          id="region"
+          id="Subject"
           value={this.state.Search} 
  valid />
 
-<Input className="SearchSpace"
+{/* <Input className="EmailSpace"
           onChange={this.handleChange}
-          placeholder="Enter tag"
-          name="tag"
+          placeholder="Enter message"
+          name="message"
           type="text"
-          id="tag"
+          id="message"
           value={this.state.Search} 
- valid />
+ valid /> */}
 
- <Button className="SearchMutton" onClick ={this.handleSearch} color="info">Search</Button>
-<FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
-<FormText className="formLay2" > Remember to keep stalking at a minimum :)</FormText>
+         <FormGroup>
+          <Label for="exampleText">Send a message</Label>
+          <Input className="EmailSpace" type="textarea" name="text" id="exampleText" placeholder= "Send a message" />
+        </FormGroup>
+
+ <Button className="SearchMutton" onClick ={this.handleSearch} color="danger">Send</Button>
+<FormFeedback className="formLay" valid>Invite your friends to join!</FormFeedback>
+            <FormText className="formLay2" > The more the merrier!</FormText>
 <div >
             <Navigation />
             </div>
