@@ -36,6 +36,8 @@ Search API:
 
 ![screen shot 2018-06-03 at 3 23 54 am](https://user-images.githubusercontent.com/28635782/40885586-fa8e7686-66dd-11e8-9e8e-af1edd86b35c.png)
 
+Invite Friend:
+![screen shot 2018-06-07 at 2 45 35 am](https://user-images.githubusercontent.com/28635782/41092211-41e41d2a-69fd-11e8-8ef9-5db2a494a613.png)
 
 General Chat:
 ![screen shot 2018-06-03 at 3 24 02 am](https://user-images.githubusercontent.com/28635782/40885575-d3d2bfca-66dd-11e8-8684-3d9a8197e50d.png)
