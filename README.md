@@ -10,6 +10,7 @@ Redux
 Node.JS
 Express
 Socket.IO
+NodeMailer API
 Overwatch API:
 
  https://github.com/alfg/overwatch-api/blob/master/api/README.md
