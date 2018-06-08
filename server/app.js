@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
+const mailRoutes = require('./routes/mail');
 const auth = require('./middleware/auth');
 const app = express();
 const sockets = require('./socket/chatsockets.js')
@@ -16,7 +17,8 @@ app.use(cors());
 
 
 app.use("/api/auth",authRoutes);
-app.use("/api/users",auth.loginRequired,userRoutes)
+app.use("/api/users",auth.loginRequired,userRoutes);
+app.use("/api/mail",mailRoutes);
 
 app.use((req,res,next) => {
     const err = new Error("Not Found");
@@ -36,5 +38,5 @@ app.use((err,req,res,next) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,() => {
-    console.log('Server is listening')
+    console.log(`Server is listening on ${PORT}`)
 })

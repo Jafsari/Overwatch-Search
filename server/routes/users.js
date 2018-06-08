@@ -3,6 +3,8 @@ const router = express.Router();
 const { User } = require("../models");
 var auth = require('../middleware/auth')
 const overwatch = require('overwatch-api');
+const nodemailer = require('nodemailer');
+const mg = require('nodemailer-mailgun-transport');
 
 router.get("/", (req,res,next) => {
     return User.find().then(users => {
@@ -57,5 +59,8 @@ router.post('/search',(req,res,next) =>{
      return res.status(200).json(json)
     });
 })
+
+
+
 
 module.exports = router;

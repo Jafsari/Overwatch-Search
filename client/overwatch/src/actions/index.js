@@ -49,6 +49,7 @@ export function login(data,second) {
     }
   }
 
+
   export function search(data){
     var answer = localStorage.getItem('jwtToken')
     answer = JSON.parse(answer)

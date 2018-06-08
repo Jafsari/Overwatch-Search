@@ -1,0 +1,807 @@
+App {
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/bridgette.jpeg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .SearchBackground {
+    text-align: center;
+    background-image: url(pics/reinhardt-shield.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .GChat {
+    text-align: center;
+    background-image: url(pics/roadhog-junk.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .col-8{
+    position:absolute;
+    left:175px;
+  }
+  
+  .CChat {
+    text-align: center;
+    background-image: url(pics/bridgette.jpeg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+  
+  }
+  .DiaChat {
+    text-align: center;
+    background-image:url(pics/anime-tracer.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+  }
+  .MasChat {
+    text-align: center;
+    background-image: url(pics/junkrat.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    display:flex;
+    flex-direction:column;
+  
+  }
+  .GrandMasChat {
+    text-align: center;
+    background-image: url(pics/Dva.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+      display:flex;
+    flex-direction:column;
+  
+  }
+  
+  
+  .Dashboard2{
+    text-align: center;
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(pics/overwatch-league.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .Dash{
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(pics/winstonEarth.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .signup{
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatchTeam.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+  }
+  
+  .login{
+      text-align: center;
+      background-image: url(pics/overwatch-serious.jpg);
+      height:100vh;
+      background-size:cover;
+      background-position:center;
+      background-attachment: fixed;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-title {
+    font-size: 1.5em;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  .format {
+    display:flex;
+    flex-direction:column;
+    position: fixed;
+    top: 31%;
+    left: 39%;
+    margin-top: -50px;
+    margin-left: -100px;
+    color:white;
+    
+  }
+  
+  .card-body{
+    overflow:scroll;
+  }
+  .dashboard{
+    display:flex;
+    flex-direction:column;
+    position: fixed;
+    top: 15%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -100px;
+    color:white;
+    /* position: absolute;
+    left:500px;
+    top:50px;
+    color: white; */
+  }
+  .login2{
+    display:flex;
+    flex-direction:column;
+    position: fixed;
+    top: 31%;
+    left: 49%;
+    margin-top: -50px;
+    margin-left: -100px;
+    color:white;
+    /* position: absolute;
+    left:610px;
+    top:200px;
+    color: white; */
+  
+  }
+  
+  .Searchlayout{
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top: 25%;
+    left: 36%;
+    color:white;
+    /* position: absolute;
+    left:475px;
+    top:200px;
+    color: white; */
+  
+  }
+  .chat{
+    /* display:flex;
+    flex-direction:column;
+    justify-content:center; */
+    /* display:flex;
+    flex-direction:column; */
+  
+  }
+  
+  .inline{
+    display:flex;
+    justify-content:center;
+  
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .card-body{
+    height:300px;
+  }
+  
+  .col-8{
+    position:relative;
+    top:-55px;
+  }
+  
+  .message{
+    display:flex;
+  }
+  
+  .grandmaster{
+  /* position:absolute;
+  top:-340px;
+  right:700px; */
+  height:225px;
+  width:225px;
+  position:relative;
+  left:-15px;
+  -moz-transform:scale(0.5);
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  }
+  
+  .SearchSpace{
+  display:block;
+  margin-bottom:20px;
+  }
+  
+  .SearchMutton{
+  /* position:relative;
+  right:10px;
+  bottom:10px; */
+  }
+  
+  .charmander{
+    color:red;
+  /* position:relative;
+  right:10px;
+  bottom:10px; */
+  }
+  
+  
+  
+  .master{
+  /* position:absolute;
+  top:-275px;
+  right:780px; */
+  position:relative;
+  height:225px;
+  width:225px;
+  left:-15px;
+  -moz-transform:scale(0.7);
+  -webkit-transform:scale(0.7);
+  transform:scale(0.7);
+  }
+  
+  .diamond{
+    /* position:absolute;
+    top:-275px;
+    right:780px; */
+  height:225px;
+  width:225px;
+  position:relative;
+  left:-15px;
+    -moz-transform:scale(0.7);
+    -webkit-transform:scale(0.7);
+    transform:scale(0.7);
+    }
+  
+    .diamondlogo{
+      padding:-105px;
+      margin:-118px;
+      -moz-transform:scale(0.1);
+      -webkit-transform:scale(0.1);
+      transform:scale(0.1);
+    }
+  
+    .complogo{
+      background:black;
+      padding:-105px;
+      margin:-90px;
+      -moz-transform:scale(0.1);
+      -webkit-transform:scale(0.1);
+      transform:scale(0.1);
+    }
+  
+    .analogo{
+      background:black;
+      padding:-105px;
+      margin:-5px;
+      -moz-transform:scale(0.1);
+      -webkit-transform:scale(0.1);
+      transform:scale(0.1);
+    }
+  
+    .grandlogo{
+      position:relative;
+      bottom:4px;
+      padding:-105px;
+      margin:-185px;
+      -moz-transform:scale(0.08);
+      -webkit-transform:scale(0.08);
+      transform:scale(0.08);
+    }
+  
+    .masterlogo{
+      position:relative;
+      bottom:2px;
+      padding:-105px;
+      margin:-115px;
+      -moz-transform:scale(0.1);
+      -webkit-transform:scale(0.1);
+      transform:scale(0.1);
+    }
+  
+  
+    .competitiveLogo{
+      /* position:absolute;
+      top:50px;
+      right:800px; */
+      position:relative;
+      bottom:30px;
+      height:225px;
+      left:-15px;
+      -moz-transform:scale(0.5);
+      -webkit-transform:scale(0.5);
+      transform:scale(0.5);
+      }
+  
+      .Reinhardt{
+        position:fixed;
+        bottom:265px;
+        right:200px;
+        -moz-transform:scale(0.2);
+        -webkit-transform:scale(0.2);
+        transform:scale(0.2);
+        }
+  
+        .chatNavigation{
+          position: absolute;
+          left:320px;
+          bottom:187px;
+          color: black;
+          width:50.7%
+        }
+        .compNavigation{
+          /* display:flex;
+          position:relative;
+          bottom:22.5%;
+          right:39%; */
+          
+          position: relative;
+          left:165px;
+          bottom:60px;
+          color: black;
+          width:50.7%
+        }
+        .masterNavigation{
+          position: absolute;
+          left:165px;
+          bottom:1px;
+          color: black;
+          width:50.7%
+        }
+        .GMNavigation{
+          position: absolute;
+          left:165px;
+          bottom:1px;
+          color: black;
+          width:50.7%
+        }
+        .diamondNavigation{
+          position: absolute;
+          left:165px;
+          bottom:1px;
+          color: black;
+          width:50.7%
+        }
+  
+        .player{
+          position:relative;
+          left:30px;
+          float:left;
+        }
+        .player-card{
+          position:relative;
+          right:50px;
+        }
+        .error {
+          color: red;
+          font-size: 12px;
+          margin-top: 5px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .App {
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/bridgette.jpeg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .SearchBackground {
+            text-align: center;
+            background-image: url(pics/reinhardt-shield.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .GChat {
+            text-align: center;
+            background-image: url(pics/roadhog-junk.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .CChat {
+            text-align: center;
+            background-image: url(pics/bridgette.jpeg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          .DiaChat {
+            text-align: center;
+            background-image:url(pics/anime-tracer.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          .MasChat {
+            text-align: center;
+            background-image: url(pics/junkrat.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          .GrandMasChat {
+            text-align: center;
+            background-image: url(pics/Dva.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          
+          .Dashboard2{
+            text-align: center;
+            background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(pics/overwatch-league.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .Dash{
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(pics/winstonEarth.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .signup{
+            text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(pics/overwatchTeam.jpg);
+            height:100vh;
+            background-size:cover;
+            background-position:center;
+            background-attachment: fixed;
+          }
+          
+          .login{
+              text-align: center;
+              background-image: url(pics/overwatch-serious.jpg);
+              height:100vh;
+              background-size:cover;
+              background-position:center;
+              background-attachment: fixed;
+          }
+          
+          .App-logo {
+            animation: App-logo-spin infinite 20s linear;
+            height: 80px;
+          }
+          
+          .App-header {
+            background-color: #222;
+            height: 150px;
+            padding: 20px;
+            color: white;
+          }
+          
+          .App-title {
+            font-size: 1.5em;
+          }
+          
+          .App-intro {
+            font-size: large;
+          }
+          
+          .format {
+            color: white; 
+            display:flex;
+            flex-direction:column;
+            position: fixed;
+            top: 31%;
+            left: 37%;
+            margin-top: -50px;
+            margin-left: -100px;
+          }
+          
+          .card-body{
+            overflow:scroll;
+          }
+          .dashboard{
+            display:flex;
+            flex-direction:column;
+            position: fixed;
+            top: 15%;
+            left: 40%;
+            margin-top: -50px;
+            margin-left: -100px;
+            color:white;
+            /* position: absolute;
+            left:500px;
+            top:50px;
+            color: white; */
+          }
+          .login2{
+            display:flex;
+            flex-direction:column;
+            position: fixed;
+            top: 31%;
+            left: 49%;
+            margin-top: -50px;
+            margin-left: -100px;
+            color:white;
+            /* position: absolute;
+            left:610px;
+            top:200px;
+            color: white; */
+          
+          }
+          
+          .Searchlayout{
+            display:flex;
+            flex-direction:column;
+            position:fixed;
+            top: 25%;
+            left: 32%;
+            color:white;
+            /* position: absolute;
+            left:475px;
+            top:200px;
+            color: white; */
+          
+          }
+          .chat{
+            /* display:flex;
+            flex-direction:column; */
+            position:relative;
+            top:225px;
+            left:155px;
+          }
+          
+          .inline{
+            display:flex;
+            justify-content:center;
+          
+          }
+          
+          @keyframes App-logo-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+          
+          .card-body{
+            height:300px;
+          }
+          
+          .col-8{
+            position:relative;
+            top:-55px;
+          }
+          
+          .message{
+            display:flex;
+          }
+          
+          .grandmaster{
+          position:absolute;
+          top:-340px;
+          right:700px;
+          -moz-transform:scale(0.5);
+          -webkit-transform:scale(0.5);
+          transform:scale(0.5);
+          }
+          
+          .SearchSpace{
+          display:block;
+          margin-bottom:20px;
+          }
+          
+          .SearchMutton{
+          /* position:relative;
+          right:10px;
+          bottom:10px; */
+          }
+          
+          .charmander{
+            color:red;
+          /* position:relative;
+          right:10px;
+          bottom:10px; */
+          }
+          
+          
+          .master{
+          position:absolute;
+          top:-275px;
+          right:780px;
+          -moz-transform:scale(0.7);
+          -webkit-transform:scale(0.7);
+          transform:scale(0.7);
+          }
+          
+          .diamond{
+            position:absolute;
+            top:-275px;
+            right:780px;
+            -moz-transform:scale(0.7);
+            -webkit-transform:scale(0.7);
+            transform:scale(0.7);
+            }
+          
+            .diamondlogo{
+              padding:-105px;
+              margin:-118px;
+              -moz-transform:scale(0.1);
+              -webkit-transform:scale(0.1);
+              transform:scale(0.1);
+            }
+          
+            .complogo{
+              background:black;
+              padding:-105px;
+              margin:-90px;
+              -moz-transform:scale(0.1);
+              -webkit-transform:scale(0.1);
+              transform:scale(0.1);
+            }
+          
+            .analogo{
+              background:black;
+              padding:-105px;
+              margin:-5px;
+              -moz-transform:scale(0.1);
+              -webkit-transform:scale(0.1);
+              transform:scale(0.1);
+            }
+          
+            .grandlogo{
+              position:relative;
+              bottom:4px;
+              padding:-105px;
+              margin:-185px;
+              -moz-transform:scale(0.08);
+              -webkit-transform:scale(0.08);
+              transform:scale(0.08);
+            }
+          
+            .masterlogo{
+              position:relative;
+              bottom:2px;
+              padding:-105px;
+              margin:-115px;
+              -moz-transform:scale(0.1);
+              -webkit-transform:scale(0.1);
+              transform:scale(0.1);
+            }
+          
+            .competitiveLogo{
+              position:absolute;
+              top:-230px;
+              right:800px;
+              -moz-transform:scale(0.7);
+              -webkit-transform:scale(0.7);
+              transform:scale(0.7);
+              }
+          
+              .Reinhardt{
+                position:absolute;
+                top:-650px;
+                right:375px;
+                -moz-transform:scale(0.2);
+                -webkit-transform:scale(0.2);
+                transform:scale(0.2);
+                }
+          
+                .chatNavigation{
+                  position: absolute;
+                  left:320px;
+                  bottom:187px;
+                  color: black;
+                  width:50.7%
+                }
+                .compNavigation{
+                  /* display:flex;
+                  position:relative;
+                  bottom:22.5%;
+                  right:39%; */
+                  
+                  position: relative;
+                  left:165px;
+                  bottom:60px;
+                  color: black;
+                  width:50.7%
+                }
+                .masterNavigation{
+                  position: absolute;
+                  left:165px;
+                  bottom:1px;
+                  color: black;
+                  width:50.7%
+                }
+                .GMNavigation{
+                  position: absolute;
+                  left:165px;
+                  bottom:1px;
+                  color: black;
+                  width:50.7%
+                }
+                .diamondNavigation{
+                  position: absolute;
+                  left:165px;
+                  bottom:1px;
+                  color: black;
+                  width:50.7%
+                }
+          
+                .player{
+                  position:relative;
+                  left:30px;
+                  float:left;
+                }
+                .player-card{
+                  position:relative;
+                  right:50px;
+                }
+                .error {
+                  color: red;
+                  font-size: 12px;
+                  margin-top: 5px;
+                }

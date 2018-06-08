@@ -14,7 +14,7 @@ constructor(props){
     this.state = {
         Who:'',
         Subject:'',
-        message:'',
+        Text:'',
     }
 
 }
@@ -23,7 +23,7 @@ clear = () => {
     this.setState({
         Who:"",
         Subject:"",
-        message:""
+        Text:""
     });
 }
 
@@ -32,9 +32,6 @@ handleChange = (e) => {
         [e.target.name]: e.target.value
       });
     
-}
-route = () => {
-    this.props.history.push('player')
 }
 
 
@@ -53,10 +50,7 @@ information = () => {
     })
     if (check === undefined){
         return;
-    } else {
-    self.props.history.push('player')
-    console.log(check)
-    }
+    } 
 }
 
 handleSearch =(e) => {
@@ -73,7 +67,7 @@ render(){
 return(
     <div className="inviteBackground">
     <FormGroup className="Searchlayout">
-<Label for="exampleEmail">Search for Player</Label>
+<Label for="exampleEmail">Invite a Friend</Label>
 
 <Input className="SearchSpace"
           onChange={this.handleChange}
