@@ -18,7 +18,7 @@ app.use(cors());
 
 app.use("/api/auth",authRoutes);
 app.use("/api/users",auth.loginRequired,userRoutes);
-app.use("/api/mail",mailRoutes);
+app.use("/api/mail",auth.loginRequired,mailRoutes);
 
 app.use((req,res,next) => {
     const err = new Error("Not Found");
