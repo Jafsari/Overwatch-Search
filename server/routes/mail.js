@@ -13,28 +13,36 @@ const config = require('../config');
 
   // var nodemailerMailgun = nodemailer.createTransport(mg(auth));
 
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+           user: config.user,
+           pass: config.pass
+       }
+   });
 
 
-  router.get('/', (req,res,next) => {
-    return res.json('hello world')
-  })
 
   router.post('/', function(req, res, next){
     console.log(req.body)
-    var mailOpts = {
+    var text = req.body.text
+    var mailOptions = {
         from: 'Overchat@noreply.com',
         to: req.body.to,
         subject: req.body.subject,
-        text : req.body.text,
-        html : '<b>test message form mailgun</b>'
+        html : `<p>${text}</p>`
     };
 
-    nodemailerMailgun.sendMail(mailOpts, function (err, response) {
-        if (err) res.send(err);
-        else {
-          res.send('email sent!');
-        }
-    });
+    transporter.sendMail(mailOptions, function (err, info) {
+      if(err) {
+        console.log(err)
+        return res.status(400).json('error')
+      }
+      else {
+        console.log(info);
+        return res.status(200).json('success')
+      }
+   });
 });
 
 
