@@ -8,57 +8,51 @@ import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 
-class Search extends Component{
+class Invite extends Component{
 constructor(props){
     super(props)
     this.state = {
-        Who:'',
-        Subject:'',
-        Text:'',
+        to:'',
+        subject:'',
+        text:'',
     }
 
 }
 
 clear = () => {
     this.setState({
-        Who:"",
-        Subject:"",
-        Text:""
+        to:"",
+        subject:"",
+        text:""
     });
 }
 
 handleChange = (e) => {
-    this.setState({
+   this.setState({
         [e.target.name]: e.target.value
       });
-    
+    console.log(this.state)
 }
 
 
 information = () => {
- var that = false
- var self = this
- var check = true
- let success;
-    this.props.search(this.state).then(res => {
+    this.props.setUserInviteLoading('loading')
+    this.props.invite(this.state).then(res => {
         let info = res.data
-        this.props.setSearchUser(info.username)
        })
     .catch(err => {
         console.log(err.message)
-        check = false
+     
     })
-    if (check === undefined){
-        return;
-    } 
 }
 
 handleSearch =(e) => {
 e.preventDefault();
-if (this.state.platform.length === 0 || this.state.region.length === 0 || this.state.tag.length === 0){
+if (this.state.tolength === 0 || this.state.subject.length === 0 || this.state.text.length === 0){
     alert('Please fill out the forms')
 } else {
-this.information(setTimeout(0))
+this.information();
+
 }
 
 }
@@ -72,33 +66,29 @@ return(
 <Input className="SearchSpace"
           onChange={this.handleChange}
           placeholder="Who do you want to invite?"
-          name="Who"
+          name="to"
           type="text"
-          id="who"
+          id="to"
           value={this.state.Search} 
  valid />
 
  <Input className="SearchSpace"
           onChange={this.handleChange}
           placeholder="Subject"
-          name="Subject"
+          name="subject"
           type="text"
-          id="Subject"
+          id="subject"
           value={this.state.Search} 
  valid />
-
-{/* <Input className="EmailSpace"
-          onChange={this.handleChange}
-          placeholder="Enter message"
-          name="message"
-          type="text"
-          id="message"
-          value={this.state.Search} 
- valid /> */}
-
          <FormGroup>
           <Label for="exampleText">Send a message</Label>
-          <Input className="EmailSpace" type="textarea" name="text" id="exampleText" placeholder= "Send a message" />
+          <Input  onChange={this.handleChange} 
+          className="EmailSpace" 
+          type="textarea" 
+          name="text" 
+          id="exampleText" 
+          placeholder= "Send a message"
+           value={this.state.Search} />
         </FormGroup>
 
  <Button className="SearchMutton" onClick ={this.handleSearch} color="danger">Send</Button>
@@ -120,4 +110,37 @@ export default compose(
 connect(null,actions),
 withRouter
 )
-(Search);
+(Invite);
+
+
+
+// const information = (this.state.data ? (
+//     <div  >
+//                <div className="container">
+//    <div className="row">
+//        <div className="col-7">
+//        <div className="card-cool">
+//     <div className="player" >
+//     <div className="card-title"><strong>Player Information</strong></div>
+//     <div><strong>Username:</strong>{this.props.information.username}</div>
+//     <div><strong>Level:</strong>{this.props.information.level}</div>
+//     <img src={this.props.information.portrait} />
+//     <div><strong>Competitive Rank:</strong>{this.props.information.competitive.rank}</div>
+//     <div><strong>Competitive Time:</strong>{this.props.information.playtime.competitive} </div>
+//     </div>
+//     <div>
+//     <img  src={this.props.information.competitive.rank_img} />
+//     </div>
+//     </div>
+//     </div>
+//     </div>
+//     </div>
+//     <div className="playerLayout">
+//     <Navigation />
+//     </div>
+//     </div>
+//   ) : (
+//     <div className='Progress' >
+//    <Progress/>
+//    </div>
+//   ));

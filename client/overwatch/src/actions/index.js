@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING } from './types'
 import jwtDecode from 'jwt-decode';
 
 export function setAuthorizationToken(token) {
@@ -69,10 +69,39 @@ export function login(data,second) {
     }
   }
 
+  export function invite(data){
+    let token = localStorage.getItem('jwtToken')
+    token = JSON.parse(token)
+    let BASE_URL = 'http://localhost:3000/api/mail'
+    return dispatch => {
+      return axios.post(BASE_URL,data,{headers:{"Authorization" : `Bearer ${token}`}}).then ( res => {
+        const response = res.data;
+        console.log(response);
+        return dispatch(setUserInvite(response))
+      }).catch(e => {
+        alert('There was a problem with your request')
+      })
+    }
+  }
+
   export function setCurrentToken(token){
     return{
       type:SET_CURRENT_TOKEN,
       token
+    };
+  }
+
+  export function setUserInviteLoading(info){
+    return{
+      type:SET_USER_INVITE_LOADING,
+      info
+    };
+  }
+
+  export function setUserInvite(response){
+    return{
+      type:SET_USER_INVITE,
+      response
     };
   }
 
