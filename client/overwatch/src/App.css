@@ -16,6 +16,14 @@ App {
   background-attachment: fixed;
 }
 
+.WatchBackground{
+  text-align: center;
+  background-image: url(pics/overwatch-fire.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
 .GChat {
   text-align: center;
   background-image: url(pics/roadhog-junk.jpg);

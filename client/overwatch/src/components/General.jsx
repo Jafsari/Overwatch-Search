@@ -1,6 +1,7 @@
 import React from "react";
 import '../App.css'
 import Rein from '../logos/Reinhardt_cute.png'
+import ana from '../pics/young-ana-chibi.jpg'
 import grand from '../logos/grandmaster.png'
 import Chat from '../Containers/Chat.jsx'
 
