@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE } from './types'
 import jwtDecode from 'jwt-decode';
+import { TwitchClient } from '../config'
 
 export function setAuthorizationToken(token) {
   if (token) {
@@ -83,6 +84,25 @@ export function login(data,second) {
         return dispatch(setUserInviteFailure(false))
       })
     }
+  }
+
+  export function watch(){
+    let BASE_URL ='https://api.twitch.tv/helix/streams?game_id=488552'
+    let token = TwitchClient
+    let config = {
+        headers : {
+        Authorization: `Bearer ${token}`,
+        'Client-ID':TwitchClient
+        }
+    }
+      return dispatch => {
+        return axios.get(BASE_URL,config).then( res => {
+          const response = res.data
+          console.log(response)
+        }).catch(e => {
+          console.log(e)
+        })
+      }
   }
 
   export function setCurrentToken(token){

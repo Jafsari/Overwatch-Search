@@ -7,8 +7,10 @@ import Navigation from '../Components/Navigation.jsx'
 import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
+import axios from 'axios';
+import { TwitchClient } from '../config.js'
 
-class Search extends Component{
+class Watch extends Component{
 constructor(props){
     super(props)
     this.state = {
@@ -17,6 +19,10 @@ constructor(props){
         tag:'',
     }
 
+}
+
+componentDidMount(){
+    this.props.watch();
 }
 
 clear = () => {
@@ -73,40 +79,13 @@ render(){
 return(
     <div className="WatchBackground">
     <FormGroup className="Searchlayout">
-<Label for="exampleEmail">Search for Player</Label>
 
-<Input className="SearchSpace"
-          onChange={this.handleChange}
-          placeholder="Enter platform"
-          name="platform"
-          type="text"
-          id="platform"
-          value={this.state.Search} 
- valid />
 
- <Input className="SearchSpace"
-          onChange={this.handleChange}
-          placeholder="Enter region"
-          name="region"
-          type="text"
-          id="region"
-          value={this.state.Search} 
- valid />
 
-<Input className="SearchSpace"
-          onChange={this.handleChange}
-          placeholder="Enter tag"
-          name="tag"
-          type="text"
-          id="tag"
-          value={this.state.Search} 
- valid />
-
- <Button className="SearchMutton" onClick ={this.handleSearch} color="info">Search</Button>
 <FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
 <FormText className="formLay2" > Remember to keep stalking at a minimum :)</FormText>
 <div >
-            <Navigation />
+    
             </div>
 </FormGroup>
 <div>
@@ -121,4 +100,4 @@ export default compose(
 connect(null,actions),
 withRouter
 )
-(Search);
+(Watch);
