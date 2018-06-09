@@ -77,9 +77,9 @@ export function login(data,second) {
       return axios.post(BASE_URL,data,{headers:{"Authorization" : `Bearer ${token}`}}).then ( res => {
         const response = res.data;
         console.log(response);
+        alert('Message sent!')
         return dispatch(setUserInvite(response))
       }).catch(e => {
-        alert('There was a problem with your request')
         return dispatch(setUserInviteFailure(false))
       })
     }

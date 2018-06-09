@@ -200,6 +200,15 @@ App {
   color: white; */
 
 }
+
+.inviteLoading{
+  display:flex;
+  flex-direction:column;
+  position:fixed;
+  top: 38%;
+  left: 47%;
+  color:white;
+}
 .chat{
   /* display:flex;
   flex-direction:column;
