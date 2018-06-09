@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST } from './types'
 import jwtDecode from 'jwt-decode';
 import { TwitchClient } from '../config'
 
@@ -97,8 +97,9 @@ export function login(data,second) {
     }
       return dispatch => {
         return axios.get(BASE_URL,config).then( res => {
-          const response = res.data
-          console.log(response)
+          const info = res.data
+          console.log(info)
+          return dispatch(setCurrentVideoList(info))
         }).catch(e => {
           console.log(e)
         })
@@ -110,6 +111,13 @@ export function login(data,second) {
       type:SET_CURRENT_TOKEN,
       token
     };
+  }
+
+  export function setCurrentVideoList(info){
+    return{
+      type:SET_CURRENT_VIDEO_LIST,
+      info
+    }
   }
 
   export function setUserInviteFailure(info){
