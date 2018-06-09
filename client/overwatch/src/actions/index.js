@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE } from './types'
 import jwtDecode from 'jwt-decode';
 
 export function setAuthorizationToken(token) {
@@ -80,6 +80,7 @@ export function login(data,second) {
         return dispatch(setUserInvite(response))
       }).catch(e => {
         alert('There was a problem with your request')
+        return dispatch(setUserInviteFailure(false))
       })
     }
   }
@@ -89,6 +90,13 @@ export function login(data,second) {
       type:SET_CURRENT_TOKEN,
       token
     };
+  }
+
+  export function setUserInviteFailure(info){
+    return{
+      type:SET_USER_INVITE_FAILURE,
+      info
+    }
   }
 
   export function setUserInviteLoading(info){
