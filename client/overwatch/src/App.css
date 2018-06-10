@@ -24,6 +24,10 @@ App {
   background-position:center;
   background-attachment: fixed;
 }
+.image{
+  height:50px;
+  width:50px;
+}
 .GChat {
   text-align: center;
   background-image: url(pics/roadhog-junk.jpg);
@@ -148,6 +152,12 @@ App {
 
 .App-intro {
   font-size: large;
+}
+
+.stream{
+  color:white;
+  display:flex;
+  flex-wrap:wrap;
 }
 
 .format {

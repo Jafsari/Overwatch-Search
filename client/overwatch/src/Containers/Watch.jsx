@@ -9,38 +9,57 @@ import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 import axios from 'axios';
 import { TwitchClient } from '../config.js'
+import Progress from '../Components/Progress.jsx'
 
 class Watch extends Component{
+    constructor(props){
+        super(props)
+        this.state={
+            data:false
+        }
+    }
 componentDidMount(){
     this.props.watch();
 }
 
-loop = () => {
-    this.props.streamer.data.map(stream => {
-        return (
-            <div>
-                {stream}
-            </div>
-        )
-    })
-}
-check = () => {
-    if (this.props.streamer === false){
-    console.log(this.props.streamer)
-    } else {
-    console.log(this.props.streamer.data)
-}
+componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
+    if(nextProps !== undefined && nextProps.streamer.data) {  
+        (this.setState({
+            data:true
+        }));
+       
+    } 
 }
 
 render(){
+    console.log(this.props.streamer.data)
+    const information = (this.state.data ?  (
+            <div className="stream">
+            {this.props.streamer.data.map((stream,index) => {
+                return (
+                        <div key={index}>
+                        {stream.title}
+                        <div>
+                        <img className='image' src={stream.thumbnail_url.replace("{width}x{height}","100x100")} />
+                        </div>
+                        </div>
+                )
+            })}
+            </div>
+            
+
+    ) : (
+        <div>
+            <Progress />
+        </div>
+    ));
+
 return(
     <div className="WatchBackground">
-    {this.check()}
-<FormFeedback className="formLay" valid>Search Players for their Info!</FormFeedback>
-<FormText className="formLay2" > Remember to keep stalking at a minimum :)</FormText>
-<div >
-    
-            </div>
+<div className='stream' >
+    {information}
+    </div>
 
 <div>
 </div>
