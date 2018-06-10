@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM } from './types'
 import jwtDecode from 'jwt-decode';
 import { TwitchClient } from '../config'
 
@@ -91,7 +91,6 @@ export function login(data,second) {
     let token = TwitchClient
     let config = {
         headers : {
-        Authorization: `Bearer ${token}`,
         'Client-ID':TwitchClient
         }
     }
@@ -105,12 +104,37 @@ export function login(data,second) {
         })
       }
   }
+  export function getStreams(){
+    let BASE_URL ='https://api.twitch.tv/helix/videos?user_id=67955580'
+    let token = TwitchClient
+    let config = {
+        headers : {
+        'Client-ID':TwitchClient
+        }
+    }
+      return dispatch => {
+        return axios.get(BASE_URL,config).then( res => {
+          const info = res.data
+          console.log(info)
+          return dispatch(setCurrentStreamList(info))
+        }).catch(e => {
+          console.log(e)
+        })
+      }
+  }
 
   export function setCurrentToken(token){
     return{
       type:SET_CURRENT_TOKEN,
       token
     };
+  }
+
+  export function setCurrentStreamList(info){
+    return {
+      type:SET_CURRENT_STREAM,
+      info
+    }
   }
 
   export function setCurrentVideoList(info){

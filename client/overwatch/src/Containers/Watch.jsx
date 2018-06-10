@@ -11,6 +11,7 @@ import axios from 'axios';
 import { TwitchClient } from '../config.js'
 import Progress from '../Components/Progress.jsx'
 
+
 class Watch extends Component{
     constructor(props){
         super(props)
@@ -19,7 +20,8 @@ class Watch extends Component{
         }
     }
 componentDidMount(){
-    this.props.watch();
+    // this.props.watch()
+    this.props.getStreams()
 }
 
 componentWillReceiveProps(nextProps) {
@@ -33,19 +35,29 @@ componentWillReceiveProps(nextProps) {
 }
 
 render(){
-    console.log(this.props.streamer.data)
+    // console.log(this.props.streamer.data)
     const information = (this.state.data ?  (
             <div className="stream">
+                                    <iframe
+                        src="http://player.twitch.tv/?channel=
+                        overwatchpit&muted=true"
+                        height="720"
+                        width="1280"
+                        frameborder="0"
+                        scrolling="no"
+                        allowfullscreen="true">
+                        </iframe>
             {this.props.streamer.data.map((stream,index) => {
                 return (
                         <div key={index}>
-                        {stream.title}
+                     
                         <div>
-                        <img className='image' src={stream.thumbnail_url.replace("{width}x{height}","100x100")} />
+
                         </div>
                         </div>
                 )
             })}
+            < Navigation />
             </div>
             
 

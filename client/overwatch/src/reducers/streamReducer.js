@@ -1,7 +1,8 @@
-import { SET_CURRENT_VIDEO_LIST } from '../actions/types';
+import { SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM } from '../actions/types';
 
 const DEFAULT_STATE = {
-    information:false
+    information:false,
+    videos:false
 };
 
 export default (state = DEFAULT_STATE, action) => {
@@ -10,6 +11,10 @@ export default (state = DEFAULT_STATE, action) => {
       return {
         information:action.info
       };
+    case SET_CURRENT_STREAM:
+    return{
+        information:action.info
+    }
     default:
       return state;
   }
