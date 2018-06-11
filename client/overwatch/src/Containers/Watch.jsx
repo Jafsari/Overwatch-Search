@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
-import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reactstrap';
+import { FormGroup, Label, Input, FormFeedback, FormText, Button, Form } from 'reactstrap';
 import '../App.css'
 import Navigation from '../Components/Navigation.jsx'
 import jwtDecode from 'jwt-decode';
@@ -12,11 +12,13 @@ import { TwitchClient } from '../config.js'
 import Progress from '../Components/Progress.jsx'
 
 
+
 class Watch extends Component{
     constructor(props){
         super(props)
         this.state={
-            data:false
+            data:false,
+            search:''
         }
     }
 componentDidMount(){
@@ -34,19 +36,47 @@ componentWillReceiveProps(nextProps) {
     } 
 }
 
+// onInputChange(search) {
+//     this.setState({search});
+
+// }
+
+handleChange = (e) => {
+    this.setState({
+        [e.target.name]: e.target.value
+      });
+      console.log(this.state.search)
+}
+
 render(){
-    // console.log(this.props.streamer.data)
     const information = (this.state.data ?  (
-            <div className="stream">
+            <div className>
+            <div>
+            <Form>
+        <FormGroup>
+        <Input 
+          onChange={this.handleChange}
+          placeholder="Who do you want to watch?"
+          name="search"
+          type="text"
+          id="search"
+          value={this.state.search} 
+ valid />
+        </FormGroup>
+        </Form>
+            <div>
+        </div>
+                </div>
+                <div>
                                     <iframe
-                        src="http://player.twitch.tv/?channel=
-                        overwatchpit&muted=true"
+                        src={`http://player.twitch.tv/?channel=${this.state.search}&muted=true`}
                         height="720"
                         width="1280"
                         frameborder="0"
                         scrolling="no"
                         allowfullscreen="true">
                         </iframe>
+                        </div>
             {this.props.streamer.data.map((stream,index) => {
                 return (
                         <div key={index}>
@@ -55,6 +85,7 @@ render(){
 
                         </div>
                         </div>
+
                 )
             })}
             < Navigation />

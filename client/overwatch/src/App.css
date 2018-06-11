@@ -19,7 +19,7 @@ App {
 .WatchBackground{
   text-align: center;
   background-image: url(pics/overwatch-fire.jpg);
-  height:100vh;
+  height:112vh;
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
@@ -152,6 +152,11 @@ App {
 
 .App-intro {
   font-size: large;
+}
+
+.Bar{
+  display:flex;
+  flex-wrap:wrap;
 }
 
 .stream{

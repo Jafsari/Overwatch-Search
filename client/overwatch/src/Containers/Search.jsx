@@ -31,7 +31,7 @@ handleChange = (e) => {
     this.setState({
         [e.target.name]: e.target.value
       });
-    
+    console.log(this.state)
 }
 route = () => {
     this.props.history.push('player')
