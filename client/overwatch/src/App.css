@@ -221,13 +221,11 @@ justify-content:space-around;
 }
 
 .StatusContainer{
-  height:500px;
-  width:500px;
-  display:flex;
+  height:400px;
   background-color:white;
-  flex-direction:column;
-  justify-content:center;
   overflow:scroll;
+  display:flex;
+  flex-direction:column;
 }
 .Searchlayout{
   display:flex;
@@ -242,6 +240,8 @@ justify-content:space-around;
   color: white; */
 
 }
+
+
 
 .StatusLayout{
     display:flex;

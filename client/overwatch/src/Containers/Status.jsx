@@ -41,15 +41,16 @@ class Status extends Component{
             <div className="StatusBackground">
             <div className="StatusLayout">
                 <div className="StatusContainer">
-                {this.props.streamer.data.map((stream) => {
+                {this.props.streamer.data.map((stream,index) => {
                     return(
-                    <div>
-                        {stream.title}:{stream.viewer_count}
+                    <div key={index} className="statusInfo">
+                        <span>{stream.title}</span>:<span>{stream.viewer_count}</span>
                     </div>
 
                     )
                 })}
                 </div>
+                <Navigation />
             </div>
             
         </div>
