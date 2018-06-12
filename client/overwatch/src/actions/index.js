@@ -87,7 +87,7 @@ export function login(data,second) {
   }
 
   export function watch(){
-    let BASE_URL ='https://api.twitch.tv/helix/streams?game_id=488552'
+    let BASE_URL ='https://api.twitch.tv/helix/streams?game_id=488552&first=10&language=en'
     let token = TwitchClient
     let config = {
         headers : {

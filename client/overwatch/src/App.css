@@ -16,6 +16,15 @@ App {
   background-attachment: fixed;
 }
 
+.StatusBackground{
+  text-align: center;
+  background-image: url(pics/overwatch-status.jpg);
+  height:100vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
 .WatchBackground{
   text-align: center;
   background-image: url(pics/overwatch-fire.jpg);
@@ -211,6 +220,15 @@ justify-content:space-around;
 
 }
 
+.StatusContainer{
+  height:500px;
+  width:500px;
+  display:flex;
+  background-color:white;
+  flex-direction:column;
+  justify-content:center;
+  overflow:scroll;
+}
 .Searchlayout{
   display:flex;
   flex-direction:column;
@@ -223,6 +241,21 @@ justify-content:space-around;
   top:200px;
   color: white; */
 
+}
+
+.StatusLayout{
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top: 25%;
+    left: 36%;
+    color:black;
+    /* position: absolute;
+    left:475px;
+    top:200px;
+    color: white; */
+  
+  
 }
 
 .inviteLoading{

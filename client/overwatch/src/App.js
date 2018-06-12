@@ -14,6 +14,7 @@ import Playerinfo from'./Containers/PlayerInfo.jsx'
 import requireAuth from './Containers/Auth.jsx'
 import Invite from './Containers/Invite.jsx'
 import Watch from './Containers/Watch.jsx'
+import Status from './Containers/Status.jsx'
 import './App.css';
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
         <Route exact path="/player" component={requireAuth(Playerinfo)} />
         <Route exact path="/invite" component={requireAuth(Invite)} />
         <Route exact path="/watch" component={requireAuth(Watch)} />
+        <Route exact path='/status' component={requireAuth(Status)} />
         </Switch>
      
       </div>

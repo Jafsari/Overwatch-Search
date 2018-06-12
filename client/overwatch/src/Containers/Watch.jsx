@@ -22,7 +22,6 @@ class Watch extends Component{
         }
     }
 componentDidMount(){
-    // this.props.watch()
     this.props.getStreams()
 }
 
@@ -35,11 +34,6 @@ componentWillReceiveProps(nextProps) {
        
     } 
 }
-
-// onInputChange(search) {
-//     this.setState({search});
-
-// }
 
 handleChange = (e) => {
     this.setState({
@@ -77,17 +71,6 @@ render(){
                         allowfullscreen="true">
                         </iframe>
                         </div>
-            {this.props.streamer.data.map((stream,index) => {
-                return (
-                        <div key={index}>
-                     
-                        <div>
-
-                        </div>
-                        </div>
-
-                )
-            })}
             < Navigation />
             </div>
             
@@ -103,9 +86,6 @@ return(
 <div className='stream' >
     {information}
     </div>
-
-<div>
-</div>
 </div>
         )
     }
