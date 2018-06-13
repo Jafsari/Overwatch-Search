@@ -36,26 +36,33 @@ class Status extends Component{
     }
     
     render(){
-        console.log(this.state)
         const information = (this.state.data ? (
             <div className="StatusBackground">
-            <div className="StatusLayout">
+        <div className="StatusLayout">
+            <span className="statusTitle">Overwatch Streamer Status </span>
                 <div className="StatusContainer">
+                <table id="statusTable">
+                <th>Title</th>
+                <th>Viewer_Count</th>
+            
                 {this.props.streamer.data.map((stream,index) => {
                     return(
-                    <div key={index} className="statusInfo">
-                        <span>{stream.title}</span>:<span>{stream.viewer_count}</span>
-                    </div>
+                    <tr key={index} className="statusInfo">               
+                        <td className="streamTitle">{stream.title}:</td>
+                        <td>{stream.viewer_count}</td>
+                    </tr>
+
 
                     )
                 })}
+                    </table>
                 </div>
                 <Navigation />
             </div>
             
         </div>
         ) : (
-            <div>
+            <div className="StatusBackground">
             <Progress />
             </div>
          ));

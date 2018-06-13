@@ -16,10 +16,12 @@ App {
   background-attachment: fixed;
 }
 
+
+
 .StatusBackground{
   text-align: center;
-  background-image: url(pics/overwatch-status.jpg);
-  height:100vh;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(pics/overwatch-status.jpg);
+  height:110vh;
   background-size:cover;
   background-position:center;
   background-attachment: fixed;
@@ -195,7 +197,7 @@ justify-content:space-around;
   flex-direction:column;
   position: fixed;
   top: 15%;
-  left: 40%;
+  left: 35%;
   margin-top: -50px;
   margin-left: -100px;
   color:white;
@@ -232,7 +234,7 @@ justify-content:space-around;
   flex-direction:column;
   position:fixed;
   top: 25%;
-  left: 36%;
+  left: 29%;
   color:white;
   /* position: absolute;
   left:475px;
@@ -241,6 +243,42 @@ justify-content:space-around;
 
 }
 
+.statusTitle{
+ color:white;
+}
+
+.streamTitle{
+  display:flex;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.viewerCount{
+  display:flex;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#statusTable tr:hover 
+{background-color: #ddd;}
+
+#statusTable td, #statusTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#statusTable tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#statusTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
 
 
 .StatusLayout{
@@ -248,7 +286,7 @@ justify-content:space-around;
     flex-direction:column;
     position:fixed;
     top: 25%;
-    left: 36%;
+    left: 25%;
     color:black;
     /* position: absolute;
     left:475px;
@@ -257,6 +295,9 @@ justify-content:space-around;
   
   
 }
+
+
+
 
 .inviteLoading{
   display:flex;
