@@ -266,9 +266,7 @@ justify-content:space-around;
   padding: 8px;
 }
 
-#statusTable tr:nth-child(even){
-  background-color: #f2f2f2;
-}
+#statusTable tr:nth-child(even){background-color: #f2f2f2;}
 
 #statusTable th {
   padding-top: 12px;

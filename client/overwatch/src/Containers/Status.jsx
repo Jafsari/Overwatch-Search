@@ -42,13 +42,13 @@ class Status extends Component{
             <span className="statusTitle">Overwatch Streamer Status </span>
                 <div className="StatusContainer">
                 <table id="statusTable">
-                <th>Title</th>
+                <th>Stream Title</th>
                 <th>Viewer_Count</th>
             
                 {this.props.streamer.data.map((stream,index) => {
                     return(
                     <tr key={index} className="statusInfo">               
-                        <td className="streamTitle">{stream.title}:</td>
+                        <td className="streamTitle">{stream.title}</td>
                         <td>{stream.viewer_count}</td>
                     </tr>
 
@@ -86,15 +86,3 @@ class Status extends Component{
     withRouter
     )
     (Status);
-
-    // {this.props.streamer.data.map((stream,index) => {
-    //     return (
-    //             <div key={index}>
-             
-    //             <div>
-
-    //             </div>
-    //             </div>
-
-    //     )
-    // })}

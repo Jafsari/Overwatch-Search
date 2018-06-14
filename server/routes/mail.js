@@ -30,7 +30,7 @@ const config = require('../config');
         from: 'Overchat@noreply.com',
         to: req.body.to,
         subject: req.body.subject,
-        html : `<p>${text}</p>`
+        html :`<p>Hi there, your friend thought you'd be a great fit to join the Overchat Community, here is their message: ${text}</p>`
     };
 
     transporter.sendMail(mailOptions, function (err, info) {
