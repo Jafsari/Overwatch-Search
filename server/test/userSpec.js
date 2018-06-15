@@ -103,12 +103,12 @@ const info = {
   tag: 'Calvin-1337'
 }
 describe('search using Overwatch API', function() {
-  it('responds with JSON', function(done) {
+  it('responds with information about battle.net', function(done) {
       request(app)
           .post(`/api/users/search`)
           .set('Authorization', 'bearer: ' + auth.token)
-          .send(info)
-          .expect(200, done);
+          .send(info,done())
+          .expect(200, done);        
   });
 });
 

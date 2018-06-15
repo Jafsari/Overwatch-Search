@@ -5,6 +5,7 @@ const morgan = require('morgan');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const mailRoutes = require('./routes/mail');
+const owlRoutes = require('./routes/owl');
 const auth = require('./middleware/auth');
 const app = express();
 const sockets = require('./socket/chatsockets.js')
@@ -17,8 +18,10 @@ app.use(cors());
 
 
 app.use("/api/auth",authRoutes);
-app.use("/api/users",userRoutes);
+app.use("/api/users",auth.loginRequired,userRoutes);
 app.use("/api/mail",auth.loginRequired,mailRoutes);
+app.use("/api/owl",owlRoutes);
+
 
 app.use((req,res,next) => {
     const err = new Error("Not Found");

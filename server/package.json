@@ -1,5 +1,19 @@
 {
-    "scripts":{
+    "scripts": {
         "test": "node_modules/mocha/bin/mocha ./tests"
+    },
+    "dependencies": {
+        "bcrypt": "^2.0.1",
+        "body-parser": "^1.18.3",
+        "cors": "^2.8.4",
+        "express": "^4.16.3",
+        "jsonwebtoken": "^8.3.0",
+        "mongoose": "^5.1.5",
+        "morgan": "^1.9.0",
+        "nodemailer": "^4.6.7",
+        "nodemailer-mailgun-transport": "^1.4.0",
+        "overwatch-api": "^0.4.0",
+        "overwatchleague": "^1.4.11",
+        "socket.io": "^2.1.1"
     }
 }

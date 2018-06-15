@@ -16,6 +16,14 @@ App {
   background-attachment: fixed;
 }
 
+.RankingBackground{
+  text-align: center;
+  background-image: url(pics/owl-mercy.png);
+  height:110vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
 
 
 .StatusBackground{
@@ -273,6 +281,28 @@ justify-content:space-around;
   padding-bottom: 12px;
   text-align: left;
   background-color: #4CAF50;
+  color: white;
+}
+
+.rankTitle{
+  
+ }
+
+#rankTable tr:hover 
+{background-color: #ddd;}
+
+#rankTable td, #rankTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#rankTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#rankTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(15, 0, 0);
   color: white;
 }
 
@@ -534,5 +564,10 @@ left:-15px;
         color: red;
         font-size: 12px;
         margin-top: 5px;
+      }
+
+      .owlLogo{
+        height:100px;
+        width:100px;
       }
       

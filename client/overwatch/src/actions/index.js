@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM,SET_CURRENT_OWL } from './types'
 import jwtDecode from 'jwt-decode';
 import { TwitchClient } from '../config'
 
@@ -123,6 +123,23 @@ export function login(data,second) {
       }
   }
 
+  export function OWL(data){
+    let token1 = localStorage.getItem('jwtToken')
+    token1 = JSON.parse(token1)
+    console.log(token1)
+    let BASE_URL = 'http://localhost:3000/api/owl'
+    return dispatch => {
+    return axios.get(BASE_URL,data, { headers: {"Authorization" : `Bearer ${token1}`} }).then(res => {
+      const information = res.data;
+      return dispatch(setCurrentRank(information))
+    }).catch(e => {
+      console.log(e)
+      alert('There was a problem with your request')
+    })
+    }
+  }
+
+
   export function setCurrentToken(token){
     return{
       type:SET_CURRENT_TOKEN,
@@ -192,5 +209,14 @@ export function login(data,second) {
       information
     }
   }
+
+  export function setCurrentRank(information){
+    return{
+      type:SET_CURRENT_OWL,
+      information
+    }
+  }
+
+ 
 
 
