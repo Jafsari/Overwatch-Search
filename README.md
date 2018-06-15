@@ -1,7 +1,7 @@
 # Overwatch-Search
 
 Description:
-OverChat is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches within specific ranks! Invite friends, watch streams, chat with others, or check the status of your favorite overwatch streams!
+OverChat is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches within specific ranks! Invite friends, watch streams,check current rankings, chat with others, or check the status of your favorite overwatch streams!
 
 Built With
 ReactJS
@@ -12,7 +12,9 @@ Express
 Socket.IO
 NodeMailer API
 Twitch API
+OWL API
 Overwatch API:
+
 
  https://github.com/alfg/overwatch-api/blob/master/api/README.md
 
@@ -49,6 +51,9 @@ Twitch API:
 ![screen shot 2018-06-12 at 10 21 59 pm](https://user-images.githubusercontent.com/28635782/41331738-6a728ee8-6e8f-11e8-9c15-5479d82b9d9e.png)
 
 
+OWL API:
+![screen shot 2018-06-15 at 2 52 14 pm](https://user-images.githubusercontent.com/28635782/41491067-d8ae8fba-70ab-11e8-979b-368cd62f4017.png)
+
 
 General Chat:
 ![screen shot 2018-06-12 at 10 28 45 pm](https://user-images.githubusercontent.com/28635782/41331929-72144848-6e90-11e8-8c5e-ee3b9a215f43.png)
@@ -69,4 +74,4 @@ Diamond Chat:
 
 This App is a gift back to the amazing Overwatch Community! :)
 
-The fan-art is work of other artists, and I do not take any credit for the beatiful pieces. 
+The fan-art is work of other artists, and I do not take any credit for the beautiful pieces. 

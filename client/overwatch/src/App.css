@@ -18,7 +18,7 @@ App {
 
 .RankingBackground{
   text-align: center;
-  background-image: url(pics/owl-mercy.png);
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(pics/owl-mercy.png);
   height:110vh;
   background-size:cover;
   background-position:center;
@@ -285,7 +285,7 @@ justify-content:space-around;
 }
 
 .rankTitle{
-  
+  color:Black;
  }
 
 #rankTable tr:hover 
