@@ -31,7 +31,7 @@ Login:
 ![screen shot 2018-06-03 at 2 13 19 am](https://user-images.githubusercontent.com/28635782/40885041-0bb3da00-66d4-11e8-84ec-b684c5e8d36a.png)
 
 Dashboard:
-![screen shot 2018-06-03 at 3 24 25 am](https://user-images.githubusercontent.com/28635782/40885574-cedde2a6-66dd-11e8-9013-54b54beccfbf.png)
+![screen shot 2018-06-14 at 10 00 19 pm](https://user-images.githubusercontent.com/28635782/41450775-83cda0e0-701e-11e8-97da-b9ffab250ed4.png)
 
 Search API:
 ![screen shot 2018-06-12 at 10 29 06 pm](https://user-images.githubusercontent.com/28635782/41331943-7bac21aa-6e90-11e8-8190-ec1a991dbeb0.png)
@@ -54,7 +54,7 @@ General Chat:
 ![screen shot 2018-06-12 at 10 28 45 pm](https://user-images.githubusercontent.com/28635782/41331929-72144848-6e90-11e8-8c5e-ee3b9a215f43.png)
 
 Competitive Chat:
-![screen shot 2018-06-03 at 3 24 06 am](https://user-images.githubusercontent.com/28635782/40885577-db32abcc-66dd-11e8-983d-7f49e7f74bbb.png)
+![screen shot 2018-06-14 at 10 02 17 pm](https://user-images.githubusercontent.com/28635782/41450818-b9cb47ba-701e-11e8-982f-dfafab803f10.png)
 
 GrandMaster Chat:
 ![screen shot 2018-06-12 at 10 28 53 pm](https://user-images.githubusercontent.com/28635782/41331932-75143e04-6e90-11e8-928d-3a39c302c21a.png)

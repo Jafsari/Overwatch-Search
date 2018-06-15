@@ -97,4 +97,20 @@ describe('DELETE /users/:id', function() {
 });
 
 
+const info = {
+  platform: 'pc' ,
+  region: 'us' ,
+  tag: 'Calvin-1337'
+}
+describe('search using Overwatch API', function() {
+  it('responds with JSON', function(done) {
+      request(app)
+          .post(`/api/users/search`)
+          .set('Authorization', 'bearer: ' + auth.token)
+          .send(info)
+          .expect(200, done);
+  });
+});
+
+
 
