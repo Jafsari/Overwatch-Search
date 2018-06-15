@@ -42,7 +42,7 @@ router.patch("/:id",(req,res,next) => {
 router.delete('/:id',(req,res,next) => {
     return User.findByIdAndRemove(req.params.id).then(function(response){
         return res.json({
-            status:200,
+            status:204,
             title:"Success",
             message:"Successfully Deleted!"
         });
