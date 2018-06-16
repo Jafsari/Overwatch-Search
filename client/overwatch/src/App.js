@@ -16,6 +16,7 @@ import Invite from './Containers/Invite.jsx'
 import Watch from './Containers/Watch.jsx'
 import Status from './Containers/Status.jsx'
 import Ranking from './Containers/Rankings.jsx'
+import Roster from './Containers/Roster.jsx'
 import './App.css';
 
 class App extends Component {
@@ -39,6 +40,7 @@ class App extends Component {
         <Route exact path="/watch" component={requireAuth(Watch)} />
         <Route exact path='/status' component={requireAuth(Status)} />
         <Route exact path='/ranking' component={requireAuth(Ranking)} />
+        <Route exact path='/roster' component={requireAuth(Roster)} />
         </Switch>
      
       </div>

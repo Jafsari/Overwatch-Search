@@ -16,6 +16,15 @@ App {
   background-attachment: fixed;
 }
 
+.RosterBackground{
+  text-align: center;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(pics/widow-owl.png);
+  height:110vh;
+  background-size:cover;
+  background-position:center;
+  background-attachment: fixed;
+}
+
 .RankingBackground{
   text-align: center;
   background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(pics/owl-mercy.png);

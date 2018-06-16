@@ -14,6 +14,16 @@ router.get("/", (req,res,next) => {
     })
 });
 
+router.post("/roster", (req,res,next) => {
+    console.log(req.body)
+    OWL.getPlayers().then(response => {
+        console.log(response.data);
+        return res.status(200).json(response.data)
+    }).catch(e => {
+        return res.status(404).json(e.message)
+    })
+});
+
 router.get("/live", (req,res,next) => {
     OWL.getLiveMatch().then(response => {
         console.log(response.data);

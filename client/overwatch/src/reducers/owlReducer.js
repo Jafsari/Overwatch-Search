@@ -1,7 +1,9 @@
-import { SET_CURRENT_OWL } from '../actions/types';
+import { SET_CURRENT_OWL,SET_CURRENT_TEAM, SET_CURRENT_TEAM_LOADING } from '../actions/types';
 
 const DEFAULT_STATE = {
-  current:false
+  current:false,
+  team:false
+
 };
 
 export default (state = DEFAULT_STATE, action) => {
@@ -10,6 +12,14 @@ export default (state = DEFAULT_STATE, action) => {
       return {
         current:action.information
       };
+    case SET_CURRENT_TEAM:
+    return{
+        team:action.information
+    }
+    case SET_CURRENT_TEAM_LOADING:
+    return{
+      team:action.info
+    };
     default:
       return state;
   }
