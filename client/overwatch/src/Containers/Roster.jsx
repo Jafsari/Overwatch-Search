@@ -4,7 +4,6 @@ import * as actions from '../actions'
 import { FormGroup, Label, Input, FormFeedback, FormText, Button, Form } from 'reactstrap';
 import '../App.css'
 import Navigation from '../Components/Navigation.jsx'
-import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 import axios from 'axios';
@@ -79,14 +78,16 @@ class Roster extends Component{
         if (this.state.data === 'done'){
             information =  <div className="RosterBackground">
             <div className="StatusLayout">
-                <span className="rankTitle"><strong>OWL Roster </strong></span>
+                <span className="rankTitle"><strong>{this.state.team}</strong></span>
                     <div className="StatusContainer">
                     <table id="rankTable">
                     <th>Name</th>
                     <th>Home Location</th>
                     <th>Role</th>
+                    <th>Nationality</th>
+                    <th>Family Name</th>
                     <th>Main</th>
-                    <th>HeadShot</th>
+                    <th>Picture</th>
                 
                     {this.props.owl.map((team,index) => {
                         return(
@@ -94,6 +95,8 @@ class Roster extends Component{
                             <td className="streamTitle">{team.name}</td>
                             <td>{team.homeLocation}</td>
                             <td>{team.attributes.role} </td>
+                            <td>{team.nationality} </td>
+                            <td> {team.familyName} </td>
                             <td> <img className= "owlLogo" src ={team.attributes.heroes[0].icons.android} /></td>
                             <td> <img className="owlLogo" src={team.headshot}/></td>
                         </tr>

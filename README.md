@@ -33,10 +33,10 @@ Login:
 ![screen shot 2018-06-03 at 2 13 19 am](https://user-images.githubusercontent.com/28635782/40885041-0bb3da00-66d4-11e8-84ec-b684c5e8d36a.png)
 
 Dashboard:
-![screen shot 2018-06-14 at 10 00 19 pm](https://user-images.githubusercontent.com/28635782/41450775-83cda0e0-701e-11e8-97da-b9ffab250ed4.png)
+![screen shot 2018-06-15 at 8 52 42 pm](https://user-images.githubusercontent.com/28635782/41495561-8ec2598a-70de-11e8-9ec2-eb9200c7f788.png)
 
 Search API:
-![screen shot 2018-06-12 at 10 29 06 pm](https://user-images.githubusercontent.com/28635782/41331943-7bac21aa-6e90-11e8-8190-ec1a991dbeb0.png)
+![screen shot 2018-06-15 at 8 48 37 pm](https://user-images.githubusercontent.com/28635782/41495606-65cadaa6-70df-11e8-9b1f-6fcb3b8a43ed.png)
 
 ![screen shot 2018-06-12 at 10 33 46 pm](https://user-images.githubusercontent.com/28635782/41331999-c01ebf32-6e90-11e8-9e78-8d0581fad0c9.png)
 
@@ -58,23 +58,23 @@ Search Teams
 
 ![screen shot 2018-06-15 at 6 14 38 pm](https://user-images.githubusercontent.com/28635782/41494462-098e5bd0-70c8-11e8-87c4-9cebdb828317.png)
 
-![screen shot 2018-06-15 at 6 12 04 pm](https://user-images.githubusercontent.com/28635782/41494438-df0c73f6-70c7-11e8-8578-170cf0d12959.png)
+![screen shot 2018-06-15 at 8 51 41 pm](https://user-images.githubusercontent.com/28635782/41495568-a20330c8-70de-11e8-882e-17ab61b2dad9.png)
 
 
 General Chat:
-![screen shot 2018-06-12 at 10 28 45 pm](https://user-images.githubusercontent.com/28635782/41331929-72144848-6e90-11e8-8c5e-ee3b9a215f43.png)
+![screen shot 2018-06-15 at 8 51 56 pm](https://user-images.githubusercontent.com/28635782/41495552-875036cc-70de-11e8-9fa9-b08a49a8d55d.png)
 
 Competitive Chat:
-![screen shot 2018-06-14 at 10 02 17 pm](https://user-images.githubusercontent.com/28635782/41450818-b9cb47ba-701e-11e8-982f-dfafab803f10.png)
+![screen shot 2018-06-15 at 8 52 10 pm](https://user-images.githubusercontent.com/28635782/41495554-891ec4c8-70de-11e8-8bd7-d691548a26f3.png)
 
 GrandMaster Chat:
-![screen shot 2018-06-12 at 10 28 53 pm](https://user-images.githubusercontent.com/28635782/41331932-75143e04-6e90-11e8-928d-3a39c302c21a.png)
+![screen shot 2018-06-15 at 8 52 18 pm](https://user-images.githubusercontent.com/28635782/41495556-8aeff376-70de-11e8-95ee-effbae389c21.png)
 
 Master Chat:
-![screen shot 2018-06-12 at 10 28 58 pm](https://user-images.githubusercontent.com/28635782/41331935-76459b9c-6e90-11e8-854e-403bf2ad440a.png)
+![screen shot 2018-06-15 at 8 52 24 pm](https://user-images.githubusercontent.com/28635782/41495557-8c150be2-70de-11e8-9257-97b27828b4de.png)
 
 Diamond Chat:
-![screen shot 2018-06-12 at 10 29 02 pm](https://user-images.githubusercontent.com/28635782/41331937-79c921c6-6e90-11e8-8a3a-9089c0cac223.png)
+![screen shot 2018-06-15 at 8 52 37 pm](https://user-images.githubusercontent.com/28635782/41495559-8d079808-70de-11e8-8be7-ba11cf4b5340.png)
 
 
 
