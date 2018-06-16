@@ -45,10 +45,9 @@ Invite Friend:
 ![screen shot 2018-06-15 at 8 48 42 pm](https://user-images.githubusercontent.com/28635782/41495625-355abee4-70e0-11e8-9b81-0be724a0b128.png)
 
 Twitch API:
-![screen shot 2018-06-10 at 4 24 12 pm](https://user-images.githubusercontent.com/28635782/41207468-626b1424-6ccb-11e8-9c8f-26756a6393e4.png)
+![screen shot 2018-06-15 at 8 51 01 pm](https://user-images.githubusercontent.com/28635782/41495645-adc9f368-70e0-11e8-8227-54696b24f483.png)
 
-
-![screen shot 2018-06-12 at 10 21 59 pm](https://user-images.githubusercontent.com/28635782/41331738-6a728ee8-6e8f-11e8-9c15-5479d82b9d9e.png)
+![screen shot 2018-06-15 at 8 51 29 pm](https://user-images.githubusercontent.com/28635782/41495644-a6d016be-70e0-11e8-95ff-179f082bd3e8.png)
 
 
 OWL API:
