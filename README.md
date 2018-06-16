@@ -54,6 +54,12 @@ Twitch API:
 OWL API:
 ![screen shot 2018-06-15 at 2 52 14 pm](https://user-images.githubusercontent.com/28635782/41491067-d8ae8fba-70ab-11e8-979b-368cd62f4017.png)
 
+Search Teams
+
+![screen shot 2018-06-15 at 6 14 38 pm](https://user-images.githubusercontent.com/28635782/41494462-098e5bd0-70c8-11e8-87c4-9cebdb828317.png)
+
+![screen shot 2018-06-15 at 6 12 04 pm](https://user-images.githubusercontent.com/28635782/41494438-df0c73f6-70c7-11e8-8578-170cf0d12959.png)
+
 
 General Chat:
 ![screen shot 2018-06-12 at 10 28 45 pm](https://user-images.githubusercontent.com/28635782/41331929-72144848-6e90-11e8-8c5e-ee3b9a215f43.png)

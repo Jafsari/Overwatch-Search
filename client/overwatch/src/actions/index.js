@@ -145,7 +145,7 @@ export function login(data,second) {
     console.log(rosterToken)
     let BASE_URL = 'http://localhost:3000/api/owl/roster'
     return dispatch => {
-    return axios.get(BASE_URL,data, { headers: {"Authorization" : `Bearer ${rosterToken}`} }).then(res => {
+    return axios.post(BASE_URL,data, { headers: {"Authorization" : `Bearer ${rosterToken}`} }).then(res => {
       const information = res.data;
       return dispatch(setCurrentRank(information))
     }).catch(e => {

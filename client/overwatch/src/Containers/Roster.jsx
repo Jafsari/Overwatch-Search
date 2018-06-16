@@ -18,20 +18,12 @@ class Roster extends Component{
         super(props)
         this.state={
             data:false,
+            done:false,
             team:''
         }
     
     }
 
-    componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
-        if(nextProps.owl) {  
-            (this.setState({
-                data:true
-            }));
-
-        } 
-    }
 
     handleChange = (e) => {
         this.setState({
@@ -40,23 +32,24 @@ class Roster extends Component{
           console.log(this.state.search)
     }
 
-    handleSubmit = (e) => {
+    handleClick = (e) => {
         e.preventDefault();
+        this.setState({
+            data:'loading'
+        })
+        this.props.OWLTeam(this.state).then(() => {
+            this.setState({data:'done'})
+        }).catch(e => {
+            console.log(e.message)
+        })
 
     }
     
     render(){
         console.log(this.state)
-        const information = (this.state.data ? (
-
-            <div className="RosterBackground">
-            <div className="InviteLoading">
-            <Progress />
-            </div>
-            </div>
-            
-        ) : (
-            <div className="RosterBackground">
+        let information;
+        if (!this.state.data){
+            information =  <div className="RosterBackground">
             <div className="StatusLayout">
             <Form onSubmit={this.handleSubmit}>
             <FormGroup>
@@ -70,12 +63,51 @@ class Roster extends Component{
          valid />
         </FormGroup>
         </Form>
+        <Button onClick={this.handleClick}> Submit </Button>
         <Navigation />
             </div>
             </div>
+        }  
+        if (this.state.data === 'loading'){
+            information =             <div className="RosterBackground">
+            <div className="InviteLoading">
+            <Progress />
+            </div>
+            </div>
+        }
 
-            
-         ));
+        if (this.state.data === 'done'){
+            information =  <div className="RosterBackground">
+            <div className="StatusLayout">
+                <span className="rankTitle"><strong>OWL Roster </strong></span>
+                    <div className="StatusContainer">
+                    <table id="rankTable">
+                    <th>Name</th>
+                    <th>Home Location</th>
+                    <th>Role</th>
+                    <th>Main</th>
+                    <th>HeadShot</th>
+                
+                    {this.props.owl.map((team,index) => {
+                        return(
+                        <tr key={index} className="statusInfo">               
+                            <td className="streamTitle">{team.name}</td>
+                            <td>{team.homeLocation}</td>
+                            <td>{team.attributes.role} </td>
+                            <td> <img className= "owlLogo" src ={team.attributes.heroes[0].icons.android} /></td>
+                            <td> <img className="owlLogo" src={team.headshot}/></td>
+                        </tr>
+    
+    
+                        )
+                    })}
+                        </table>
+                    </div>
+                    <Navigation />
+                </div>
+                
+            </div>
+        }
     return(
         <div>
             {information}
@@ -86,7 +118,7 @@ class Roster extends Component{
     }
     const mapStateToProps = (state) => { 
         return { 
-          owl: state.owl.current.content
+          owl: state.owl.current
           };
       };
       
