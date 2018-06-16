@@ -42,7 +42,7 @@ Search API:
 
 
 Invite Friend:
-![screen shot 2018-06-12 at 10 29 10 pm](https://user-images.githubusercontent.com/28635782/41331945-7ccd9046-6e90-11e8-996a-828ad75abcba.png)
+![screen shot 2018-06-15 at 8 48 42 pm](https://user-images.githubusercontent.com/28635782/41495625-355abee4-70e0-11e8-9b81-0be724a0b128.png)
 
 Twitch API:
 ![screen shot 2018-06-10 at 4 24 12 pm](https://user-images.githubusercontent.com/28635782/41207468-626b1424-6ccb-11e8-9c8f-26756a6393e4.png)
