@@ -46,7 +46,9 @@ export function login(data,second) {
         console.log(token);
         localStorage.setItem('jwtToken', token);
         // dispatch(setCurrentUser(jwtDecode(token)));
-      });
+      }).catch( e => {
+        console.log(e)
+      })
     }
   }
 

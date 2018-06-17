@@ -4,8 +4,17 @@ const { User } = require("../models/")
 const jwt = require("jsonwebtoken")
 const SECRET = "woo"
 const overwatch = require('overwatch-api');
+const schema = require('../auth-schema');
+
+
 
 router.post('/signup', function(req,res){
+    const valid = schema.validate(req.body)
+    if (valid.error) {
+      return res.status(400).json('Error in validation')
+    }
+    req.parsed = valid.value
+
     return User.create(req.body).then(function(response){
         var token = jwt.sign({ user_id: response.id}, SECRET);
         res.status(200).send({token})
@@ -17,6 +26,12 @@ router.post('/signup', function(req,res){
 
 
 router.post('/login', function(req,res){
+    const valid = schema.validate(req.body)
+    if (valid.error) {
+      return res.status(400).json('Error in validation')
+    }
+    req.parsed = valid.value
+
     return User.findOne({username:req.body.username}).then(function(user){
         user.comparePassword(req.body.password, function(err, isMatch){
             if(isMatch){
@@ -30,5 +45,6 @@ router.post('/login', function(req,res){
         res.status(400).send('Invalid Credentials')
     })
 });
+
 
 module.exports = router;

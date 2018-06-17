@@ -18,6 +18,7 @@ class Dashboard extends Component {
         console.log('Goodbye!')
     }
 
+
     render(){
         return(
             <div className="Dashboard2">
