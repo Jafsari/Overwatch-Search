@@ -52,6 +52,12 @@ router.delete('/:id',(req,res,next) => {
 
 router.post('/search',(req,res,next) =>{
 
+    const valid = schema.validate(req.body)
+    if (valid.error) {
+      return res.status(400).json('Error in validation')
+    }
+    req.parsed = valid.value
+
     console.log(req.body)
     const platform = req.body.platform;
     const region = req.body.region;
