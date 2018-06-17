@@ -5,6 +5,7 @@ var auth = require('../middleware/auth')
 const overwatch = require('overwatch-api');
 const nodemailer = require('nodemailer');
 const mg = require('nodemailer-mailgun-transport');
+const schema = require('../search-schema');
 
 router.get("/", (req,res,next) => {
     return User.find().then(users => {
@@ -50,6 +51,7 @@ router.delete('/:id',(req,res,next) => {
 })
 
 router.post('/search',(req,res,next) =>{
+
     console.log(req.body)
     const platform = req.body.platform;
     const region = req.body.region;

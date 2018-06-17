@@ -3,6 +3,7 @@ import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, 
 import jwtDecode from 'jwt-decode';
 import { TwitchClient } from '../config'
 
+
 export function setAuthorizationToken(token) {
   if (token) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -67,6 +68,7 @@ export function login(data,second) {
     }).catch(e => {
       console.log(e)
       alert('There was a problem with your request')
+      return dispatch(this.props.history.push('search'))
       return dispatch(SET_SEARCH_FAILURE)
     })
     }

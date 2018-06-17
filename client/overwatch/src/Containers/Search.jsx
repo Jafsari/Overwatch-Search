@@ -4,9 +4,9 @@ import * as actions from '../actions'
 import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reactstrap';
 import '../App.css'
 import Navigation from '../Components/Navigation.jsx'
-import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
+import { validation } from '../schema'
 
 class Search extends Component{
 constructor(props){
@@ -61,11 +61,21 @@ information = () => {
 
 handleSearch =(e) => {
 e.preventDefault();
-if (this.state.platform.length === 0 || this.state.region.length === 0 || this.state.tag.length === 0){
-    alert('Please fill out the forms')
-} else {
-this.information(setTimeout(0))
-}
+let platform = this.state.platform
+let region = this.state.region
+let tag = this.state.tag
+let valid = this.information
+validation.validate({
+    platform,
+    region,
+    tag
+  })
+  .then(()  => {
+    valid();
+})
+.catch((err) => {
+    console.log(err.message)
+})
 
 }
 
