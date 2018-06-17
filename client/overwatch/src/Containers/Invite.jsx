@@ -8,6 +8,8 @@ import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 import Progress from '../Components/Progress.jsx';
+import { inviteValidation } from '../schema'
+
 
 class Invite extends Component{
 constructor(props){
@@ -40,14 +42,25 @@ information = () => {
 
 handleSearch =(e) => {
 e.preventDefault();
-if (this.state.tolength === 0 || this.state.subject.length === 0 || this.state.text.length === 0){
-    alert('Please fill out the forms')
-} else {
-this.information();
+let to = this.state.to
+let subject = this.state.subject
+let text = this.state.text
+let valid = this.information
+inviteValidation.validate({
+    to,
+    subject,
+    text
+  })
+  .then(()  => {
+    valid();
+})
+.catch((err) => {
+    alert(err.message)
+})
 
 }
 
-}
+
 
 check = () => {
     console.log(this.props.inviteInfo)

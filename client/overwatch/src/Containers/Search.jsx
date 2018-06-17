@@ -74,7 +74,7 @@ validation.validate({
     valid();
 })
 .catch((err) => {
-    console.log(err.message)
+    alert(err.message)
 })
 
 }
