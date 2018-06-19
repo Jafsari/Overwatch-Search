@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import'../player.css'
-import Navigation from '../Components/Navigation.jsx'
 import Progress from '../Components/Progress.jsx'
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
@@ -44,12 +43,12 @@ class Playerinfo extends Component{
             <div className="card-title"><strong>Player Information</strong></div>
             <div><strong>Username:</strong>{this.props.information.username}</div>
             <div><strong>Level:</strong>{this.props.information.level}</div>
-            <img src={this.props.information.portrait} />
+            <img alt='' src={this.props.information.portrait} />
             <div><strong>Competitive Rank:</strong>{this.props.information.competitive.rank}</div>
             <div><strong>Competitive Time:</strong>{this.props.information.playtime.competitive} </div>
             </div>
             <div>
-            <img  src={this.props.information.competitive.rank_img} />
+            <img alt ='' src={this.props.information.competitive.rank_img} />
             </div>
             </div>
             </div>

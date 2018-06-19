@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore,applyMiddleware, compose } from 'redux';
-import reducers from './reducers'
 import reduxThunk from 'redux-thunk'
-import jwtDecode from 'jwt-decode';
 import rootReducer from './reducers';
 import { setCurrentUser,setAuthorizationToken } from './actions';
 import App from './App';

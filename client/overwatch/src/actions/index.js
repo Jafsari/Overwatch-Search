@@ -43,7 +43,6 @@ export function login(data,second) {
     return dispatch => {
       return axios.post(`${BASE_URL}/api/auth/signup`, data).then(res => {
         const token = JSON.stringify(res.data.token);
-        const decode = jwtDecode(token)
         console.log(token);
         localStorage.setItem('jwtToken', token);
         // dispatch(setCurrentUser(jwtDecode(token)));
@@ -64,11 +63,9 @@ export function login(data,second) {
       const information = res.data;
       console.log(information);
       return dispatch(setSearchUser(information))
-      return dispatch(this.props.history.push('playerinfo'))
     }).catch(e => {
       console.log(e)
       alert('There was a problem with your request')
-      return dispatch(this.props.history.push('search'))
       return dispatch(SET_SEARCH_FAILURE)
     })
     }
@@ -92,7 +89,6 @@ export function login(data,second) {
 
   export function watch(){
     let BASE_URL ='https://api.twitch.tv/helix/streams?game_id=488552&first=10&language=en'
-    let token = TwitchClient
     let config = {
         headers : {
         'Client-ID':TwitchClient
@@ -110,7 +106,6 @@ export function login(data,second) {
   }
   export function getStreams(){
     let BASE_URL ='https://api.twitch.tv/helix/videos?user_id=67955580'
-    let token = TwitchClient
     let config = {
         headers : {
         'Client-ID':TwitchClient

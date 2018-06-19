@@ -39,10 +39,8 @@ route = () => {
 
 
 information = () => {
- var that = false
  var self = this
  var check = true
- let success;
     this.props.setSearchUserLoading('loading')
     this.props.search(this.state).then(res => {
         let info = res.data

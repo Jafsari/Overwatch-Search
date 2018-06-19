@@ -1,7 +1,5 @@
 import { connect } from 'react-redux';
-import * as actions from '../actions'
 import React, { Component } from 'react';
-import { Button, FormGroup, Label, Input } from 'reactstrap';
 import '../App.css';
 import BasicForm from '../Containers/Form.jsx';
 

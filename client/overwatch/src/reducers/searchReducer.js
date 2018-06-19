@@ -14,6 +14,10 @@ export default (state = DEFAULT_STATE, action) => {
       return{
         playerinfo:action.information
       };
+      case SET_SEARCH_FAILURE:
+      return{
+        playerinfo:action.information
+      };
     default:
       return state;
   }

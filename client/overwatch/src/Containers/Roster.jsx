@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions'
-import { FormGroup, Label, Input, FormFeedback, FormText, Button, Form } from 'reactstrap';
+import { FormGroup,  Input,  Button, Form } from 'reactstrap';
 import '../App.css'
 import Navigation from '../Components/Navigation.jsx'
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
-import axios from 'axios';
-import { TwitchClient } from '../config.js'
 import Progress from '../Components/Progress.jsx'
 
 

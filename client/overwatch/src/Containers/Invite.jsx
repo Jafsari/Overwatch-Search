@@ -4,12 +4,10 @@ import * as actions from '../actions'
 import { FormGroup, Label, Input, FormFeedback, FormText, Button, } from 'reactstrap';
 import '../App.css'
 import Navigation from '../Components/Navigation.jsx'
-import jwtDecode from 'jwt-decode';
 import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 import Progress from '../Components/Progress.jsx';
 import { inviteValidation } from '../schema'
-import SweetAlert from 'sweetalert-react';
 
 
 class Invite extends Component{
