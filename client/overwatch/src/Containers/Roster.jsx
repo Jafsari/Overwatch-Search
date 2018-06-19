@@ -47,7 +47,7 @@ class Roster extends Component{
         let information;
         if (!this.state.data){
             information =  <div className="RosterBackground">
-            <div className="StatusLayout">
+            <div className="rosterLayout">
             <Form onSubmit={this.handleSubmit}>
             <FormGroup>
             < Input 

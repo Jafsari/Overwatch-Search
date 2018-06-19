@@ -343,6 +343,22 @@ justify-content:space-around;
   
 }
 
+.rosterLayout{
+    animation: Melt 0.3s linear;
+    display:flex;
+    flex-direction:column;
+    position:fixed;
+    top: 25%;
+    left: 25%;
+    color:black;
+    /* position: absolute;
+    left:475px;
+    top:200px;
+    color: white; */
+  
+  
+}
+
 
 
 
@@ -379,6 +395,10 @@ justify-content:space-around;
   to  {opacity:1}
 }
 
+@keyframes Melt {
+  from {transform:translateX(1000px)}
+  to {transform:translateX(0px)}
+}
 
 .card-body{
   height:300px;
