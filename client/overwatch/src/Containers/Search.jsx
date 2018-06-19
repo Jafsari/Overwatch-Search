@@ -43,6 +43,7 @@ information = () => {
  var self = this
  var check = true
  let success;
+    this.props.setSearchUserLoading('loading')
     this.props.search(this.state).then(res => {
         let info = res.data
         this.props.setSearchUser(info.username)
@@ -93,7 +94,6 @@ return(
           id="platform"
           value={this.state.Search} 
  valid />
-
  <Input className="SearchSpace"
           onChange={this.handleChange}
           placeholder="Enter region"

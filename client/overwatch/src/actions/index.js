@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM,SET_CURRENT_OWL,SET_CURRENT_TEAM,SET_CURRENT_TEAM_LOADING } from './types'
+import { SET_CURRENT_USER, SET_SEARCH_USER,SET_CURRENT_NAME, SET_CURRENT_TOKEN, SET_SEARCH_FAILURE, SET_USER_INVITE, SET_USER_INVITE_LOADING, SET_USER_INVITE_FAILURE, SET_CURRENT_VIDEO_LIST, SET_CURRENT_STREAM,SET_CURRENT_OWL,SET_CURRENT_TEAM,SET_CURRENT_TEAM_LOADING, SET_SEARCH_USER_LOADING } from './types'
 import jwtDecode from 'jwt-decode';
 import { TwitchClient } from '../config'
 
@@ -210,6 +210,13 @@ export function login(data,second) {
     }
   }
 
+  export function setSearchUserLoading(information){
+    return{
+      type:SET_SEARCH_USER_LOADING,
+      information
+    };
+  }
+
   export function setCurrentUser(user) {
     return {
       type: SET_CURRENT_USER,
@@ -230,6 +237,8 @@ export function login(data,second) {
       information
     }
   }
+
+
 
   export function setCurrentRank(information){
     return{

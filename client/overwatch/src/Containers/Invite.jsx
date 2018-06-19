@@ -9,6 +9,7 @@ import {withRouter} from "react-router-dom";
 import { compose } from 'redux';
 import Progress from '../Components/Progress.jsx';
 import { inviteValidation } from '../schema'
+import SweetAlert from 'sweetalert-react';
 
 
 class Invite extends Component{
@@ -17,7 +18,7 @@ constructor(props){
     this.state = {
         to:'',
         subject:'',
-        text:'',
+        text:''
     }
 
 }
@@ -53,17 +54,17 @@ inviteValidation.validate({
   })
   .then(()  => {
     valid();
+    this.setState({show:true})
 })
 .catch((err) => {
+    console.log(err.message)
     alert(err.message)
 })
 
 }
 
 
-
 check = () => {
-    console.log(this.props.inviteInfo)
     if (this.props.inviteInfo === false || this.props.inviteInfo === 'success') {
         return (<div className="inviteBackground">
         <FormGroup className="Searchlayout">
@@ -76,7 +77,7 @@ check = () => {
               type="text"
               id="to"
               value={this.state.Search} 
-     valid />
+     valid/>
     
      <Input className="SearchSpace"
               onChange={this.handleChange}

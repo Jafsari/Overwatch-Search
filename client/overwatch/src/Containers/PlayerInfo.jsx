@@ -13,6 +13,12 @@ class Playerinfo extends Component{
             data:false
         }
     }
+
+    componentDidMount(){
+        if (this.props.information === false){
+            this.props.history.push('search')
+        }
+    }
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
         if(nextProps !== undefined && nextProps.information.username) {  
@@ -20,7 +26,6 @@ class Playerinfo extends Component{
                 data:true
             }));
         } else {
-            console.log('cool')
             this.props.history.push('search')
         }
     }
@@ -49,9 +54,6 @@ class Playerinfo extends Component{
             </div>
             </div>
             </div>
-            </div>
-            <div className="playerLayout">
-            <Navigation />
             </div>
             </div>
           ) : (

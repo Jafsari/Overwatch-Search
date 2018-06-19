@@ -12,6 +12,7 @@ import App from './App';
 import { loadState, saveState } from './localStorage.js';
 import throttle from 'lodash/throttle';
 import logger from 'redux-logger'
+import 'normalize.css';
 
 
 const persistedState = loadState();

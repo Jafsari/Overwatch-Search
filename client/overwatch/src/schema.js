@@ -7,7 +7,7 @@ export const validation = yup.object().shape({
 });
 
 export const inviteValidation = yup.object().shape({
-  to: yup.string().min(8).email().max(25).required(),
+  to: yup.string().email().max(25).required(),
   subject: yup.string().min(4).max(25).required(),
   text: yup.string().min(4).max(200).required()
 });

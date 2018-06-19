@@ -22,7 +22,7 @@ class Dashboard extends Component {
     render(){
         return(
             <div className="Dashboard2">
-            <div className="dashboard">
+            <div className="dashboard slideUp ">
                 <Navigation />
                 <div className="inline">
                 <Modal />
