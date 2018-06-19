@@ -202,6 +202,7 @@ justify-content:space-around;
 }
 
 .format {
+
   display:flex;
   flex-direction:column;
   position: fixed;
@@ -216,6 +217,7 @@ justify-content:space-around;
   overflow:scroll;
 }
 .dashboard{
+  animation:left-right 1s linear;
   display:flex;
   flex-direction:column;
   position: fixed;
@@ -230,6 +232,7 @@ justify-content:space-around;
   color: white; */
 }
 .login2{
+  animation:left-right 1s linear;
   display:flex;
   flex-direction:column;
   position: fixed;
@@ -253,6 +256,7 @@ justify-content:space-around;
   flex-direction:column;
 }
 .Searchlayout{
+  animation:left-right 1s linear;
   display:flex;
   flex-direction:column;
   position:fixed;
@@ -370,6 +374,12 @@ justify-content:space-around;
   to { transform: rotate(360deg); }
 }
 
+@keyframes left-right{
+  from { opacity: 0}
+  to  {opacity:1}
+}
+
+
 .card-body{
   height:300px;
 }
@@ -380,6 +390,7 @@ justify-content:space-around;
 }
 
 .message{
+  animation:left-right 0.3s linear;
   display:flex;
 }
 

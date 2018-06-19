@@ -13,14 +13,13 @@ class Login extends Component{
         this.props.history.push('dashboard')
     }
 }
-
 render(){
         return (
-            <div className="login">
-            <form className="login2">
+<div className="login">
+    <form className="login2">
               <div>
          <BasicForm current='Login'/>
-      </div>
+        </div>
             <div>
             </div>
             </form>
@@ -35,5 +34,4 @@ const mapStateToProps = (state) => {
       isAuthenticated: state.auth.isAuthenticated
       };
   };
-  
   export default connect(mapStateToProps,null)(Login);
