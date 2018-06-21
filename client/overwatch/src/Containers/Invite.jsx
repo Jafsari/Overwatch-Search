@@ -65,7 +65,7 @@ inviteValidation.validate({
 check = () => {
     if (this.props.inviteInfo === false || this.props.inviteInfo === 'success') {
         return (<div className="inviteBackground">
-        <FormGroup className="Searchlayout">
+        <FormGroup className="inviteLayout">
     <Label for="exampleEmail">Invite a Friend</Label>
     
     <Input className="SearchSpace"

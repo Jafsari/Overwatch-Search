@@ -256,9 +256,6 @@ justify-content:space-around;
   flex-direction:column;
 }
 .Searchlayout{
-  -webkit-animation:pop-in 0.5s;
-  -moz-animation:pop-in 0.5s;
-  -ms-animation:pop-in 0.5s;
   display:flex;
   flex-direction:column;
   position:fixed;
@@ -270,6 +267,18 @@ justify-content:space-around;
   top:200px;
   color: white; */
 
+}
+
+.inviteLayout{
+  -webkit-animation:pop-in 0.5s;
+  -moz-animation:pop-in 0.5s;
+  -ms-animation:pop-in 0.5s;
+  display:flex;
+  flex-direction:column;
+  position:fixed;
+  top: 25%;
+  left: 29%;
+  color:white;
 }
 
 .statusTitle{
