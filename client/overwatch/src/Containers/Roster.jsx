@@ -31,6 +31,10 @@ class Roster extends Component{
 
     handleClick = (e) => {
         e.preventDefault();
+        if (this.state.team.length < 6){
+            alert('Please enter a valid team')
+            return;
+        }
         this.setState({
             data:'loading'
         })
