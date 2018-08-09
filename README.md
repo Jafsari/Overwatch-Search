@@ -16,6 +16,7 @@
 
 
 ## How to Get Started
+> Link https://github.com/Jafsari/Overwatch-Search.git
   - Clone the project
   - Inside of the terminal, start the server with nodemon app.js.
   - Start the front-end by going inside of the client folder and typing npm run start.
