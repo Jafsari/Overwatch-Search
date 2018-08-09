@@ -1,27 +1,24 @@
 # Overwatch-Search
 
-Description:
-OverChat is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches within specific ranks! Invite friends, watch streams,check current rankings, chat with others, or check the status of your favorite overwatch streams!
+> OverChat is an web application that brings competitive Overwatch players together. Find other serious players to play competitive ranked matches within specific ranks! Invite friends, watch streams,check current rankings, chat with others, or check the status of your favorite overwatch streams!
 
-Built With
-ReactJS
-ReactStrap 
-Redux 
-Node.JS
-Express
-Socket.IO
-NodeMailer API
-Twitch API
-OWL API
-Overwatch API:
-
-
- https://github.com/alfg/overwatch-api/blob/master/api/README.md
+## Technologies
+- ReactJS
+- ReactStrap 
+- Redux 
+- Node.JS
+- Express
+- Socket.IO
+- NodeMailer API
+- Twitch API
+- OWL API
+- Overwatch API
 
 
-Author
-Justin Afsari
-
+## How to Get Started
+  - Clone the project
+  - Inside of the terminal, start the server with nodemon app.js.
+  - Start the front-end by going inside of the client folder and typing npm run start.
 
 Landing:
 ![screen shot 2018-06-04 at 3 49 29 pm](https://user-images.githubusercontent.com/28635782/40945800-2c8ce1d6-680f-11e8-883e-b7cb29bd75c6.png)
